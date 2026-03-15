@@ -1,8 +1,8 @@
 {
-  "name": "cat-energy-2",
+  "name": "museum",
   "version": "2.0.7",
   "private": true,
-  "description": "Личный проект «Кэт энерджи» от HTML Academy",
+  "description": "Museum",
   "type": "module",
   "engines": {
     "node": "^18.18 || ^20.9"
