@@ -1,0 +1,119 @@
+.main-navigation {
+  color: $color-white;
+  background-color: $color-black;
+}
+
+.main-navigation__logo-link {
+  display: block;
+  width: 199px;
+  height: 33px;
+
+  color: $color-white;
+
+  @include respond-to ("desktop") {
+    width: 189px;
+  }
+}
+
+.main-navigation__logo-link:hover {
+  color: $color-gold;
+}
+
+.main-navigation__logo-link:active {
+  color: $color-gold-dark;
+}
+
+.main-navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  margin-left: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 55px;
+
+  @include respond-to("desktop") {
+    position: fixed;
+    top: 130px;
+    left: 0;
+    z-index: 2;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px 0;
+
+    padding: 35px 120px 287px 55px;
+    background-color: $color-black;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &--close {
+    @include respond-to("desktop") {
+      transform: translate(-100%);
+    }
+  }
+
+  &--open {
+    @include respond-to("desktop") {
+      transform: translate(70%);
+    }
+  }
+}
+
+.main-navigation__item {
+  font-weight: 200;
+  font-size: 22px;
+  letter-spacing: 0.09em;
+  color: $color-white;
+
+  @include respond-to("desktop") {
+    position: relative;
+    width: 122px;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+  }
+}
+
+.main-navigation__item::before {
+  @include respond-to("desktop") {
+    content: "";
+    //display: block;
+    width: 12px;
+    height: 12px;
+
+    position: absolute;
+    top: 7px;
+    left: 110px;
+
+    background-color: $color-white;
+    mask-image: url("../../icons/stack.svg#arrow-burger-menu");
+    mask-position: center;
+    mask-size: 12px 12px;
+    mask-repeat: no-repeat;
+  }
+}
+
+.main-navigation__item-link {
+  display: block;
+  color: $color-white;
+}
+
+.main-navigation__item:hover .main-navigation__item-link {
+  color: $color-gold;
+}
+
+.main-navigation__item:hover::before {
+  background-color: $color-gold;
+}
+
+.main-navigation__item:active .main-navigation__item-link {
+  color: $color-gold-dark;
+}
+
+.main-navigation__item:active::before {
+  background-color: $color-gold-dark;
+}

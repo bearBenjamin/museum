@@ -1,0 +1,20 @@
+$breakpoints: (
+  "mobile": 420px,
+  "tablet": 768px,
+  "desktop": 1024px,
+  "desktop-xl": 1920px
+);
+
+$color-black:       #030303;
+$color-white:       #ffffff;
+$color-gray-dark:   #333333;
+$color-gray-medium: #999999;
+$color-gray-light:  #e7e7e7;
+$color-gray-web:    #dbdbdb;
+$color-gold:        #9d8665;
+$color-gold-light:  #d2b183;
+$color-gold-dark:   #7e6c51;
+$color-red-dark:    #710707;
+
+$basic-family: "Roboto", sans-serif;
+$secondary-family: "Forum", sans-serif;
