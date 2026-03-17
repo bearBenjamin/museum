@@ -1,0 +1,38 @@
+.main-header {
+  position: relative;
+  padding-top: 59px;
+  padding-bottom: 58px;
+  color: $color-white;
+  background-color: $color-black;
+
+  @include respond-to ("desktop") {
+    padding-top: 49px;
+    padding-bottom: 48px;
+  }
+}
+
+.main-header__wrapper {
+  @include respond-to ("desktop") {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.main-header__navigation {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.main-header__button {
+  display: none;
+
+  @include respond-to("desktop") {
+    margin-left: auto;
+    display: block;
+    width: 32px;
+    height: 18px;
+  }
+}

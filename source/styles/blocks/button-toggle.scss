@@ -1,0 +1,43 @@
+.button-toggle {
+  @include respond-to("desktop") {
+    padding: 0;
+    line-height: 0;
+    border: none;
+    background-color: inherit;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    cursor: pointer;
+  }
+}
+
+.button-toggle__line {
+  display: block;
+  width: 32px;
+  height: 2px;
+  margin-bottom: 6px;
+  background-color: $color-white;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-toggle--open .button-toggle__line:last-child {
+  margin-bottom: 0;
+  box-shadow: 0 8px 0 0 $color-white;
+  transform: none;
+}
+
+.button-toggle--open .button-toggle__line:nth-child(2) {
+  transform: none;
+}
+
+.button-toggle--close .button-toggle__line:nth-child(2) {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.button-toggle--close .button-toggle__line:last-child {
+  margin-bottom: 0;
+  box-shadow: none;
+  transform: translateY(-4px) rotate(-45deg);
+}

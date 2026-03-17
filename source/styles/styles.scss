@@ -1,0 +1,32 @@
+/* GLOBAL */
+@import "./common/variables.scss";
+@import "./common/mixins.scss";
+@import "./common/fonts.scss";
+@import "./common/global.scss";
+@import "./common/visually-hidden.scss";
+
+/* BLOCKS */
+@import "./blocks/page.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/wrapper.scss";
+@import "./blocks/main-navigation.scss";
+@import "./blocks/button-toggle.scss";
+@import "./blocks/main.scss";
+@import "./blocks/title.scss";
+@import "./blocks/welcome.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/visiting.scss";
+@import "./blocks/item-card.scss";
+@import "./blocks/explore.scss";
+@import "./blocks/slider-explore.scss";
+@import "./blocks/video.scss";
+@import "./blocks/player.scss";
+@import "./blocks/video-slider.scss";
+@import "./blocks/gallery.scss";
+@import "./blocks/ticket.scss";
+@import "./blocks/form-ticket.scss";
+@import "./blocks/paralax.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/info-page.scss";
+@import "./blocks/info-developer.scss";
