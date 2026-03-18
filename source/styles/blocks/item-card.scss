@@ -1,11 +1,64 @@
-// .item-card {}
+.item-card {
+  font-family: $basic-family;
+  font-weight: 200;
+  color: $color-black;
 
-// .item-card__link {}
+  transition: opacity 0.3s ease;
+}
 
-// .item-card__picture {}
+.item-card__link {
+  color: $color-black;
+}
 
-// .item-card__title {}
+.item-card__picture {
+  display: block;
+}
 
-// .item-card__secondary-title {}
+.item-card__title {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 22px;
 
-// .item-card__label {}
+  font-family: $secondary-family;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.item-card__title::before {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 3px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  background-color: $color-red-dark;
+
+  transition: width 0.4s ease-in-out;
+}
+
+.item-card__link:hover .item-card__title::before {
+  width: 100%;
+}
+
+.item-card__secondary-title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 200;
+  font-size: 22px;
+  text-transform: capitalize;
+}
+
+.item-card__label {
+  margin: 0;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.item-card:active {
+  opacity: 0.5;
+}

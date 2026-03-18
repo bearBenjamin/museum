@@ -51,6 +51,7 @@
     </div>
   </header>
   <main class="main">
+
     <section class="welcome">
       <div class="wrapper welcome__wrapper">
         <h1 class="title welcome__title">Welcome to&nbsp;the&nbsp;Louvre</h1>
@@ -107,7 +108,6 @@
               <span class="slider__sepatator-number">|</span>
               <span class="slider__total-count">05</span>
             </div>
-            <!-- <div class="slider__container-pagination"> -->
             <ol class="slider__pagination-list">
               <li class="slider__pagination-item">
                 <button class="slider__pagination-btn slider__pagination-btn--current" type="button">
@@ -135,7 +135,6 @@
                 </button>
               </li>
             </ol>
-            <!-- </div> -->
             <div class="slider__container-arrow">
               <button class="slider__arrow-btn slider__arrow-left" type="button">
                 <span class="visually-hidden">Листать влево</span>
@@ -148,76 +147,149 @@
         </div>
       </div>
     </section>
-    <section class="main__visiting visiting">
-      <h2 class="title visiting__title">Virtual tour</h2>
-      <ul class="visiting__list-cards">
-        <li class="visiting__item-card item-card">
-          <a class="item-card__link" href="https://www.google.com/maps/@48.8606882,2.3356791,3a,90y,328.36h,87.55t/data=!3m7!1e1!3m5!1sAF1QipMZ9YgnArbwEIbTDANeSQYFu9gNqpW_2Sv8FBvY!2e10!3e12!7i4352!8i1815">
-            <img class="item-card__picture" src="#" width="440" height="285" alt="Royal palace">
-            <h3 class="item-card__title">Royal palace</h3>
-            <h4 class="item-card__secondary-title">360° Virtual Tour</h4>
-            <p class="item-card__label">Google Street Panorama View</p>
-          </a>
-        </li>
-        <li class="visiting__item-card item-card">
-          <a class="item-card__link" href="https://www.google.com/maps/@48.8563254,2.3352706,3a,75y,90t/data=!3m7!1e1!3m5!1sAF1QipNRj_CwP4coDMYdCHj6qHeBeJpI2VxU5BUsOX4F!2e10!3e12!7i11000!8i5500">
-            <img class="item-card__picture" src="#" width="440" height="285" alt="Denon Wing">
-            <h3 class="item-card__title">Denon wing</h3>
-            <h4 class="item-card__secondary-title">360° Virtual Tour</h4>
-            <p class="item-card__label">Google Street Panorama View</p>
-          </a>
-        </li>
-        <li class="visiting__item-card item-card">
-          <a class="item-card__link" href="https://www.google.com/maps/@48.8601723,2.3395439,3a,88.4y,322.04h,84.25t/data=!3m7!1e1!3m5!1sAF1QipNMZGQuEA-pAUvIG_eP_2f3gWTKZEJ6XLVJ-Pgb!2e10!3e12!7i10240!8i5120">
-            <img class="item-card__picture" src="#" width="440" height="285" alt="Colonnade perrault">
-            <h3 class="item-card__title">Colonnade perrault</h3>
-            <h4 class="item-card__secondary-title">360° Virtual Tour</h4>
-            <p class="item-card__label">Google Street Panorama View</p>
-          </a>
-        </li>
-        <li class="visiting__item-card item-card">
-          <a class="item-card__link" href="https://www.google.com/maps/@48.860183,2.3356156,3a,90y,177.69h,95.61t/data=!3m7!1e1!3m5!1sAF1QipP7uFZnTITRe-7AEVAgHAfqiCL-03gvBHcYWgF3!2e10!3e12!7i5472!8i2736">
-            <img class="item-card__picture" src="#" width="440" height="285" alt="Greek hall">
-            <h3 class="item-card__title">Greek hall</h3>
-            <h4 class="item-card__secondary-title">360° Virtual Tour</h4>
-            <p class="item-card__label">Google Street Panorama View</p>
-          </a>
-        </li>
-        <li class="visiting__item-card item-card">
-          <a class="item-card__link" href="https://www.google.com/maps/@48.8598788,2.3355157,3a,82.2y,7.53h,94t/data=!3m7!1e1!3m5!1sAF1QipO1wkUUbyzpPjj-OR0mR5etZJT-xl-40XK8rDQ3!2e10!3e12!7i10240!8i5120">
-            <img class="item-card__picture" src="#" width="440" height="285" alt="Mona lisa">
-            <h3 class="item-card__title">Mona lisa</h3>
-            <h4 class="item-card__secondary-title">360° Virtual Tour</h4>
-            <p class="item-card__label">Google Street Panorama View</p>
-          </a>
-        </li>
-        <li class="visiting__item-card item-card">
-          <a class="item-card__link" href="https://www.google.com/maps/@48.8563254,2.3352706,3a,90y,21.26h,79.91t/data=!3m7!1e1!3m5!1sAF1QipPpGAowYatVyk3MMGnZAaQkYm2EUk-Dlca06SS5!2e10!3e12!7i11304!8i5652">
-            <img class="item-card__picture" src="#" width="440" height="285" alt="Night palace">
-            <h3 class="item-card__title">Night palace</h3>
-            <h4 class="item-card__secondary-title">360° Virtual Tour</h4>
-            <p class="item-card__label">Google Street Panorama View</p>
-          </a>
-        </li>
-      </ul>
+
+    <section class="visiting">
+      <div class="wrapper visiting__vrapper">
+        <h2 class="title visiting__title">Virtual tour</h2>
+        <ul class="visiting__list-cards">
+          <li class="visiting__item-card item-card">
+            <a class="item-card__link" href="https://www.google.com/maps/@48.8606882,2.3356791,3a,90y,328.36h,87.55t/data=!3m7!1e1!3m5!1sAF1QipMZ9YgnArbwEIbTDANeSQYFu9gNqpW_2Sv8FBvY!2e10!3e12!7i4352!8i1815">
+              <div class="item-card__picture-container">
+                <picture>
+                  <source width="280" height="180" type="image/webp" media="(max-width: 768px)" srcset="images/virtual-tour/royal-palace-tablet@1x.webp 1x, images/virtual-tour/royal-palace-tablet@2x.webp 2x">
+                  <source width="330" height="215" type="image/webp" media="(max-width: 1024px)" srcset="images/virtual-tour/royal-palace-desktop@1x.webp 1x, images/virtual-tour/royal-palace-desktop@2x.webp 2x">
+                  <source width="440" height="285" type="image/webp" srcset="images/virtual-tour/royal-palace-desktop-xl@1x.webp 1x, images/virtual-tour/royal-palace-desktop-xl@2x.webp 2x">
+                  <source width="280" height="180" type="image/jpeg" media="(max-width: 768px)" srcset="images/virtual-tour/royal-palace-tablet@1x.jpg 1x, images/virtual-tour/royal-palace-tablet@2x.jpg 2x">
+                  <source width="330" height="215" type="image/jpeg" media="(max-width: 1024px)" srcset="images/virtual-tour/royal-palace-desktop@1x.jpg 1x, images/virtual-tour/royal-palace-desktop@2x.jpg 2x">
+                  <img class="item-card__picture" width="440" height="285" alt="Royal palace" loading="lazy" src="images/virtual-tour/royal-palace-desktop-xl@1x.jpg" srcset="images/virtual-tour/royal-palace-desktop-xl@2x.jpg">
+                </picture>
+              </div>
+              <h3 class="item-card__title">Royal palace</h3>
+              <h4 class="item-card__secondary-title">360° Virtual Tour</h4>
+              <p class="item-card__label">Google Street Panorama View</p>
+            </a>
+          </li>
+          <li class="visiting__item-card item-card">
+            <a class="item-card__link" href="https://www.google.com/maps/@48.8563254,2.3352706,3a,75y,90t/data=!3m7!1e1!3m5!1sAF1QipNRj_CwP4coDMYdCHj6qHeBeJpI2VxU5BUsOX4F!2e10!3e12!7i11000!8i5500">
+              <div class="item-card__picture-container">
+                <picture>
+                  <source width="280" height="180" type="image/webp" media="(max-width: 768px)" srcset="images/virtual-tour/denon-wing-tablet@1x.webp 1x, images/virtual-tour/denon-wing-tablet@2x.webp 2x">
+                  <source width="330" height="215" type="image/webp" media="(max-width: 1024px)" srcset="images/virtual-tour/denon-wing-desktop@1x.webp 1x, images/virtual-tour/denon-wing-desktop@2x.webp 2x">
+                  <source width="440" height="285" type="image/webp" srcset="images/virtual-tour/denon-wing-desktop-xl@1x.webp 1x, images/virtual-tour/denon-wing-desktop-xl@2x.webp 2x">
+                  <source width="280" height="180" type="image/jpeg" media="(max-width: 768px)" srcset="images/virtual-tour/denon-wing-tablet@1x.jpg 1x, images/virtual-tour/denon-wing-tablet@2x.jpg 2x">
+                  <source width="330" height="215" type="image/jpeg" media="(max-width: 1024px)" srcset="images/virtual-tour/denon-wing-desktop@1x.jpg 1x, images/virtual-tour/denon-wing-desktop@2x.jpg 2x">
+                  <img class="item-card__picture" width="440" height="285" alt="Denon wing" loading="lazy" src="images/virtual-tour/denon-wing-desktop-xl@1x.jpg" srcset="images/virtual-tour/denon-wing-desktop-xl@2x.jpg">
+                </picture>
+              </div>
+              <h3 class="item-card__title">Denon wing</h3>
+              <h4 class="item-card__secondary-title">360° Virtual Tour</h4>
+              <p class="item-card__label">Google Street Panorama View</p>
+            </a>
+          </li>
+          <li class="visiting__item-card item-card">
+            <a class="item-card__link" href="https://www.google.com/maps/@48.8601723,2.3395439,3a,88.4y,322.04h,84.25t/data=!3m7!1e1!3m5!1sAF1QipNMZGQuEA-pAUvIG_eP_2f3gWTKZEJ6XLVJ-Pgb!2e10!3e12!7i10240!8i5120">
+              <div class="item-card__picture-container">
+                <picture>
+                  <source width="280" height="180" type="image/webp" media="(max-width: 768px)" srcset="images/virtual-tour/collonnade-perrault-tablet@1x.webp 1x, images/virtual-tour/collonnade-perrault-tablet@2x.webp 2x">
+                  <source width="330" height="215" type="image/webp" media="(max-width: 1024px)" srcset="images/virtual-tour/collonnade-perrault-desktop@1x.webp 1x, images/virtual-tour/collonnade-perrault-desktop@2x.webp 2x">
+                  <source width="440" height="285" type="image/webp" srcset="images/virtual-tour/colonnade-perrault-desktop-xl@1x.webp 1x, images/virtual-tour/colonnade-perrault-desktop-xl@2x.webp 2x">
+                  <source width="280" height="180" type="image/jpeg" media="(max-width: 768px)" srcset="images/virtual-tour/collonnade-perrault-tablet@1x.jpg 1x, images/virtual-tour/collonnade-perrault-tablet@2x.jpg 2x">
+                  <source width="330" height="215" type="image/jpeg" media="(max-width: 1024px)" srcset="images/virtual-tour/collonnade-perrault-desktop@1x.jpg 1x, images/virtual-tour/collonnade-perrault-desktop@2x.jpg 2x">
+                  <img class="item-card__picture" width="440" height="285" alt="Colonnade perrault" loading="lazy" src="images/virtual-tour/colonnade-perrault-desktop-xl@1x.jpg" srcset="images/virtual-tour/collonnade-perrault-desktop-xl@2x.jpg">
+                </picture>
+              </div>
+              <h3 class="item-card__title">Colonnade&nbsp;perrault</h3>
+              <h4 class="item-card__secondary-title">360° Virtual Tour</h4>
+              <p class="item-card__label">Google Street Panorama View</p>
+            </a>
+          </li>
+          <li class="visiting__item-card item-card">
+            <a class="item-card__link" href="https://www.google.com/maps/@48.860183,2.3356156,3a,90y,177.69h,95.61t/data=!3m7!1e1!3m5!1sAF1QipP7uFZnTITRe-7AEVAgHAfqiCL-03gvBHcYWgF3!2e10!3e12!7i5472!8i2736">
+              <div class="item-card__picture-container">
+                <picture>
+                  <source width="280" height="180" type="image/webp" media="(max-width: 768px)" srcset="images/virtual-tour/greek-hall-tablet@1x.webp 1x, images/virtual-tour/greek-hall-tablet@2x.webp 2x">
+                  <source width="330" height="215" type="image/webp" media="(max-width: 1024px)" srcset="images/virtual-tour/greek-hall-desktop@1x.webp 1x, images/virtual-tour/greek-hall-desktop@2x.webp 2x">
+                  <source width="440" height="285" type="image/webp" srcset="images/virtual-tour/greek-hall-desktop-xl@1x.webp 1x, images/virtual-tour/greek-hall-desktop-xl@2x.webp 2x">
+                  <source width="280" height="180" type="image/jpeg" media="(max-width: 768px)" srcset="images/virtual-tour/greek-hall-tablet@1x.jpg 1x, images/virtual-tour/greek-hall-tablet@2x.jpg 2x">
+                  <source width="330" height="215" type="image/jpeg" media="(max-width: 1024px)" srcset="images/virtual-tour/greek-hall-desktop@1x.jpg 1x, images/virtual-tour/greek-hall-desktop@2x.jpg 2x">
+                  <img class="item-card__picture" width="440" height="285" alt="Colonnade perrault" loading="lazy" src="images/virtual-tour/greek-hall-desktop-xl@1x.jpg" srcset="images/virtual-tour/greek-hall-desktop-xl@2x.jpg">
+                </picture>
+              </div>
+              <h3 class="item-card__title">Greek hall</h3>
+              <h4 class="item-card__secondary-title">360° Virtual tour</h4>
+              <p class="item-card__label">Google street panorama view</p>
+            </a>
+          </li>
+          <li class="visiting__item-card item-card">
+            <a class="item-card__link" href="https://www.google.com/maps/@48.8598788,2.3355157,3a,82.2y,7.53h,94t/data=!3m7!1e1!3m5!1sAF1QipO1wkUUbyzpPjj-OR0mR5etZJT-xl-40XK8rDQ3!2e10!3e12!7i10240!8i5120">
+              <div class="item-card__picture-container">
+                <picture>
+                  <source width="280" height="180" type="image/webp" media="(max-width: 768px)" srcset="images/virtual-tour/mona-lisa-tablet@1x.webp 1x, images/virtual-tour/mona-lisa-tablet@2x.webp 2x">
+                  <source width="330" height="215" type="image/webp" media="(max-width: 1024px)" srcset="images/virtual-tour/mona-lisa-desktop@1x.webp 1x, images/virtual-tour/mona-lisa-desktop@2x.webp 2x">
+                  <source width="440" height="285" type="image/webp" srcset="images/virtual-tour/mona-lisa-desktop-xl@1x.webp 1x, images/virtual-tour/mona-lisa-desktop-xl@2x.webp 2x">
+                  <source width="280" height="180" type="image/jpeg" media="(max-width: 768px)" srcset="images/virtual-tour/mona-lisa-tablet@1x.jpg 1x, images/virtual-tour/mona-lisa-tablet@2x.jpg 2x">
+                  <source width="330" height="215" type="image/jpeg" media="(max-width: 1024px)" srcset="images/virtual-tour/mona-lisa-desktop@1x.jpg 1x, images/virtual-tour/mona-lisa-desktop@2x.jpg 2x">
+                  <img class="item-card__picture" width="440" height="285" alt="Colonnade perrault" loading="lazy" src="images/virtual-tour/mona-lisa-desktop-xl@1x.jpg" srcset="images/virtual-tour/mona-lisa-desktop-xl@2x.jpg">
+                </picture>
+              </div>
+              <h3 class="item-card__title">Mona lisa</h3>
+              <h4 class="item-card__secondary-title">360° Virtual Tour</h4>
+              <p class="item-card__label">Google Street Panorama View</p>
+            </a>
+          </li>
+          <li class="visiting__item-card item-card">
+            <a class="item-card__link" href="https://www.google.com/maps/@48.8563254,2.3352706,3a,90y,21.26h,79.91t/data=!3m7!1e1!3m5!1sAF1QipPpGAowYatVyk3MMGnZAaQkYm2EUk-Dlca06SS5!2e10!3e12!7i11304!8i5652">
+              <div class="item-card__picture-container">
+                <picture>
+                  <source width="280" height="180" type="image/webp" media="(max-width: 768px)" srcset="images/virtual-tour/night-palace-tablet@1x.webp 1x, images/virtual-tour/night-palace-tablet@2x.webp 2x">
+                  <source width="330" height="215" type="image/webp" media="(max-width: 1024px)" srcset="images/virtual-tour/night-palace-desktop@1x.webp 1x, images/virtual-tour/night-palace-desktop@2x.webp 2x">
+                  <source width="440" height="285" type="image/webp" srcset="images/virtual-tour/night-palace-desktop-xl@1x.webp 1x, images/virtual-tour/night-palace-desktop-xl@2x.webp 2x">
+                  <source width="280" height="180" type="image/jpeg" media="(max-width: 768px)" srcset="images/virtual-tour/night-palace-tablet@1x.jpg 1x, images/virtual-tour/night-palace-tablet@2x.jpg 2x">
+                  <source width="330" height="215" type="image/jpeg" media="(max-width: 1024px)" srcset="images/virtual-tour/night-palace-desktop@1x.jpg 1x, images/virtual-tour/night-palace-desktop@2x.jpg 2x">
+                  <img class="item-card__picture" width="440" height="285" alt="Colonnade perrault" loading="lazy" src="images/virtual-tour/night-palace-desktop-xl@1x.jpg" srcset="images/virtual-tour/night-palace-desktop-xl@2x.jpg">
+                </picture>
+              </div>
+              <h3 class="item-card__title">Night palace</h3>
+              <h4 class="item-card__secondary-title">360° Virtual Tour</h4>
+              <p class="item-card__label">Google Street Panorama View</p>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
+
     <section class="main__explore explore">
-      <div class="explore__wrapper-content">
-        <h2 class="title explore__title">Picture explore</h2>
-        <p class="explore__text explore__text-one">Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
-        <p class="explore__text explore__text-two">It was cleaned in 1984 to remove a <span class="explore__text-color">"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
-        <p class="explore__text explore__text-three">The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
-      </div>
-      <div class="explore__slider slider-explore">
-        <div class="slider-explore__slider-inner">
-          <img class="slider-explore__slider-picture" src="#" width="720" height="700" alt="picture after">
+      <div class="wrapper explore__wrapper">
+        <div class="explore__wrapper-content">
+          <h2 class="title explore__title">Picture explore</h2>
+          <p class="explore__text explore__text-one">Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
+          <p class="explore__text explore__text-two">It was cleaned in 1984 to remove a <span class="explore__text-color">"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
+          <p class="explore__text explore__text-three">The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
         </div>
-        <div class="slider-explore__slider-inner slider-explore__slider-inner--before">
-          <img class="slider-explore__slider-picture" src="#" width="720" height="700" alt="picture before">
+        <div class="explore__slider slider-explore">
+          <div class="slider-explore__slider-inner">
+            <div class="slider-explore__picture-container">
+              <picture>
+                <source width="720" height="700" type="image/webp" srcset="images/explorer-slider/after@1x.webp 1x, images/explorer-slider/after@2x.webp 2x">
+                <img class="slider-explore__picture" width="720" height="700" alt="Picture before" loading="lazy" src="images/explorer-slider/after@1x.jpg" srcset="images/explorer-slider/after@2x.jpg 2x">
+              </picture>
+            </div>
+          </div>
+          <div class="slider-explore__slider-inner slider-explore__slider-inner--before">
+            <div class="slider-explore__picture-container">
+              <picture>
+                <source width="720" height="700" type="image/webp" srcset="images/explorer-slider/before@1x.webp 1x, images/explorer-slider/before@2x.webp 2x">
+                <img class="slider-explore__picture" width="720" height="700" alt="Picture before" loading="lazy" src="images/explorer-slider/before@1x.jpg" srcset="images/explorer-slider/before@2x.jpg 2x">
+              </picture>
+            </div>
+          </div>
+          <div class="slider-explore__slider-toggle">
+            <span class="visually-hidden">Переключатель слайдера было-стало</span>
+          </div>
         </div>
-        <div class="slider-explore__slider-toggle"></div>
       </div>
     </section>
+
     <section class="main__video video">
       <h2 class="title video__title">Video journey</h2>
       <p class="video__text">Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code</p>
