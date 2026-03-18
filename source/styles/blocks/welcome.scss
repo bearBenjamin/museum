@@ -5,7 +5,7 @@
 
 .welcome__wrapper {
   display: grid;
-  grid-template-columns: 600px 1fr;
+  grid-template-columns: auto 1fr;
   grid-template-rows: auto auto 1fr;
 }
 
@@ -32,8 +32,6 @@
   padding: 24px 64px;
   display: block;
 
-  // justify-self: start;
-  // align-self: start;
   place-self: start;
 
   border-radius: 10px;
@@ -69,6 +67,3 @@
   max-width: 1000px;
   justify-self: end;
 }
-
-
-// background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%), url(1.jpg);
