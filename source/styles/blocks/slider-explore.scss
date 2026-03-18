@@ -27,15 +27,17 @@
   transform: translateX(-50%);
   z-index: 1;
 
-  background: linear-gradient(
-    to bottom,
-    $color-white 0%,
-    $color-white calc(50.5% - 20px),
-    transparent calc(50% - 20px),
-    transparent calc(50% + 20px),
-    $color-white calc(50% + 20px),
-    $color-white 100%
-  ) no-repeat center / 4px 100%;
+  background:
+    linear-gradient(
+      to bottom,
+      $color-white 0%,
+      $color-white calc(50.5% - 20px),
+      transparent calc(50% - 20px),
+      transparent calc(50% + 20px),
+      $color-white calc(50% + 20px),
+      $color-white 100%
+    )
+    no-repeat center / 4px 100%;
 }
 
 .slider-explore__slider-toggle::before {
