@@ -291,51 +291,95 @@
     </section>
 
     <section class="main__video video">
-      <h2 class="title video__title">Video journey</h2>
-      <p class="video__text">Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code</p>
-      <div class="video__player player">
-        <video class="player__video" src="#" width="1440" height="650"></video>
-        <button class="player__toggle-play" type="button">
-          <span class="visually-hidden">Button play</span>
-        </button>
-        <div class="player__controls">
-          <button class="player__btn-play" type="button">
+      <div class="wrapper video__wrapper">
+        <h2 class="title video__title">Video journey</h2>
+        <p class="video__text">Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code</p>
+        <div class="video__player player">
+          <video class="player__video" id="my-player" src="images/video/video0.mp4" preload="metadata" poster="images/video/poster0.jpg" playsinline="playsinline">
+          </video>
+          <button class="player__toggle-play" type="button">
             <span class="visually-hidden">Button play</span>
           </button>
-          <div class="player__progress">
-            <div class="player__progress-field"></div>
+          <div class="player__controls">
+            <button class="player__btn-play" type="button">
+              <span class="visually-hidden">Button play</span>
+            </button>
+            <div class="player__progress">
+              <input class="player__progress-field" id="video" name="video" type="range" min="0" max="100" value="53" step="1">
+              <label class="player__progress-label visually-hidden" for="video">Video</label>
+            </div>
+            <button class="player__btn-volume" type="button">
+              <span class="visually-hidden">Button volume</span>
+            </button>
+            <div class="player__range-volume"><input class="player__range-volume-field" type="range" name="volume" id="volume" min="0" max="100" value="43">
+              <label class="player__range-volume-label visually-hidden" for="volume">Volume</label>
+            </div>
+            <button class="player__btn-full-screen" type="button">
+              <span class="visually-hidden">Full screen</span>
+            </button>
           </div>
-          <button class="player__btn-volume" type="button">
-            <span class="visually-hidden">Button volume</span>
-          </button>
-          <input class="player__range-volume" type="range" name="volume" id="volume">
-          <label class="player__range-volume-label visually-hidden" for="volume">Volume</label>
-          <button class="player__btn-full-screen" type="button">
-            <span class="visually-hidden">Full screen</span>
-          </button>
+        </div>
+        <div class="video__slider video-slider">
+          <ul class="video-slider__list">
+            <li class="video-slider__item">
+              <video class="video-slider__video" width="452" height="254" src="images/video/video3.mp4" preload="metadata" poster="images/video/poster3.jpg" playsinline="playsinline"></video>
+              <div class="video-slider__container-item-title">
+                <p class="video-slider__item-title">Exposition - Le Corps et l’Ame. De Dona...</p>
+              </div>
+              <button class="video-slider__item-btn" type="button">
+                <span class="visually-hidden">Button play item slider</span>
+              </button>
+            </li>
+            <li class="video-slider__item">
+              <video class="video-slider__video" width="452" height="254" src="images/video/video1.mp4" preload="metadata" poster="images/video/poster1.jpg" playsinline="playsinline"></video>
+              <div class="video-slider__container-item-title">
+                <p class="video-slider__item-title">Au Louvre ! La Venus de Milo</p>
+              </div>
+              <button class="video-slider__item-btn" type="button">
+                <span class="visually-hidden">Button play item slider</span>
+              </button>
+            </li>
+            <li class="video-slider__item">
+              <video class="video-slider__video" width="452" height="254" src="images/video/video2.mp4" preload="metadata" poster="images/video/poster2.jpg" playsinline="playsinline"></video>
+              <div class="video-slider__container-item-title">
+                <p class="video-slider__item-title">Promenade dans les collections mesop...</p>
+              </div>
+              <button class="video-slider__item-btn" type="button">
+                <span class="visually-hidden">Button play item slider</span>
+              </button>
+            </li>
+          </ul>
+          <ol class="video-slider__pagination">
+            <li class="video-slider__pagination-item">
+              <button class="video-slider__pagination-item-btn video-slider__pagination-item-btn--current" type="button">
+                <span class="visually-hidden">Video 1</span>
+              </button>
+            </li>
+            <li class="video-slider__pagination-item">
+              <button class="video-slider__pagination-item-btn" type="button">
+                <span class="visually-hidden">Video 2</span>
+              </button>
+            </li>
+            <li class="video-slider__pagination-item">
+              <button class="video-slider__pagination-item-btn" type="button">
+                <span class="visually-hidden">Video 3</span>
+              </button>
+            </li>
+            <li class="video-slider__pagination-item">
+              <button class="video-slider__pagination-item-btn" type="button">
+                <span class="visually-hidden">Video 4</span>
+              </button>
+            </li>
+            <li class="video-slider__pagination-item">
+              <button class="video-slider__pagination-item-btn" type="button">
+                <span class="visually-hidden">Video 5</span>
+              </button>
+            </li>
+          </ol>
         </div>
       </div>
-      <div class="video__slider video-slider">
-        <ul class="video-slider__list">
-          <li class="video-slider__item">
-            <video class="video-slider__video" width="452" height="254"></video>
-          </li>
-          <li class="video-slider__item">
-            <video class="video-slider__video" width="452" height="254"></video>
-          </li>
-          <li class="video-slider__item">
-            <video class="video-slider__video" width="452" height="254"></video>
-          </li>
-        </ul>
-        <ol class="video-slider__pagination">
-          <li class="video-slider__pagination-item"></li>
-          <li class="video-slider__pagination-item"></li>
-          <li class="video-slider__pagination-item"></li>
-          <li class="video-slider__pagination-item"></li>
-          <li class="video-slider__pagination-item"></li>
-        </ol>
-      </div>
     </section>
+
     <section class="main__gallery gallery">
       <h2 class="title gallery__title">Art gallery</h2>
       <ul class="gallery__list">
@@ -386,6 +430,7 @@
         </li>
       </ul>
     </section>
+
     <section class="main__tickets ticket">
       <h2 class="title ticket__title">Buy tickets</h2>
       <div class="ticket__wrapper">

@@ -1,9 +1,38 @@
-// .video {}
+.video {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  color: $color-black;
+  background-color: $color-white;
+}
 
-// .video-title {}
+.video__wrapper {
+  display: grid;
+  grid-template-columns: 605px 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 40px 115px;
+}
 
-// .video-text {}
+.video__title {
+  margin: 0;
+  margin-bottom: 35px;
+  grid-column: 1 / 2;
+  color: $color-gold;
+}
 
-// .video__player {}
+.video__text {
+  margin: 0;
+  margin-bottom: 35px;
+  grid-column: 2 / 3;
+  align-self: center;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 175%;
+}
 
-// .video__slider {}
+.video__player {
+  grid-area: 2 / 1 / 3 / -1;
+}
+
+.video__slider {
+  grid-area: 3 / 1 / 4 / -1;
+}
