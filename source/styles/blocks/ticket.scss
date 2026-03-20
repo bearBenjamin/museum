@@ -1,44 +1,222 @@
-// .ticket {}
+.ticket {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  color: $color-black;
+  background-color: $color-white;
+}
 
-// .ticket__title {}
+.ticket__title {
+  position: relative;
+  margin-bottom: 103px;
+  color: $color-gold;
+}
 
-// .ticket__wrapper {}
+.ticket__title::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  background-color: $color-red-dark;
+}
 
-// .ticket__pictrure {}
+.ticket__inner {
+  display: flex;
+}
 
-// .ticket__filter-group {}
+.ticket__picture-container {
+  margin-right: 60px;
+}
 
-// .ticket__filter-group-title {}
+.ticket__picture {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
-// .ticket__filter-group-list-type {}
+.ticket__filter-group {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 
-// .ticket__filter-group-item {}
+.ticket__filter-group-type {
+  margin-right: 240px;
+}
 
-// .ticket__filter-group-control {}
+.ticket__filter-group-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 28px;
+}
 
-// .ticket__filter-group-input {}
+.ticket__filter-group-title--amount {
+  margin-bottom: 25px;
+  text-align: right;
+}
 
-// .ticket__filter-group-control-mark {}
+.ticket__filter-group-list-type,
+.ticket__filter-group-list-amount {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-// .ticket__filter-group-control-label {}
+.ticket__filter-group-item-type {
+  margin-bottom: 25px;
+}
 
-// .ticket__control-amount {}
+.ticket__filter-group-control {
+  position: relative;
+  padding-left: 40px;
+  width: 270px;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 22px;
+}
 
-// .ticket__basic-wrapper {}
+.ticket__filter-group-control-mark {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 17px;
+  height: 17px;
+}
 
-// .ticket__decrease {}
+.ticket__filter-group-control-mark--temp {
+  width: 18px;
+  height: 18px;
+}
 
-// .ticket__input-basic-amount {}
+.ticket__filter-group-input[type="radio"] + .ticket__filter-group-control-mark {
+  border-radius: 50%;
+  border: 2px solid $color-black;
+}
 
-// .ticket__increase {}
+.ticket__filter-group-input[type="radio"]:checked + .ticket__filter-group-control-mark::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $color-black;
+}
 
-// .ticket__sum-wrapper {}
+.ticket__filter-group-control-label {
+  display: inline-block;
+  width: 230px;
+  overflow-wrap: break-word;
+}
+
+.ticket__filter-group-list-amount {
+  margin-bottom: 50px;
+}
+
+.ticket__filter-group-item-amount {
+  margin-bottom: 10px;
+  width: 150px;
+
+  font-weight: 300;
+  font-size: 22px;
+}
+
+.ticket__filter-group-item-amount:last-child {
+  margin-bottom: 0;
+}
+
+.ticket__control-amount {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.ticket__basic-wrapper {
+  display: flex;
+  border: 3px solid $color-black;
+}
+
+.ticket__decrease {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  width: 50px;
+  height: 50px;
+
+
+  background-color: $color-black;
+  mask-image: url("../../icons/stack.svg#ticket-minus");
+  mask-position: center;
+  mask-size: 18px 38px;
+  mask-repeat: no-repeat;
+}
+
+.ticket__input-basic-amount {
+  margin: 0;
+  padding: 12px 19px;
+  border: none;
+
+  width: 50px;
+  font-weight: 300;
+  font-size: 22px;
+  text-align: center;
+}
+
+.ticket__increase {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  width: 50px;
+  height: 50px;
+
+
+  background-color: $color-black;
+  mask-image: url("../../icons/stack.svg#ticket-plus");
+  mask-position: center;
+  mask-size: 19px 38px;
+  mask-repeat: no-repeat;
+}
+
+.ticket__sum-wrapper {
+  margin-bottom: 52px;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.02em;
+}
 
 // .ticket__sum-text {}
 
 // .ticket__sun-number {}
 
-// .ticket-toggle {}
+.ticket__toggle {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  position: absolute;
+  top: 342px;
+  left: -25px;
+  padding-right: 38px;
+  padding-left: 38px;
+  width: 175px;
+  height: 50px;
+
+  font-family: $basic-family;
+  font-weight: 300;
+  font-size: 22px;
+  letter-spacing: 0.09em;
+  text-align: center;
+  color: $color-white;
+  background-color: $color-black;
+
+}
 
 // .ticket__inner-form {}
 
