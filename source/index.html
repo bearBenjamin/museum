@@ -510,229 +510,89 @@
     </section>
 
     <section class="main__tickets ticket">
-      <h2 class="title ticket__title">Buy tickets</h2>
-      <div class="ticket__wrapper">
-        <img class="ticket__picture" src="#" width="720" height="550" alt="picture gallery Louvre">
-        <fieldset class="ticket__filter-group" form="form-buy-ticket">
-          <legend class="ticket__filter-group-title">Ticket type</legend>
-          <ul class="ticket__filter-group-list-type">
-            <li class="ticket__filter-group-item">
-              <label class="ticket__filter-group-control">
-                <input class="ticket__filter-group-input visually-hidden" type="radio" form="form-buy-ticket" name="type-ticket" value="permanent">
-                <span class="ticket__filter-group-control-mark"></span>
-                <span class="ticket__filter-group-control-label">Permanent exhibition</span>
-              </label>
-            </li>
-            <li class="ticket__filter-group-item">
-              <label class="ticket__filter-group-control">
-                <input class="ticket__filter-group-input visually-hidden" type="radio" form="form-buy-ticket" name="type-ticket" value="temporary">
-                <span class="ticket__filter-group-control-mark"></span>
-                <span class="ticket__filter-group-control-label">Temporary exhibition</span>
-              </label>
-            </li>
-            <li class="ticket__filter-group-item">
-              <label class="ticket__filter-group-control">
-                <input class="ticket__filter-group-input visually-hidden" type="radio" form="form-buy-ticket" name="type-ticket" value="combined">
-                <span class="ticket__filter-group-control-mark"></span>
-                <span class="ticket__filter-group-control-label">Combined admission</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="ticket__filter-group" form="form-buy-ticket">
-          <legend class="ticket__filter-group-title">Amount</legend>
-          <ul class="ticket__filter-group-list-amount">
-            <li class="ticket__filter-group-item">
-              <label class="ticket__control-amount" for="basic">Basic 18+</label>
-              <div class="ticket__basic-wrapper">
-                <button class="ticket__decrease" type="button">
-                  <span class="visually-hidden">Кнопка уменьшения количества билетов</span>
-                </button>
-                <input class="ticket__input-basic-amount" type="number" form="form-buy-ticket" min="0" max="99" name="basic" id="basic" value="1">
-                <button class="ticket__increase" type="button">
-                  <span class="visually-hidden">Кнопка увеличения количества билетов</span>
-                </button>
-              </div>
-            </li>
-            <li class="ticket__filter-group-item">
-              <label class="ticket__control-amount" for="senior">Senior 65+</label>
-              <div class="ticket__basic-wrapper">
-                <button class="ticket__decrease" type="button">
-                  <span class="visually-hidden">Кнопка уменьшения количества билетов</span>
-                </button>
-                <input class="ticket__input-basic-amount" type="number" form="form-buy-ticket" min="0" max="99" name="senior" id="senior" value="1">
-                <button class="ticket__increase" type="button">
-                  <span class="visually-hidden">Кнопка увеличения количества билетов</span>
-                </button>
-              </div>
-            </li>
-          </ul>
-          <div class="ticket__sum-wrapper">
-            <span class="ticket__sum-text">Total €</span>
-            <span class="ticket__sum-number">220</span>
+      <div class="wrapper">
+        <h2 class="title ticket__title">Buy tickets</h2>
+        <div class="ticket__inner">
+          <div class="ticket__picture-container">
+            <picture>
+              <source width="380" height="160" type="image/webp" media="(max-width: 420px)" srcset="images/ticket-page/buy-ticket-page-mobile@1x.webp 1x, images/ticket-page/buy-ticket-page-mobile@2x.webp 2x">
+              <source width="444" height="340" type="image/webp" media="(max-width: 768px)" srcset="images/ticket-page/buy-ticket-page-tablet@1x.webp 1x, images/ticket-page/buy-ticket-page-tablet@2x.webp 2x">
+              <source width="700" height="440" type="image/webp" media="(max-width: 1024px)" srcset="images/ticket-page/buy-ticket-page-desktop@1x.webp 1x, images/ticket-page/buy-ticket-page-desktop@2x.webp 2x">
+              <source width="720" height="550" type="image/webp" srcset="images/ticket-page/buy-ticket-page-desktop-xl@1x.webp 1x, images/ticket-page/buy-ticket-page-desktop-xl@2x.webp 2x">
+              <source width="380" height="160" type="image/jpeg" media="(max-width: 420px)" srcset="images/ticket-page/buy-ticket-page-mobile@1x.jpg 1x, images/ticket-page/buy-ticket-page-mobile@2x.jpg 2x">
+              <source width="444" height="340" type="image/jpeg" media="(max-width: 768px)" srcset="images/ticket-page/buy-ticket-page-tablet@1x.jpg 1x, images/ticket-page/buy-ticket-page-tablet@2x.jpg 2x">
+              <source width="700" height="440" type="image/jpeg" media="(max-width: 1024px)" srcset="images/ticket-page/buy-ticket-page-desktop@1x.jpg 1x, images/ticket-page/buy-ticket-page-desktop@2x.jpg 2x">
+              <img class="ticket__picture" width="720" height="550" alt="picture ticket page" loading="lazy" src="images/ticket-page/buy-ticket-page-desktop-xl@1x.jpg" srcset="images/ticket-page/buy-ticket-page-desktop-xl@2x.jpg 2x">
+            </picture>
           </div>
-        </fieldset>
-        <button class="ticket__toggle" type="button">
-          <span class="visually-hidden">Показать форму покупки билетов</span>
-          Buy now
-        </button>
-      </div>
-      <div class="ticket__inner-form">
-        <section class="ticket__form-ticket">
-          <h2 class="title ticket__form-title">Booking tickets</h2>
-          <p class="ticket__text">Tour to Louvre</p>
-          <form class="ticket__form form-ticket" action="#" method="post" id="form-buy-ticket">
-            <button class="form-ticket__button-close" type="reset">
-              <span class="visually-hidden">Close button</span>
-            </button>
-            <div class="form-ticket__wrapper">
-              <div class="form-ticket__wrapper-one">
-                <fieldset class="form-ticket__filter-group">
-                  <legend class="form-ticket__title visually-hidden">Date</legend>
-                  <label class="form-ticket__label visually-hidden" for="date">Choose a date</label>
-                  <select class="form-ticket__date" id="date" form="form-buy-ticket" name="date">
-                    <option value="" disabled selected>Date</option>
-                  </select>
-                  <label class="form-ticket__label visually-hidden" for="time">Choose a time</label>
-                  <select class="form-ticket__time" id="time" form="form-buy-ticket" name="time">
-                    <option value="" disabled selected>Time</option>
-                  </select>
-                </fieldset>
-                <fieldset class="form-ticket__filter-group">
-                  <legend class="form-ticket__title visually-hidden">Personal data</legend>
-                  <label class="form-ticket__label visually-hidden" for="name">Name</label>
-                  <input class="form-ticket__name" type="text" id="name" name="name" value="Name">
-                  <label class="form-ticket__label visually-hidden" for="e-mail">E-mail</label>
-                  <input class="form-ticket__e-mail" type="text" id="e-mail" name="mail" value="E-mail">
-                  <label class="form-ticket__label visually-hidden" for="phone">Phone</label>
-                  <input class="form-ticket__phone" type="text" id="phone" name="phone" value="Phone">
-                  <label class="form-ticket__label visually-hidden" for="ticket-type">Ticket Type</label>
-                  <select class="form-ticket__ticket-type" id="ticket-type" form="form-buy-ticket" name="ticket-type">
-                    <option value="" disabled selected>Ticket Type</option>
-                    <option value="Basic">Basic</option>
-                    <option value="Senior">Senior</option>
-                  </select>
-                </fieldset>
-                <fieldset class="form-ticket__filter-group">
-                  <legend class="form-ticket__entry-title">Entry ticket</legend>
-                  <ul class="form-ticket__entry-list">
-                    <li class="form-ticket__entry-item">
-                      <label class="form-ticket__control-entry" for="basic-form">Basic 18+ (20 €)</label>
-                      <div class="form-ticket__entry-wrapper">
-                        <button class="form-ticket__decrease form-ticket__decrease--color" type="button">
-                          <span class="visually-hidden">Кнопка уменьшения количества билетов</span>
-                        </button>
-                        <input class="form-ticket__input-basic-entry" type="number" form="form-buy-ticket" min="0" max="99" name="basic" id="basic-form" value="2">
-                        <button class="form-ticket__increase form-ticket__increase--color" type="button">
-                          <span class="visually-hidden">Кнопка увеличения количества билетов</span>
-                        </button>
-                      </div>
-                    </li>
-                    <li class="form-ticket__entry-item">
-                      <label class="form-ticket__control-entry" for="senior-form">Senior 65+ (10 €)</label>
-                      <div class="form-ticket__wrapper">
-                        <button class="form-ticket__decrease form-ticket__decrease--color" type="button">
-                          <span class="visually-hidden">Кнопка уменьшения количества билетов</span>
-                        </button>
-                        <input class="form-ticket__input-senior-entry" type="number" form="form-buy-ticket" min="0" max="99" name="senior" id="senior-form" value="2">
-                        <button class="form-ticket__increase form-ticket__increase--color" type="button">
-                          <span class="visually-hidden">Кнопка увеличения количества билетов</span>
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                </fieldset>
-              </div>
-
-              <div class="form-ticket__wrapper-two">
-                <div class="form-ticket__inner-one">
-                  <div class="form-ticket__innert-info-ticket">
-                    <div class="form-ticket__content-inner">
-                      <h2 class="form-ticket__secondary-title">Overview</h2>
-                      <p class="form-ticket__text">Tour to Louvre</p>
-                      <ul class="form-ticket__data-ticket-list">
-                        <li class="form-ticket__data-item">Friday, August 19</li>
-                        <li class="form-ticket__data-item">16 : 30</li>
-                        <li class="form-ticket__data-item">Temporary exhibition</li>
-                      </ul>
-                    </div>
-                    <img class="form-ticket__ticket-picture" src="#" width="150" height="120" alt="picture ticket">
-                  </div>
-                  <div class="form-ticket__innert-price-ticket">
-                    <ul class="form-ticket__price-list">
-                      <li class="form-ticket__price-item">
-                        <span class="form-ticket__price-count">2</span>
-                        <span class="form-ticket__price-name">Basic (20 €)</span>
-                        <span class="form-ticket__price-sum">40 €</span>
-                      </li>
-                      <li class="form-ticket__price-item">
-                        <span class="form-ticket__price-count">2</span>
-                        <span class="form-ticket__price-name">Senior (10 €)</span>
-                        <span class="form-ticket__price-sum">20 €</span>
-                      </li>
-                      <li class="form-ticket__price-item">
-                        <span class="form-ticket__total-text">Total:</span>
-                        <span class="form-ticket__total-sum">60 €</span>
-                      </li>
-                    </ul>
-                  </div>
+          <fieldset class="ticket__filter-group ticket__filter-group-type" form="form-buy-ticket">
+            <legend class="ticket__filter-group-title">Ticket type</legend>
+            <ul class="ticket__filter-group-list-type">
+              <li class="ticket__filter-group-item-type">
+                <label class="ticket__filter-group-control">
+                  <input class="ticket__filter-group-input visually-hidden" type="radio" form="form-buy-ticket" name="type-ticket" value="permanent" checked>
+                  <span class="ticket__filter-group-control-mark"></span>
+                  <span class="ticket__filter-group-control-label">Permanent exhibition</span>
+                </label>
+              </li>
+              <li class="ticket__filter-group-item-type">
+                <label class="ticket__filter-group-control">
+                  <input class="ticket__filter-group-input visually-hidden" type="radio" form="form-buy-ticket" name="type-ticket" value="temporary">
+                  <span class="ticket__filter-group-control-mark ticket__filter-group-control-mark--temp"></span>
+                  <span class="ticket__filter-group-control-label">Temporary exhibition</span>
+                </label>
+              </li>
+              <li class="ticket__filter-group-item-type">
+                <label class="ticket__filter-group-control">
+                  <input class="ticket__filter-group-input visually-hidden" type="radio" form="form-buy-ticket" name="type-ticket" value="combined">
+                  <span class="ticket__filter-group-control-mark"></span>
+                  <span class="ticket__filter-group-control-label">Combined admission</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="ticket__filter-group" form="form-buy-ticket">
+            <legend class="ticket__filter-group-title ticket__filter-group-title--amount">Amount</legend>
+            <ul class="ticket__filter-group-list-amount">
+              <li class="ticket__filter-group-item-amount">
+                <label class="ticket__control-amount" for="basic">Basic 18+</label>
+                <div class="ticket__basic-wrapper">
+                  <button class="ticket__decrease" type="button">
+                    <span class="visually-hidden">Кнопка уменьшения количества билетов</span>
+                  </button>
+                  <input class="ticket__input-basic-amount" type="number" form="form-buy-ticket" min="0" max="99" name="basic" id="basic" value="1">
+                  <button class="ticket__increase" type="button">
+                    <span class="visually-hidden">Кнопка увеличения количества билетов</span>
+                  </button>
                 </div>
-
-                <div class="form-ticket__inner-two"><!-- здесь будет сетка grid -->
-                  <label class="form-ticket__label-card" for="card-number">Card number</label>
-                  <input class="form-ticket__input-card" type="text" id="card-number" name="card-number">
-                  <fieldset class="form-ticket__date-card-group">
-                    <legend class="form-ticket__date-card-group-title">Expiration date</legend>
-                    <div class="form-ticket__field-row">
-                      <div class="form-ticket__field-row-one">
-                        <label class="form-ticket__label-date-card visually-hidden" for="date-card">Date</label>
-                        <input class="form-ticket__input-date-card" type="text" id="date-card" name="date-card">
-                        <div class="form-ticket__toggle-button">
-                          <button class="form-ticket__button-up" type="button">
-                            <span class="visually-hidden">Button up</span>
-                          </button>
-                          <button class="form-ticket__button-down" type="button">
-                            <span class="visually-hidden">Button down</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="form-ticket__field-row-two">
-                        <label class="form-ticket__label-year-card visually-hidden" for="year-card">Year</label>
-                        <input class="form-ticket__input-year-card" type="text" id="year-card" name="year-card">
-                        <div class="form-ticket__toggle-button">
-                          <button class="form-ticket__button-year-up" type="button">
-                            <span class="visually-hidden">Button up</span>
-                          </button>
-                          <button class="form-ticket__button-year-down" type="button">
-                            <span class="visually-hidden">Button down</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </fieldset>
-                  <label class="form-ticket__label-name-card" for="card-name">Card number</label>
-                  <input class="form-ticket__input-name-card" type="text" id="card-name" name="card-name">
-                  <div class="form-ticket__icon-container">
-                    <img class="form-ticket__icon-visa" src="#" width="55" height="16" alt="icon visa">
-                    <img class="form-ticket__icon-master" src="#" width="53" height="32" alt="icon mastercard">
-                  </div>
+              </li>
+              <li class="ticket__filter-group-item-amount">
+                <label class="ticket__control-amount" for="senior">Senior 65+</label>
+                <div class="ticket__basic-wrapper">
+                  <button class="ticket__decrease" type="button">
+                    <span class="visually-hidden">Кнопка уменьшения количества билетов</span>
+                  </button>
+                  <input class="ticket__input-basic-amount" type="number" form="form-buy-ticket" min="0" max="99" name="senior" id="senior" value="1">
+                  <button class="ticket__increase" type="button">
+                    <span class="visually-hidden">Кнопка увеличения количества билетов</span>
+                  </button>
                 </div>
-                <div class="form-ticket__inner-three">
-                  <div class="form-ticket__black-square"></div>
-                  <label class="form-ticket__label-cv" for="cvc">CVC/CVV</label>
-                  <input class="form-ticket__input-cv" type="text" id="cvc" name="cvc">
-                  <p class="form-ticket__card-cvc-text">The last 3 or 4 digits on back of the card</p>
-                </div>
-                <button class="form-ticket__submit" type="submit">
-                  <span class="visually-hidden">Button submit</span>
-                  Book
-                </button>
-              </div>
+              </li>
+            </ul>
+            <div class="ticket__sum-wrapper">
+              <span class="ticket__sum-text">Total €</span>
+              <span class="ticket__sum-number">220</span>
             </div>
-          </form>
-        </section>
+            <button class="ticket__toggle" type="button">
+              <span class="visually-hidden">Показать форму покупки билетов</span>
+              Buy now
+            </button>
+          </fieldset>
+        </div>
       </div>
+
     </section>
+
     <section class="main__parallax parallax">
       <h2 class="visually-hidden">Parallax</h2>
       <div class="parallax__wrapper">
@@ -824,6 +684,163 @@
       <p class="info-developer__name">Username</p>
     </section>
   </footer>
+
+  <div class="booking-modal">
+    <section class="booking-modal__content">
+      <h2 class="title booking-modal__title">Booking tickets</h2>
+      <p class="booking-modal__subtitle">Tour to Louvre</p>
+      <form class="booking-modal__form form-ticket" action="#" method="post" id="form-buy-ticket">
+        <button class="form-ticket__button-close" type="reset">
+          <span class="visually-hidden">Close button</span>
+        </button>
+        <div class="form-ticket__wrapper">
+          <div class="form-ticket__wrapper-one">
+            <fieldset class="form-ticket__filter-group">
+              <legend class="form-ticket__title visually-hidden">Date</legend>
+              <label class="form-ticket__label visually-hidden" for="date">Choose a date</label>
+              <select class="form-ticket__date" id="date" form="form-buy-ticket" name="date">
+                <option value="" disabled selected>Date</option>
+              </select>
+              <label class="form-ticket__label visually-hidden" for="time">Choose a time</label>
+              <select class="form-ticket__time" id="time" form="form-buy-ticket" name="time">
+                <option value="" disabled selected>Time</option>
+              </select>
+            </fieldset>
+            <fieldset class="form-ticket__filter-group">
+              <legend class="form-ticket__title visually-hidden">Personal data</legend>
+              <label class="form-ticket__label visually-hidden" for="name">Name</label>
+              <input class="form-ticket__name" type="text" id="name" name="name" value="Name">
+              <label class="form-ticket__label visually-hidden" for="e-mail">E-mail</label>
+              <input class="form-ticket__e-mail" type="text" id="e-mail" name="mail" value="E-mail">
+              <label class="form-ticket__label visually-hidden" for="phone">Phone</label>
+              <input class="form-ticket__phone" type="text" id="phone" name="phone" value="Phone">
+              <label class="form-ticket__label visually-hidden" for="ticket-type">Ticket Type</label>
+              <select class="form-ticket__ticket-type" id="ticket-type" form="form-buy-ticket" name="ticket-type">
+                <option value="" disabled selected>Ticket Type</option>
+                <option value="Basic">Basic</option>
+                <option value="Senior">Senior</option>
+              </select>
+            </fieldset>
+            <fieldset class="form-ticket__filter-group">
+              <legend class="form-ticket__entry-title">Entry ticket</legend>
+              <ul class="form-ticket__entry-list">
+                <li class="form-ticket__entry-item">
+                  <label class="form-ticket__control-entry" for="basic-form">Basic 18+ (20 €)</label>
+                  <div class="form-ticket__entry-wrapper">
+                    <button class="form-ticket__decrease form-ticket__decrease--color" type="button">
+                      <span class="visually-hidden">Кнопка уменьшения количества билетов</span>
+                    </button>
+                    <input class="form-ticket__input-basic-entry" type="number" form="form-buy-ticket" min="0" max="99" name="basic" id="basic-form" value="2">
+                    <button class="form-ticket__increase form-ticket__increase--color" type="button">
+                      <span class="visually-hidden">Кнопка увеличения количества билетов</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="form-ticket__entry-item">
+                  <label class="form-ticket__control-entry" for="senior-form">Senior 65+ (10 €)</label>
+                  <div class="form-ticket__wrapper">
+                    <button class="form-ticket__decrease form-ticket__decrease--color" type="button">
+                      <span class="visually-hidden">Кнопка уменьшения количества билетов</span>
+                    </button>
+                    <input class="form-ticket__input-senior-entry" type="number" form="form-buy-ticket" min="0" max="99" name="senior" id="senior-form" value="2">
+                    <button class="form-ticket__increase form-ticket__increase--color" type="button">
+                      <span class="visually-hidden">Кнопка увеличения количества билетов</span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+
+          <div class="form-ticket__wrapper-two">
+            <div class="form-ticket__inner-one">
+              <div class="form-ticket__innert-info-ticket">
+                <div class="form-ticket__content-inner">
+                  <h2 class="form-ticket__secondary-title">Overview</h2>
+                  <p class="form-ticket__text">Tour to Louvre</p>
+                  <ul class="form-ticket__data-ticket-list">
+                    <li class="form-ticket__data-item">Friday, August 19</li>
+                    <li class="form-ticket__data-item">16 : 30</li>
+                    <li class="form-ticket__data-item">Temporary exhibition</li>
+                  </ul>
+                </div>
+                <img class="form-ticket__ticket-picture" src="#" width="150" height="120" alt="picture ticket">
+              </div>
+              <div class="form-ticket__innert-price-ticket">
+                <ul class="form-ticket__price-list">
+                  <li class="form-ticket__price-item">
+                    <span class="form-ticket__price-count">2</span>
+                    <span class="form-ticket__price-name">Basic (20 €)</span>
+                    <span class="form-ticket__price-sum">40 €</span>
+                  </li>
+                  <li class="form-ticket__price-item">
+                    <span class="form-ticket__price-count">2</span>
+                    <span class="form-ticket__price-name">Senior (10 €)</span>
+                    <span class="form-ticket__price-sum">20 €</span>
+                  </li>
+                  <li class="form-ticket__price-item">
+                    <span class="form-ticket__total-text">Total:</span>
+                    <span class="form-ticket__total-sum">60 €</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="form-ticket__inner-two"><!-- здесь будет сетка grid -->
+              <label class="form-ticket__label-card" for="card-number">Card number</label>
+              <input class="form-ticket__input-card" type="text" id="card-number" name="card-number">
+              <fieldset class="form-ticket__date-card-group">
+                <legend class="form-ticket__date-card-group-title">Expiration date</legend>
+                <div class="form-ticket__field-row">
+                  <div class="form-ticket__field-row-one">
+                    <label class="form-ticket__label-date-card visually-hidden" for="date-card">Date</label>
+                    <input class="form-ticket__input-date-card" type="text" id="date-card" name="date-card">
+                    <div class="form-ticket__toggle-button">
+                      <button class="form-ticket__button-up" type="button">
+                        <span class="visually-hidden">Button up</span>
+                      </button>
+                      <button class="form-ticket__button-down" type="button">
+                        <span class="visually-hidden">Button down</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="form-ticket__field-row-two">
+                    <label class="form-ticket__label-year-card visually-hidden" for="year-card">Year</label>
+                    <input class="form-ticket__input-year-card" type="text" id="year-card" name="year-card">
+                    <div class="form-ticket__toggle-button">
+                      <button class="form-ticket__button-year-up" type="button">
+                        <span class="visually-hidden">Button up</span>
+                      </button>
+                      <button class="form-ticket__button-year-down" type="button">
+                        <span class="visually-hidden">Button down</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <label class="form-ticket__label-name-card" for="card-name">Card number</label>
+              <input class="form-ticket__input-name-card" type="text" id="card-name" name="card-name">
+              <div class="form-ticket__icon-container">
+                <img class="form-ticket__icon-visa" src="#" width="55" height="16" alt="icon visa">
+                <img class="form-ticket__icon-master" src="#" width="53" height="32" alt="icon mastercard">
+              </div>
+            </div>
+            <div class="form-ticket__inner-three">
+              <div class="form-ticket__black-square"></div>
+              <label class="form-ticket__label-cv" for="cvc">CVC/CVV</label>
+              <input class="form-ticket__input-cv" type="text" id="cvc" name="cvc">
+              <p class="form-ticket__card-cvc-text">The last 3 or 4 digits on back of the card</p>
+            </div>
+            <button class="form-ticket__submit" type="submit">
+              <span class="visually-hidden">Button submit</span>
+              Book
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+
 </body>
 
 </html>
