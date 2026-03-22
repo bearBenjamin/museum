@@ -1,5 +1,9 @@
-// .paralax {}
-
-// .parallax__wrapper {}
-
-// .parallax__img {}
+.parallax__wrapper {
+  height: 400px;
+  background-image: url("../../images/parallax.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-white;
+}

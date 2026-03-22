@@ -1,7 +1,27 @@
-// .info-developer {}
+.info-developer {
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0.09em;
+  color: $color-white;
+  background-color: $color-black;
+}
 
-// .info-developer__copyright {}
+.info-developer__wrapper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-// .info-developer__school {}
+.info-developer__copyright {
+  margin: 0;
+}
 
-// .info-developer__name {}
+.info-developer__school,
+.info-developer__name {
+  display: block;
+  color: $color-white;
+  text-decoration: none;
+}
