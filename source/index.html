@@ -560,7 +560,7 @@
                   <button class="ticket__decrease" type="button">
                     <span class="visually-hidden">Кнопка уменьшения количества билетов</span>
                   </button>
-                  <input class="ticket__input-basic-amount" type="number" form="form-buy-ticket" min="0" max="99" name="basic" id="basic" value="1">
+                  <input class="ticket__input-basic-amount" type="text" form="form-buy-ticket" name="basic" id="basic" value="1" readonly>
                   <button class="ticket__increase" type="button">
                     <span class="visually-hidden">Кнопка увеличения количества билетов</span>
                   </button>
@@ -572,7 +572,7 @@
                   <button class="ticket__decrease" type="button">
                     <span class="visually-hidden">Кнопка уменьшения количества билетов</span>
                   </button>
-                  <input class="ticket__input-basic-amount" type="number" form="form-buy-ticket" min="0" max="99" name="senior" id="senior" value="1">
+                  <input class="ticket__input-basic-amount" type="text" form="form-buy-ticket" name="senior" id="senior" value="1" readonly>
                   <button class="ticket__increase" type="button">
                     <span class="visually-hidden">Кнопка увеличения количества билетов</span>
                   </button>
@@ -590,98 +590,123 @@
           </fieldset>
         </div>
       </div>
-
     </section>
 
     <section class="main__parallax parallax">
+      <div class="parallax__wrapper"></div>
       <h2 class="visually-hidden">Parallax</h2>
-      <div class="parallax__wrapper">
-        <img class="parallax__img" src="#" width="1920" height="400" alt="picture gallery Louvre">
-      </div>
     </section>
+
     <section class="main__contacts contacts">
-      <h2 class="title contacts__title">Contacts</h2>
-      <div class="contacts__wrapper">
-        <div class="contacts__text-content">
-          <h3 class="contacts__secondary-title">Palais Royal Musee du Louvre</h3>
-          <ul class="contacts__list">
-            <li class="contacts__item">
-              <span class="contacts__label">address:</span>
-              <address class="contacts__address">75001 Paris, France</address>
-            </li>
-            <li class="contacts__item">
-              <span class="contacts__label">phone:</span>
-              <a class="contacts__phone" href="tel:+33140205050">+33(0) 1 40 20 50 50</a>
-            </li>
-            <li class="contacts__item">
-              <span class="contacts__label">mail:</span>
-              <a class="contacts__value" href="mailto:info@louvre.fr">info@louvre.fr</a>
-            </li>
-          </ul>
+      <div class="wrapper">
+        <h2 class="title contacts__title">Contacts</h2>
+        <div class="contacts__wrapper">
+          <div class="contacts__text-content">
+            <h3 class="contacts__secondary-title">Palais Royal Musee du Louvre</h3>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <span class="contacts__label">address:</span>
+                <address class="contacts__address">75001 Paris, France</address>
+              </li>
+              <li class="contacts__item">
+                <span class="contacts__label">phone:</span>
+                <a class="contacts__phone" href="tel:+33140205050">+33(0) 1 40 20 50 50</a>
+              </li>
+              <li class="contacts__item">
+                <span class="contacts__label">mail:</span>
+                <a class="contacts__email" href="mailto:info@louvre.fr">info@louvre.fr</a>
+              </li>
+            </ul>
+          </div>
+          <div class="contacts__map-container">
+            <picture>
+              <source width="380" height="248" type="image/webp" media="(max-width: 420px)" srcset="images/map/map-420@1x.webp 1x, images/map/map-420@2x.webp 2x">
+              <source width="728" height="476" type="image/webp" media="(max-width: 768px)" srcset="images/map/map-768@1x.webp 1x, images/map/map-768@2x.webp 2x">
+              <source width="694" height="454" type="image/webp" media="(max-width: 1024px)" srcset="images/map/map-1024@1x.webp 1x, images/map/map-1024@2x.webp 2x">
+              <source width="960" height="620" type="image/webp" srcset="images/map/map-1920@1x.webp 1x, images/map/map-1920@2x.webp 2x">
+              <source width="380" height="248" type="image/png" media="(max-width: 420px)" srcset="images/map/map-420@1x.png 1x, images/map/map-420@2x.png 2x">
+              <source width="728" height="476" type="image/png" media="(max-width: 768px)" srcset="images/map/map-768@1x.png 1x, images/map/map-768@2x.png 2x">
+              <source width="694" height="454" type="image/png" media="(max-width: 1024px)" srcset="images/map/map-1024@1x.png 1x, images/map/map-1024@1x.png 2x">
+              <img class="contacts__map" width="960" height="620" alt="picture map" loading="lazy" src="images/map/map-1920@1x.png" srcset="images/map/map-1920@2x.png 2x">
+            </picture>
+          </div>
         </div>
-        <img class="contacts__map" src="#" width="960" height="620" alt="map">
       </div>
     </section>
+
   </main>
+
   <footer class="footer">
+
     <section class="footer__info-page info-page">
-      <h2 class="visually-hidden">Information about the developer</h2>
-      <a class="info-page__footer-logo" href="#">
-        <span class="visually-hidden">Logo museum</span>
-      </a>
-      <ul class="info-page__footer-list-info">
-        <li class="info-page__footer-item">
-          <a class="info-page__footer-info-link" href="#">Visiting</a>
-        </li>
-        <li class="info-page__footer-item">
-          <a class="info-page__footer-info-link" href="#">Explore</a>
-        </li>
-        <li class="info-page__footer-item">
-          <a class="info-page__footer-info-link" href="#">Video</a>
-        </li>
-        <li class="info-page__footer-item">
-          <a class="info-page__footer-info-link" href="#">Gallery</a>
-        </li>
-        <li class="info-page__footer-item">
-          <a class="info-page__footer-info-link" href="#">Tickets</a>
-        </li>
-        <li class="info-page__footer-item">
-          <a class="info-page__footer-info-link" href="#">Contacts</a>
-        </li>
-      </ul>
-      <ul class="info-page__footer-list-social">
-        <li class="info-page__footer-item-social">
-          <a class="info-page__footer-item-social-link" href="https://www.youtube.com/user/louvre">
-            <span class="visually-hidden">Youtube</span>
-          </a>
-        </li>
-        <li class="info-page__footer-item-social">
-          <a class="info-page__footer-item-social-link" href="https://www.instagram.com/museelouvre/">
-            <span class="visually-hidden">Instagramm</span>
-          </a>
-        </li>
-        <li class="info-page__footer-item-social">
-          <a class="info-page__footer-item-social-link" href="http://twitter.com/museelouvre">
-            <span class="visually-hidden">Twiter</span>
-          </a>
-        </li>
-        <li class="info-page__footer-item-social">
-          <a class="info-page__footer-item-social-link" href="https://www.facebook.com/museedulouvre">
-            <span class="visually-hidden">Facebook</span>
-          </a>
-        </li>
-        <li class="info-page__footer-item-social">
-          <a class="info-page__footer-item-social-link" href="https://www.pinterest.fr/museedulouvre/">
-            <span class="visually-hidden">Pinteres</span>
-          </a>
-        </li>
-      </ul>
+      <div class="wrapper info-page__wrapper">
+        <h2 class="visually-hidden">Information about the developer</h2>
+        <a class="info-page__footer-logo" href="#">
+          <span class="visually-hidden">Logo museum</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="195" height="50" fill="none" viewBox="0 0 199 33">
+            <g clip-path="url(#clip0_1_1995)">
+              <path fill="currentColor" d="M49 26H0L24.5 0zM13.3 13.13l3.34 3.54 3.34-3.54-3.34-3.55zm3.34 11.88 3.34-3.54-3.34-3.55-3.33 3.55zm15.77 0 3.34-3.54-3.34-3.55-3.4 3.55zM28.47 5.4l-.08.09-3.15 3.35c-.1.1 0 .16 0 .24l3.07 3.27.14.13 3.34-3.53zM8.79 25l.13-.14 3.07-3.26a.2.2 0 0 0 .08-.15.2.2 0 0 0-.08-.15q-1.39-1.45-2.75-2.92l-.45-.47-3.34 3.55zm8.45-16.06 3.33 3.54.1-.1 3.15-3.32c.1-.12 0-.18 0-.26l-3.08-3.25-.13-.14zm0 8.38 3.33 3.54.17-.17q1.5-1.56 3.02-3.21l.07-.08.02-.09q0-.05-.02-.08l-.07-.08q-1.42-1.5-2.82-3l-.37-.37zm15.76 0 3.34 3.54 3.33-3.54-3.33-3.54zm-4.53-3.55v.07l-3.17 3.36c-.1.1-.06.16 0 .25l2.94 3.14q.12.15.28.29l3.34-3.54zm-15.74 7.07.07-.09 3.16-3.36c.1-.1 0-.15 0-.24l-3.11-3.26-.15-.13-3.32 3.53zm19.63-4.19 3.33-3.54-3.33-3.53-3.34 3.54zm-7.89-8.38 3.34-3.54-3.28-3.46h-.07l-3.2 3.43-.04.09q0 .04.04.08zm0 8.38 3.34-3.54-3.31-3.54-3.34 3.55zm0 8.38 3.34-3.54-3.34-3.55-3.3 3.52zm15.77 0 3.33-3.54-3.32-3.52h-.06l-3.22 3.38c-.1.12 0 .17 0 .24l2.62 2.84zm-38.35.2h6L4.9 22.09zm39.28 0h5.94l-2.97-3.15zm-17.62 0-2.98-3.15-2.98 3.15zm9.76 0h5.94l-2.97-3.15zm-1.91 0-2.97-3.15-2.97 3.15zm-15.77 0-2.97-3.15-2.97 3.15z" />
+            </g>
+            <path fill="currentColor" d="M75.26 25.72h.14a.6.6 0 0 0 .4-.14q.16-.16.27-.4.14-.21.2-.47.08-.25.08-.47V9.26q0-.2-.08-.45-.06-.25-.2-.48a1 1 0 0 0-.28-.36.5.5 0 0 0-.39-.17h-.14v-.28h4.03v.28h-.14a.5.5 0 0 0-.39.17q-.16.14-.28.36-.1.23-.2.48a2 2 0 0 0-.05.45v15.7h6.13q.53 0 .92-.25.4-.25.65-.61.28-.4.39-.82.15-.45.14-.8h.28V26H75.26zm26.3-18.48q2.2 0 3.92.78 1.74.75 2.94 2.08a9 9 0 0 1 1.88 3.02 10 10 0 0 1 .67 3.58 9.4 9.4 0 0 1-6.02 8.88q-1.76.7-3.78.7a9.17 9.17 0 0 1-6.8-2.86 9.7 9.7 0 0 1-2.46-6.47 10 10 0 0 1 2.51-6.66 9.53 9.53 0 0 1 7.14-3.05m-.03 18.06a7.5 7.5 0 0 0 7.06-5.43 9 9 0 0 0-.08-5.94 9 9 0 0 0-1.6-2.83 8 8 0 0 0-2.5-2.07 6.4 6.4 0 0 0-3.21-.81q-1.75 0-3.1.78a8 8 0 0 0-3.82 4.65q-.5 1.5-.5 2.91 0 1.55.59 3.11.59 1.54 1.62 2.8t2.44 2.05q1.42.78 3.1.78m16.9-17.78h3.97v.28h-.14a.5.5 0 0 0-.39.17q-.17.14-.3.36a2 2 0 0 0-.23.93v11.06q0 1.09.22 2.01.22.93.76 1.6.53.67 1.4 1.06a6 6 0 0 0 2.13.37q1.4 0 2.24-.45t1.29-1.15q.46-.74.58-1.62.14-.9.14-1.77V9.26q0-.2-.05-.45t-.2-.48a1 1 0 0 0-.28-.36.5.5 0 0 0-.36-.17h-.14v-.28h3.05v.28h-.14a.5.5 0 0 0-.4.17q-.14.14-.27.36a2 2 0 0 0-.23.93v11.03a9 9 0 0 1-.44 3q-.45 1.15-1.24 1.81-.78.67-1.84.93-1.04.25-2.22.25-1.26 0-2.35-.28a4.3 4.3 0 0 1-1.85-.92 4.5 4.5 0 0 1-1.23-1.82 8 8 0 0 1-.45-2.94V9.26q0-.2-.05-.45t-.2-.48a1 1 0 0 0-.28-.36.5.5 0 0 0-.36-.17h-.14zm23.65.98q0 .16.08.42l4.93 13.27 4.93-13.41.05-.17.03-.17q0-.33-.28-.47a1 1 0 0 0-.48-.17v-.28h3.06v.28q-.43 0-.79.22-.33.22-.53.76l-6.41 17.56-6.55-17.48a2 2 0 0 0-.5-.72q-.31-.3-.8-.34v-.28h3.98v.28a1 1 0 0 0-.5.2q-.22.16-.22.5m23 17.22h.14V26h-3.95v-.28h.14a.5.5 0 0 0 .36-.17q.16-.16.28-.39.15-.22.2-.48.05-.27.05-.5V9.26q0-.2-.05-.45t-.2-.48a1 1 0 0 0-.28-.36.5.5 0 0 0-.36-.17h-.14v-.28h4.87q2.8 0 4.31 1.1a3.7 3.7 0 0 1 1.54 3.21 4.6 4.6 0 0 1-1.29 3.25q-.58.56-1.4.92a8 8 0 0 1-1.68.5l2.02 3.09 1.48 2.21q.75 1.06 1.49 2.21l.42.59q.25.31.5.56.29.25.56.42.3.14.62.14V26h-1.2q-1.13 0-1.85-.53-.7-.56-1.18-1.29a327 327 0 0 1-4.98-7.5l-.68-.06-.64-.11v7.67q0 .23.06.5.05.26.16.48l.28.4q.18.16.4.16m-.9-17.25v7.11h.14l.7.06h1.23q.6 0 1.23-.17.67-.2 1.24-.61.58-.46.95-1.15.39-.7.39-1.77 0-1.05-.42-1.73a3 3 0 0 0-1.12-1.07 5 5 0 0 0-1.7-.53q-1.02-.15-2.22-.14zm17.2 17.25h.15a.6.6 0 0 0 .4-.14q.16-.16.27-.4.15-.21.2-.47.08-.25.08-.47V9.26q0-.2-.08-.45-.06-.25-.2-.48a1 1 0 0 0-.28-.36.5.5 0 0 0-.4-.17h-.13v-.28h10.78v2.6h-.28q-.06-.64-.5-1.12-.45-.5-1.4-.5h-5.63v7.08H189q.65 0 1.07-.39.45-.4.45-.92h.28v3.5h-.28q0-.51-.42-.87a1.6 1.6 0 0 0-1.1-.36h-4.64v8.48h6.13q.53 0 .92-.25a2.5 2.5 0 0 0 1.04-1.35q.15-.41.14-.7h.28V26h-11.48z" />
+          </svg>
+        </a>
+        <ul class="info-page__footer-list-info">
+          <li class="info-page__footer-item">
+            <a class="info-page__footer-info-link" href="#">Visiting</a>
+          </li>
+          <li class="info-page__footer-item">
+            <a class="info-page__footer-info-link" href="#">Explore</a>
+          </li>
+          <li class="info-page__footer-item">
+            <a class="info-page__footer-info-link" href="#">Video</a>
+          </li>
+          <li class="info-page__footer-item">
+            <a class="info-page__footer-info-link" href="#">Gallery</a>
+          </li>
+          <li class="info-page__footer-item">
+            <a class="info-page__footer-info-link" href="#">Tickets</a>
+          </li>
+          <li class="info-page__footer-item">
+            <a class="info-page__footer-info-link" href="#">Contacts</a>
+          </li>
+        </ul>
+        <ul class="info-page__footer-list-social">
+          <li class="info-page__footer-item-social">
+            <a class="info-page__footer-item-social-link info-page__footer-item-social-link--youtube" href="https://www.youtube.com/user/louvre">
+              <span class="visually-hidden">Youtube</span>
+            </a>
+          </li>
+          <li class="info-page__footer-item-social">
+            <a class="info-page__footer-item-social-link info-page__footer-item-social-link--instagram" href="https://www.instagram.com/museelouvre/">
+              <span class="visually-hidden">Instagram</span>
+            </a>
+          </li>
+          <li class="info-page__footer-item-social">
+            <a class="info-page__footer-item-social-link info-page__footer-item-social-link--twiter" href="http://twitter.com/museelouvre">
+              <span class="visually-hidden">Twiter</span>
+            </a>
+          </li>
+          <li class="info-page__footer-item-social">
+            <a class="info-page__footer-item-social-link info-page__footer-item-social-link--facebook" href="https://www.facebook.com/museedulouvre">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="info-page__footer-item-social">
+            <a class="info-page__footer-item-social-link info-page__footer-item-social-link--pinteres" href="https://www.pinterest.fr/museedulouvre/">
+              <span class="visually-hidden">Pinteres</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
+
     <section class="footer__info-developer info-developer">
-      <h2 class="visually-hidden">Information about the developer</h2>
-      <p class="info-developer__copyright">© 2021</p>
-      <p class="info-developer__school">The rolling scopes school</p>
-      <p class="info-developer__name">Username</p>
+      <div class="wrapper info-developer__wrapper">
+        <h2 class="visually-hidden">Information about the developer</h2>
+        <p class="info-developer__copyright">© 2021</p>
+        <a class="info-developer__school" href="#">The rolling scopes school</a>
+        <a class="info-developer__name" href="https://github.com/bearBenjamin">BearBenjamin</a>
+      </div>
     </section>
   </footer>
 
