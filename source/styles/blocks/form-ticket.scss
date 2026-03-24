@@ -1,10 +1,37 @@
-// .form-ticket {}
+.form-ticket {
+  color: $color-black;
+  background-color: $color-white;
+}
 
-// .form-ticket__button-close {}
+.form-ticket__button-close {
+  margin: 0;
+  padding: 0;
+  border: none;
 
-// .form-ticket__wrapper {}
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 25px;
+  height: 25px;
+  background-image: url("../../icons/stack.svg#ticket-close");
+  background-size: 25px 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $color-white;
+}
 
-// .form-ticket__wrapper-one {}
+.form-ticket__wrapper {
+  display: flex;
+  gap: 40px;
+}
+
+.form-ticket__wrapper-one {
+  width: 400px;
+}
+
+.form-ticket__wrapper-two {
+  width: 530px;
+}
 
 // .form-ticket__filter-group {}
 
@@ -43,8 +70,6 @@
 // .form-ticket__increase {}
 
 // .form-ticket__increase--color {}
-
-// .form-ticket__wrapper-two {}
 
 // .form-ticket__inner-one {}
 

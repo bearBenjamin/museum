@@ -1,0 +1,345 @@
+.form-part-two {
+  padding: 25px 30px 26px;
+  display: flex;
+  flex-direction: column;
+  color: $color-black;
+  background-color: $color-white;
+  border: 1px solid $color-black;
+}
+
+.form-part-two__inner-one {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 22px;
+  margin-bottom: 10px;
+}
+
+.form-part-two__innert-info-ticket {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-part-two__secondary-title {
+  margin: 0;
+  margin-bottom: 2px;
+  font-weight: 500;
+  font-size: 32px;
+  color: #272727;
+}
+
+.form-part-two__text {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 22px;
+  color: $color-red-dark;
+}
+
+.form-part-two__data-ticket-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.form-part-two__data-item {
+  margin-bottom: 5px;
+  padding-left: 30px;
+  background-size: 15px 15px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.form-part-two__data-item--date {
+  background-image: url("../../icons/stack.svg#ticket-date");
+}
+
+.form-part-two__data-item--time {
+  background-image: url("../../icons/stack.svg#ticket-time");
+}
+
+.form-part-two__data-item--check {
+  margin-bottom: 0;
+  background-image: url("../../icons/stack.svg#ticket-chek-type");
+}
+
+.form-part-two__price-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.form-part-two__price-item {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.form-part-two__price-count {
+  padding: 0 11px 1px;
+  width: 32px;
+  height: 20px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #a4a4a3;
+  background-color: $color-black;
+  border-radius: 5px;
+}
+
+.form-part-two__price-sum {
+  margin-left: auto;
+}
+
+.form-part-two__price-item:last-child {
+  position: relative;
+  margin-top: 21px;
+}
+
+.form-part-two__price-item:last-child::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  background-color: $color-red-dark;
+}
+
+.form-part-two__price-total {
+  margin-right: auto;
+  font-weight: 400;
+  font-size: 32px;
+}
+
+.form-part-two__total-sum {
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.form-part-two__card-container {
+  position: relative;
+  width: 100%;
+}
+
+.form-part-two__inner-two {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 15px 20px;
+  width: 360px;
+  background-color: #bcbcbc;
+  display: grid;
+  grid-template-columns: 100px 100px 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  column-gap: 15px;
+  border-radius: 3px;
+}
+
+.form-part-two__label-card {
+  grid-area: 1 / 1 / 2 / 2;
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #161615;
+}
+
+.form-part-two__input-card {
+  grid-area: 2 / 1 / 3 / 3;
+  margin-bottom: 10px;
+  width: 215px;
+  height: 35px;
+  border: 0.5px solid #a4a4a3;
+}
+
+.form-part-two__date-card-group {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  grid-area: 3 / 1 / 4 / 3;
+}
+
+.form-part-two__date-card-group-title {
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #161615;
+}
+
+.form-part-two__field-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-part-two__field-row-one,
+.form-part-two__field-row-two {
+  display: flex;
+  width: 100px;
+}
+
+.form-part-two__input-date-card {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px 47px 10px 10px;
+  width: 72px;
+  height: 35px;
+  border: 0.5px solid #a4a4a3;
+}
+
+.form-part-two__input-date-card::placeholder,
+.form-part-two__input-year-card::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  color: #161615;
+}
+
+.form-part-two__toggle-button {
+  width: 28px;
+  height: 35px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background-color: $color-white;
+  border: 0.5px solid #a4a4a3;
+}
+
+.form-part-two__button-up,
+.form-part-two__button-year-up,
+.form-part-two__button-down,
+.form-part-two__button-year-down {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form-part-two__button-up,
+.form-part-two__button-year-up {
+  display: block;
+  width: 6px;
+  height: 4px;
+  background-color: #a4a4a3;
+  mask-image: url("../../icons/stack.svg#ticket-up-arrow");
+  mask-size: 6px 4px;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
+.form-part-two__button-down,
+.form-part-two__button-year-down {
+  display: block;
+  width: 6px;
+  height: 4px;
+  background-color: #a4a4a3;
+  mask-image: url("../../icons/stack.svg#ticket-down-arrow");
+  mask-size: 6px 4px;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
+.form-part-two__input-year-card {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px 25px 10px 10px;
+  width: 72px;
+  height: 35px;
+  border: 0.5px solid #a4a4a3;
+}
+
+.form-part-two__label-name-card {
+  grid-area: 4 / 1 / 5 / 2;
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #161615;
+}
+
+.form-part-two__input-name-card {
+  width: 100%;
+  height: 35px;
+  grid-area: 5 / 1 / 6 / 4;
+  border: 0.5px solid #a4a4a3;
+}
+
+.form-part-two__icon-container {
+  grid-area: 1 / 3 / 4 / 4;
+  padding-top: 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: start;
+  gap: 15px;
+}
+
+.form-part-two__inner-three {
+  position: absolute;
+  top: 30px;
+  left: 110px;
+  z-index: 1;
+  width: 360px;
+  background-color: #939393;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+}
+
+.form-part-two__black-square {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 45px;
+  background-color: #161615;
+}
+
+.form-part-two__label-cv {
+  margin-right: 29px;
+  margin-bottom: 5px;
+  width: fit-content;
+  align-self: end;
+  font-weight: 400;
+  font-size: 12px;
+  color: #161615;
+  text-transform: uppercase;
+}
+
+.form-part-two__input-cv {
+  margin-right: 20px;
+  margin-bottom: 6px;
+  width: 75px;
+  height: 35px;
+  align-self: end;
+  border: 0.5px solid  #a4a4a3;
+}
+
+.form-part-two__card-cvc-text {
+  margin-right: 30px;
+  width: 55px;
+  align-self: end;
+  font-weight: 400;
+  font-size: 10px;
+  color: #161615;
+}
+
+.form-part-two__submit {
+  display: block;
+  margin: 0;
+  padding: 11px 85px 10px;
+  position: absolute;
+  top: 273px;
+  right: -2px;
+  border: none;
+  font-weight: 400;
+  font-size: 22px;
+  color: $color-white;
+  background-color: $color-red-dark;
+}
