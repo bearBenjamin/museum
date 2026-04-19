@@ -1,0 +1,1 @@
+var e=document.querySelector(".ticket__toggle"),o=document.querySelector(".booking-modal"),t=document.querySelector(".form-ticket__button-close");e.addEventListener("click",()=>{o.classList.add("booking-modal--open")});t.addEventListener("click",()=>{o.classList.remove("booking-modal--open")});
