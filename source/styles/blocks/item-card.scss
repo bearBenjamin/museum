@@ -18,7 +18,7 @@
   position: relative;
   width: 100%;
   margin: 0;
-  margin-top: 25px;
+  margin-top: 24px;
   margin-bottom: 22px;
 
   font-family: $secondary-family;
@@ -34,7 +34,7 @@
   width: 300px;
   height: 3px;
   position: absolute;
-  bottom: -10px;
+  bottom: -12px;
   left: 0;
   background-color: $color-red-dark;
 
@@ -59,6 +59,22 @@
   text-transform: capitalize;
 }
 
-.item-card:active {
-  opacity: 0.5;
+.item-card:hover .item-card__title,
+.item-card:hover .item-card__secondary-title,
+.item-card:hover .item-card__label {
+  color: $color-gold;
+}
+
+.item-card:active .item-card__title,
+.item-card:active .item-card__secondary-title,
+.item-card:active .item-card__label {
+  color: $color-gold-dark;
+}
+
+.item-card:hover .item-card__picture {
+  opacity: 0.6;
+}
+
+.item-card:active .item-card__picture {
+  opacity: 0.3;
 }

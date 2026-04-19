@@ -12,22 +12,59 @@
 
 .player__toggle-play {
   position: absolute;
-  top: 50%;
+  top: 44%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  border: 8px solid $color-white;
+  border: none;
   background-color: transparent;
-
-  background-image: url("../../icons/stack.svg#btn-play-video-player");
-  background-repeat: no-repeat;
-  background-position: 60% 50%;
-  background-size: 91px;
 
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.player__toggle-play::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background-color: $color-white;
+  mask-image: url("../../icons/stack.svg#btn-play-video-player");
+  mask-repeat: no-repeat;
+  mask-position: 60% 50%;
+  mask-size: 91px;
+}
+
+.player__toggle-play::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 8px solid $color-white;
+}
+
+.player__toggle-play:hover::after {
+  background-color: $color-gold;
+}
+
+.player__toggle-play:active::after {
+  background-color: $color-gold-dark;
+}
+
+.player__toggle-play:hover::before {
+  border-color: $color-gold;
+}
+
+.player__toggle-play:active::before {
+  border-color: $color-gold-dark;
 }
 
 .player__controls {
@@ -48,10 +85,10 @@
   width: 23px;
   height: 31px;
 
-  background-color: inherit;
-  background-image: url("../../icons/stack.svg#btn-play-video-panel-player");
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #b3b3b3;
+  mask-image: url("../../icons/stack.svg#btn-play-video-panel-player");
+  mask-position: center;
+  mask-repeat: no-repeat;
 
   cursor: pointer;
 }
@@ -83,15 +120,24 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: $color-white;
+  background-color: $color-white;
   cursor: pointer;
   border: none;
+  margin-left: 7px;
 
   // transition: transform 0.1s ease-in-out;
 }
 
-.player__progress-field::-webkit-slider-thumb:hover {
+.player__progress-field::-webkit-slider-thumb:hover,
+.player__range-volume-field::-webkit-slider-thumb:hover {
   transform: scale(1.2);
+  background-color: $color-gray-light;
+}
+
+.player__progress-field::-webkit-slider-thumb:active,
+.player__range-volume-field::-webkit-slider-thumb:active {
+  transform: scale(1.2);
+  background-color: $color-gray-light;
 }
 
 .player__progress-field::-moz-range-progress {
@@ -107,10 +153,10 @@
   width: 38px;
   height: 31px;
 
-  background-color: inherit;
-  background-image: url("../../icons/stack.svg#btn-volume-video-panel-player");
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #b3b3b3;
+  mask-image: url("../../icons/stack.svg#btn-volume-video-panel-player");
+  mask-position: center;
+  mask-repeat: no-repeat;
 
   cursor: pointer;
 }
@@ -142,14 +188,15 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: $color-white;
+  background-color: $color-white;
   cursor: pointer;
   border: none;
 }
 
-.player__range-volume-field::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
-}
+// .player__range-volume-field::-webkit-slider-thumb:hover {
+//   transform: scale(1.2);
+//   background-color: $color-gold;
+// }
 
 .player__range-volume-field::-moz-range-progress {
   background-color: #710707;
@@ -164,10 +211,30 @@
   width: 35px;
   height: 35px;
 
-  background-color: inherit;
-  background-image: url("../../icons/stack.svg#btn-full-screen-video-panel-player");
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #b3b3b3;
+  mask-image: url("../../icons/stack.svg#btn-full-screen-video-panel-player");
+  mask-position: center;
+  mask-repeat: no-repeat;
 
   cursor: pointer;
+}
+
+.player__btn-play:hover,
+.player__btn-volume:hover,
+.player__btn-full-screen:hover {
+  background-color: #989898;
+}
+
+// пока так, потом навешу модификатор и буду менять через JS
+
+.player__btn-play:active {
+  mask-image: url("../../icons/stack.svg#pause");
+}
+
+.player__btn-volume:active {
+  mask-image: url("../../icons/stack.svg#mute");
+}
+
+.player__btn-full-screen:active {
+  mask-image: url("../../icons/stack.svg#fullscreen-exit");
 }

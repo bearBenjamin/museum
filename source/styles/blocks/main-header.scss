@@ -1,14 +1,14 @@
 .main-header {
   position: relative;
-  padding-top: 59px;
-  padding-bottom: 58px;
+  // padding-top: 59px;
+  // padding-bottom: 58px;
   color: $color-white;
   background-color: $color-black;
 
-  @include respond-to ("desktop") {
-    padding-top: 49px;
-    padding-bottom: 48px;
-  }
+  // @include respond-to ("desktop") {
+  //   padding-top: 49px;
+  //   padding-bottom: 48px;
+  // }
 }
 
 .main-header__wrapper {

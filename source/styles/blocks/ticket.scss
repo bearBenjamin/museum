@@ -7,7 +7,7 @@
 
 .ticket__title {
   position: relative;
-  margin-bottom: 103px;
+  margin-bottom: 102px;
   color: $color-gold;
 }
 
@@ -17,7 +17,7 @@
   width: 100%;
   height: 3px;
   position: absolute;
-  bottom: -25px;
+  bottom: -26px;
   left: 0;
   background-color: $color-red-dark;
 }
@@ -48,7 +48,9 @@
 }
 
 .ticket__filter-group-title {
+  padding: 0;
   margin-bottom: 50px;
+  text-transform: capitalize;
   font-weight: 700;
   font-size: 28px;
 }
@@ -69,6 +71,10 @@
   margin-bottom: 25px;
 }
 
+.ticket__filter-group-item-type:last-child {
+  text-transform: capitalize;
+}
+
 .ticket__filter-group-control {
   position: relative;
   padding-left: 40px;
@@ -76,6 +82,7 @@
   display: inline-block;
   font-weight: 300;
   font-size: 22px;
+  cursor: pointer;
 }
 
 .ticket__filter-group-control-mark {
@@ -84,13 +91,8 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  width: 17px;
-  height: 17px;
-}
-
-.ticket__filter-group-control-mark--temp {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 
 .ticket__filter-group-input[type="radio"] + .ticket__filter-group-control-mark {
@@ -133,12 +135,13 @@
 
 .ticket__control-amount {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
 .ticket__basic-wrapper {
   display: flex;
-  border: 3px solid $color-black;
+  outline: 3px solid $color-black;
+  outline-offset: -3px;
 }
 
 .ticket__decrease {
@@ -152,9 +155,11 @@
 
   background-color: $color-black;
   mask-image: url("../../icons/stack.svg#ticket-minus");
-  mask-position: center;
-  mask-size: 18px 38px;
+  mask-position: left 15px top 50%;
+  mask-size: 16px 37px;
   mask-repeat: no-repeat;
+
+  cursor: pointer;
 }
 
 .ticket__input-basic-amount {
@@ -163,6 +168,7 @@
   border: none;
 
   width: 50px;
+  font-family: $basic-family;
   font-weight: 300;
   font-size: 22px;
   text-align: center;
@@ -179,16 +185,18 @@
 
   background-color: $color-black;
   mask-image: url("../../icons/stack.svg#ticket-plus");
-  mask-position: center;
-  mask-size: 19px 38px;
+  mask-position: left 18px top 50%;
+  mask-size: 16px 36px;
   mask-repeat: no-repeat;
+
+  cursor: pointer;
 }
 
 .ticket__sum-wrapper {
   margin-bottom: 52px;
   font-weight: 700;
   font-size: 28px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
 }
 
 // .ticket__sum-text {}
@@ -201,10 +209,10 @@
   border: none;
 
   position: absolute;
-  top: 342px;
+  top: 334px;
   left: -25px;
-  padding-right: 38px;
-  padding-left: 38px;
+  padding-right: 37px;
+  padding-left: 37px;
   width: 175px;
   height: 50px;
 
@@ -213,6 +221,18 @@
   font-size: 22px;
   letter-spacing: 0.09em;
   text-align: center;
+  text-transform: capitalize;
   color: $color-white;
   background-color: $color-black;
+
+  cursor: pointer;
+}
+
+.ticket__toggle:hover {
+  color: #000000;
+  background-color: $color-gold;
+}
+
+.ticket__toggle:active {
+  background-color: $color-gold-dark;
 }

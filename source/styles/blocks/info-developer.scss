@@ -25,3 +25,18 @@
   color: $color-white;
   text-decoration: none;
 }
+
+.info-developer__school {
+  margin-left: 75px;
+  text-transform: capitalize;
+}
+
+.info-developer__school:hover,
+.info-developer__name:hover {
+  color: $color-gold;
+}
+
+.info-developer__school:active,
+.info-developer__name:active {
+  color: $color-gold-light;
+}

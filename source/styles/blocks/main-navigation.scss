@@ -4,9 +4,10 @@
 }
 
 .main-navigation__logo-link {
+  padding-top: 59px;
+  padding-bottom: 58px;
   display: block;
   width: 199px;
-  height: 33px;
 
   color: $color-white;
 
@@ -15,12 +16,18 @@
   }
 }
 
+.main-navigation__logo-link-img {
+  display: block;
+  width: 199px;
+  height: 33px;
+}
+
 .main-navigation__logo-link:hover {
   color: $color-gold;
 }
 
 .main-navigation__logo-link:active {
-  color: $color-gold-dark;
+  color: $color-gold-light;
 }
 
 .main-navigation__list {
@@ -49,17 +56,17 @@
     background-color: $color-black;
     transition: transform 0.5s ease-in-out;
   }
+}
 
-  &--close {
-    @include respond-to("desktop") {
-      transform: translate(-100%);
-    }
+.main-navigation__list--close {
+  @include respond-to("desktop") {
+    transform: translate(-100%);
   }
+}
 
-  &--open {
-    @include respond-to("desktop") {
-      transform: translate(70%);
-    }
+.main-navigation__list--open {
+  @include respond-to("desktop") {
+    transform: translate(70%);
   }
 }
 
@@ -78,10 +85,13 @@
   }
 }
 
+.main-navigation__item:nth-child(4) {
+  margin-right: 6px; // подогнал под PP список навигации
+}
+
 .main-navigation__item::before {
   @include respond-to("desktop") {
     content: "";
-    //display: block;
     width: 12px;
     height: 12px;
 
@@ -99,10 +109,15 @@
 
 .main-navigation__item-link {
   display: block;
+  max-width: 125px;
+  padding-top: 62px;
+  padding-bottom: 62px;
   color: $color-white;
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 
-.main-navigation__item:hover .main-navigation__item-link {
+.main-navigation__item-link:hover {
   color: $color-gold;
 }
 
@@ -110,10 +125,10 @@
   background-color: $color-gold;
 }
 
-.main-navigation__item:active .main-navigation__item-link {
-  color: $color-gold-dark;
+.main-navigation__item-link:active {
+  color: $color-gold-light;
 }
 
 .main-navigation__item:active::before {
-  background-color: $color-gold-dark;
+  background-color: $color-gold-light;
 }
