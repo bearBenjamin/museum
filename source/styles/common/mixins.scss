@@ -15,3 +15,7 @@
     src: $font-src;
   }
 }
+
+@mixin line-shadow($color: $color-white) {
+  box-shadow: 0 8px 0 0 $color;
+}

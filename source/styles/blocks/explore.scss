@@ -3,6 +3,11 @@
   padding-bottom: 75px;
   color: $color-white;
   background-color: $color-black;
+
+  @include respond-to ("desktop") {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .explore__wrapper {
@@ -10,15 +15,27 @@
   grid-template-columns: 660px 1fr;
   grid-template-rows: auto;
   column-gap: 60px;
+
+  @include respond-to ("desktop") {
+    display: block;
+  }
 }
 
 .explore__wrapper-content {
   padding-bottom: 216px;
+
+  @include respond-to ("desktop") {
+    padding-bottom: 0;
+  }
 }
 
 .explore__title {
   position: relative;
   margin-bottom: 103px;
+
+  @include respond-to ("desktop") {
+    margin-bottom: 83px;
+  }
 }
 
 .explore__title::before {
@@ -30,6 +47,10 @@
   bottom: -27px;
   left: 0;
   background-color: $color-red-dark;
+
+  @include respond-to ("desktop") {
+    bottom: -20px;
+  }
 }
 
 .explore__text {
@@ -39,6 +60,13 @@
   font-weight: 300;
   font-size: 22px;
   line-height: 175%;
+
+  @include respond-to ("desktop") {
+    margin-bottom: 0;
+
+    font-size: 20px;
+    line-height: 193%;
+  }
 }
 
 .explore__text-color {
@@ -47,11 +75,28 @@
 
 // .explore__text-one {}
 
-// .explore__text-two {}
+.explore__text-two {
+  @include respond-to ("desktop") {
+    margin-bottom: 62px;
 
-// .explore__text-three {}
+    line-height: 175%;
+  }
+}
+
+.explore__text-three {
+  @include respond-to ("desktop") {
+    display: none;
+  }
+}
 
 .explore__slider {
   position: relative;
   margin-top: 15px;
+
+  @include respond-to ("desktop") {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 720px;
+    min-height: 700px;
+  }
 }

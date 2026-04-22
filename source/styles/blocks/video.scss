@@ -3,6 +3,11 @@
   padding-bottom: 74px;
   color: $color-black;
   background-color: $color-white;
+
+  @include respond-to ("desktop") {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .video__wrapper {
@@ -10,6 +15,10 @@
   grid-template-columns: 605px 1fr;
   grid-template-rows: auto auto auto;
   gap: 40px 115px;
+
+  @include respond-to ("desktop") {
+    display: block;
+  }
 }
 
 .video__title {
@@ -17,6 +26,10 @@
   margin-bottom: 35px;
   grid-column: 1 / 2;
   color: $color-gold;
+
+  @include respond-to ("desktop") {
+    margin-bottom: 40px;
+  }
 }
 
 .video__text {
@@ -27,10 +40,18 @@
   font-weight: 300;
   font-size: 22px;
   line-height: 175%;
+
+  @include respond-to ("desktop") {
+    display: none;
+  }
 }
 
 .video__player {
   grid-area: 2 / 1 / 3 / -1;
+
+  @include respond-to ("desktop") {
+    margin-bottom: 40px;
+  }
 }
 
 .video__slider {

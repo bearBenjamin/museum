@@ -1,15 +1,24 @@
 .button-toggle {
   @include respond-to("desktop") {
-    padding: 0;
+    margin-bottom: 6px;
+    padding: 6px 0 8px;
     line-height: 0;
     border: none;
     background-color: inherit;
+
+    width: 32px;
+    // height: 18px;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     cursor: pointer;
   }
+}
+
+.button-toggle--close {
+  margin-top: 10px;
+  margin-right: -3px;
 }
 
 .button-toggle__line {
@@ -19,17 +28,39 @@
   margin-bottom: 6px;
   background-color: $color-white;
 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .button-toggle--open .button-toggle__line:last-child {
   margin-bottom: 0;
-  box-shadow: 0 8px 0 0 $color-white;
+
+  @include line-shadow;
+
   transform: none;
+  cursor: pointer;
 }
 
 .button-toggle--open .button-toggle__line:nth-child(2) {
   transform: none;
+}
+
+.button-toggle--open:hover .button-toggle__line {
+  background-color: $color-gold;
+}
+
+.button-toggle--open:hover .button-toggle__line:last-child {
+  @include line-shadow($color: $color-gold);
+}
+
+.button-toggle--open:active .button-toggle__line {
+  background-color: $color-gold-light;
+}
+
+.button-toggle--open:active .button-toggle__line:last-child {
+  @include line-shadow($color: $color-gold-light);
 }
 
 .button-toggle--close .button-toggle__line:nth-child(2) {
@@ -40,4 +71,12 @@
   margin-bottom: 0;
   box-shadow: none;
   transform: translateY(-4px) rotate(-45deg);
+}
+
+.button-toggle--close:hover .button-toggle__line {
+  background-color: $color-gold;
+}
+
+.button-toggle--close:active .button-toggle__line {
+  background-color: $color-gold-light;
 }

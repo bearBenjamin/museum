@@ -12,6 +12,11 @@
 
 .item-card__picture {
   display: block;
+  width: 440px;
+
+  @include respond-to ("desktop") {
+    width: 330px;
+  }
 }
 
 .item-card__title {
@@ -26,6 +31,11 @@
   font-size: 32px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+
+  @include respond-to ("desktop") {
+    font-size: 28px;
+    letter-spacing: 0.11em;
+  }
 }
 
 .item-card__title::before {
@@ -39,6 +49,10 @@
   background-color: $color-red-dark;
 
   transition: width 0.4s ease-in-out;
+
+  @include respond-to ("desktop") {
+    width: 150px;
+  }
 }
 
 .item-card__link:hover .item-card__title::before {
@@ -51,12 +65,22 @@
   font-weight: 200;
   font-size: 22px;
   text-transform: capitalize;
+
+  @include respond-to ("desktop") {
+    font-weight: 100;
+    font-size: 20px;
+  }
 }
 
 .item-card__label {
   margin: 0;
   font-size: 18px;
   text-transform: capitalize;
+
+  @include respond-to ("desktop") {
+    font-weight: 200;
+    font-size: 16px;
+  }
 }
 
 .item-card:hover .item-card__title,

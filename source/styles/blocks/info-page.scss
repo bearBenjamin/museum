@@ -22,8 +22,16 @@
 
 .info-page__footer-logo {
   grid-area: 1 / 1 / 1 / 2;
+  align-self: start;
   display: block;
   color: $color-white;
+}
+
+.info-page__footer-logo-svg {
+  @include respond-to ("desktop") {
+    width: 194px;
+    height: 33px;
+  }
 }
 
 .info-page__footer-logo:hover {
@@ -46,6 +54,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 155px;
+
+  @include respond-to ("desktop") {
+    margin: 6px 0 25px 25px;
+    column-gap: 105px;
+  }
 }
 
 .info-page__footer-item {
@@ -85,6 +98,10 @@
   display: flex;
   align-items: end;
   gap: 23px;
+
+  @include respond-to ("desktop") {
+    margin-bottom: 51px;
+  }
 }
 
 .info-page__footer-item-social {

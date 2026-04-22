@@ -1,4 +1,12 @@
-// .video-slider {}
+.video-slider {
+  width: 100%;
+  max-width: 1440px;
+  overflow: hidden;
+
+  @include respond-to ("desktop") {
+    max-width: 984px;
+  }
+}
 
 .video-slider__list {
   margin: 0;
@@ -8,6 +16,10 @@
   display: flex;
   gap: 42px;
   margin-bottom: 40px;
+
+  @include respond-to ("display") {
+    gap: 41px;
+  }
 }
 
 .video-slider__item {
@@ -18,6 +30,11 @@
   width: 452px;
   height: 254px;
   display: block;
+
+  @include respond-to ("desktop") {
+    width: 300px;
+    height: 170px;
+  }
 }
 
 .video-slider__container-item-title {
@@ -26,15 +43,31 @@
   left: 0;
   width: 100%;
   height: auto;
+
+  @include respond-to ("desktop") {
+    top: 12px;
+  }
 }
 
 .video-slider__item-title {
   margin: 0;
   margin-left: 60px;
+  max-width: 329px;
 
   font-size: 18px;
   line-height: 214%;
   color: $color-white;
+
+  white-space: nowrap;      /* Запрещаю перенос текста на новую строку */
+  overflow: hidden;         /* Прячу всё, что выходит за пределы блока */
+  text-overflow: ellipsis;  /* Добавляю три точки в конце */
+
+  @include respond-to ("desktop") {
+    max-width: 188px;
+    margin-left: 55px;
+
+    line-height: 211%;
+  }
 }
 
 .video-slider__container-item-title::before {

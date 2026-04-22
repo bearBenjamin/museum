@@ -5,4 +5,8 @@
 
 .modal-container__content {
   padding: 91px 235px;
+
+  @include respond-to ("desktop") {
+    padding: 75px 25px 30px;
+  }
 }

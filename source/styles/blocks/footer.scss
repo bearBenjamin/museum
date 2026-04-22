@@ -2,6 +2,10 @@
   padding-top: 75px;
   color: $color-white;
   background-color: $color-black;
+
+  @include respond-to ("desktop") {
+    padding-top: 60px;
+  }
 }
 
 // .footer__info-page {}

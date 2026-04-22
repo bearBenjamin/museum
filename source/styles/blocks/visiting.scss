@@ -3,12 +3,21 @@
   padding-bottom: 73px;
   color: $color-black;
   background-color: $color-white;
+
+  @include respond-to ("desktop") {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .visiting__title {
   position: relative;
   margin-bottom: 103px;
   color: $color-gold;
+
+  @include respond-to ("desktop") {
+    margin-bottom: 83px;
+  }
 }
 
 .visiting__title::before {
@@ -20,6 +29,10 @@
   bottom: -27px;
   left: 0;
   background-color: $color-red-dark;
+
+  @include respond-to ("desktop") {
+    bottom: -20px;
+  }
 }
 
 .visiting__list-cards {
@@ -31,6 +44,13 @@
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto;
   gap: 75px 60px;
+
+  @include respond-to ("desktop") {
+    padding: 0 108px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 60px 108px;
+  }
 }
 
 // .visiting__item-card {}

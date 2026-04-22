@@ -17,3 +17,7 @@
   color: $color-white;
   background-color: $color-gray-web;
 }
+
+.page__body--noscroll {
+  overflow-y: hidden;
+}

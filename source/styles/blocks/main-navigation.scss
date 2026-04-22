@@ -12,6 +12,8 @@
   color: $color-white;
 
   @include respond-to ("desktop") {
+    padding-top: 49px;
+    padding-bottom: 48px;
     width: 189px;
   }
 }
@@ -20,6 +22,10 @@
   display: block;
   width: 199px;
   height: 33px;
+
+  @include respond-to ("desktop") {
+    width: 189px;
+  }
 }
 
 .main-navigation__logo-link:hover {
@@ -46,13 +52,13 @@
     position: fixed;
     top: 130px;
     left: 0;
-    z-index: 2;
+    z-index: 3;
 
     flex-direction: column;
     align-items: flex-start;
     gap: 25px 0;
 
-    padding: 35px 120px 287px 55px;
+    padding: 35px 120px 280px 55px;
     background-color: $color-black;
     transition: transform 0.5s ease-in-out;
   }
@@ -60,13 +66,14 @@
 
 .main-navigation__list--close {
   @include respond-to("desktop") {
+    width: 305px;
     transform: translate(-100%);
   }
 }
 
 .main-navigation__list--open {
   @include respond-to("desktop") {
-    transform: translate(70%);
+    transform: translate(0);
   }
 }
 
@@ -89,7 +96,22 @@
   margin-right: 6px; // подогнал под PP список навигации
 }
 
-.main-navigation__item::before {
+.main-navigation__item-link {
+  display: block;
+  max-width: 125px;
+  padding-top: 62px;
+  padding-bottom: 62px;
+  color: $color-white;
+  overflow-wrap: break-word;
+  word-break: break-all;
+
+  @include respond-to ("desktop") {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.main-navigation__item-link::before {
   @include respond-to("desktop") {
     content: "";
     width: 12px;
@@ -107,21 +129,11 @@
   }
 }
 
-.main-navigation__item-link {
-  display: block;
-  max-width: 125px;
-  padding-top: 62px;
-  padding-bottom: 62px;
-  color: $color-white;
-  overflow-wrap: break-word;
-  word-break: break-all;
-}
-
 .main-navigation__item-link:hover {
   color: $color-gold;
 }
 
-.main-navigation__item:hover::before {
+.main-navigation__item-link:hover::before {
   background-color: $color-gold;
 }
 
@@ -129,6 +141,6 @@
   color: $color-gold-light;
 }
 
-.main-navigation__item:active::before {
+.main-navigation__item-link:active::before {
   background-color: $color-gold-light;
 }

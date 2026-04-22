@@ -7,6 +7,12 @@
 
   color: $color-white;
   background-color: $color-black;
+
+  @include respond-to ("desktop") {
+    padding-top: 60px;
+
+    height: 1460px;
+  }
 }
 
 .gallery::after {
@@ -21,10 +27,18 @@
 
   pointer-events: none;
   z-index: 2;
+
+  @include respond-to ("desktop") {
+    height: 239px;
+  }
 }
 
 .gallery__title {
   margin-bottom: 75px;
+
+  @include respond-to ("desktop") {
+    margin-bottom: 60px;
+  }
 }
 
 .gallery__list {

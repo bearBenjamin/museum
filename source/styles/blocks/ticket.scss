@@ -3,12 +3,21 @@
   padding-bottom: 75px;
   color: $color-black;
   background-color: $color-white;
+
+  @include respond-to ("desktop") {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .ticket__title {
   position: relative;
   margin-bottom: 102px;
   color: $color-gold;
+
+  @include respond-to ("desktop") {
+    margin-bottom: 83px;
+  }
 }
 
 .ticket__title::before {
@@ -20,6 +29,10 @@
   bottom: -26px;
   left: 0;
   background-color: $color-red-dark;
+
+  @include respond-to ("dekstop") {
+    bottom: -20px;
+  }
 }
 
 .ticket__inner {
@@ -28,6 +41,10 @@
 
 .ticket__picture-container {
   margin-right: 60px;
+
+  @include respond-to ("desktop") {
+    margin-right: 80px;
+  }
 }
 
 .ticket__picture {
@@ -41,10 +58,18 @@
   margin: 0;
   padding: 0;
   border: none;
+
+  // @include respond-to ("desktop") {
+
+  // }
 }
 
 .ticket__filter-group-type {
   margin-right: 240px;
+
+  @include respond-to ("desktop") {
+    display: none;
+  }
 }
 
 .ticket__filter-group-title {
@@ -58,6 +83,11 @@
 .ticket__filter-group-title--amount {
   margin-bottom: 25px;
   text-align: right;
+
+  @include respond-to ("desktop") {
+    margin-bottom: 28px;
+    text-align: left;
+  }
 }
 
 .ticket__filter-group-list-type,
@@ -119,14 +149,21 @@
 
 .ticket__filter-group-list-amount {
   margin-bottom: 50px;
+
+  @include respond-to ("desktop") {
+    margin-bottom: 25px;
+  }
 }
 
 .ticket__filter-group-item-amount {
   margin-bottom: 10px;
-  width: 150px;
 
   font-weight: 300;
   font-size: 22px;
+
+  @include respond-to ("desktop") {
+    margin-bottom: 28px;
+  }
 }
 
 .ticket__filter-group-item-amount:last-child {
@@ -136,6 +173,10 @@
 .ticket__control-amount {
   display: block;
   margin-bottom: 14px;
+
+  @include respond-to ("desktop") {
+    margin-bottom: 10px;
+  }
 }
 
 .ticket__basic-wrapper {
@@ -160,6 +201,10 @@
   mask-repeat: no-repeat;
 
   cursor: pointer;
+
+  @include respond-to ("desktop") {
+    mask-position: left 17px top 50%;
+  }
 }
 
 .ticket__input-basic-amount {
@@ -172,6 +217,10 @@
   font-weight: 300;
   font-size: 22px;
   text-align: center;
+
+  @include respond-to ("desktop") {
+    width: 75px;
+  }
 }
 
 .ticket__increase {
@@ -190,6 +239,10 @@
   mask-repeat: no-repeat;
 
   cursor: pointer;
+
+  @include respond-to ("desktop") {
+    mask-position: left 16px top 50%;
+  }
 }
 
 .ticket__sum-wrapper {
@@ -197,6 +250,10 @@
   font-weight: 700;
   font-size: 28px;
   letter-spacing: 0.03em;
+
+  @include respond-to ("desktop") {
+    margin-bottom: 68px;
+  }
 }
 
 // .ticket__sum-text {}
@@ -226,6 +283,10 @@
   background-color: $color-black;
 
   cursor: pointer;
+
+  @include respond-to ("desktop") {
+    position: static;
+  }
 }
 
 .ticket__toggle:hover {

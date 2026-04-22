@@ -3,12 +3,21 @@
   padding-bottom: 75px;
   background-color: $color-white;
   color: $color-black;
+
+  @include respond-to ("desktop") {
+    padding-top: 60px;
+    padding-bottom: 63px;
+  }
 }
 
 .contacts__title {
   position: relative;
   margin-bottom: 103px;
   color: $color-gold;
+
+  @include respond-to ("desktop") {
+    margin-bottom: 81px;
+  }
 }
 
 .contacts__title::before {
@@ -36,6 +45,12 @@
   padding-right: 50px;
   font-weight: 500;
   font-size: 28px;
+
+  @include respond-to ("desktop") {
+    max-width: 185px;
+    margin-bottom: 35px;
+    font-size: 24px;
+  }
 }
 
 .contacts__list {
@@ -48,6 +63,11 @@
   margin-bottom: 25px;
   font-weight: 300;
   font-size: 22px;
+
+  @include respond-to ("desktop") {
+    margin-bottom: 13px;
+    font-size: 20px;
+  }
 }
 
 .contacts__address {

@@ -11,6 +11,7 @@
 }
 
 .player__toggle-play {
+  padding: 0;
   position: absolute;
   top: 44%;
   left: 50%;
@@ -23,6 +24,13 @@
 
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
+
+  @include respond-to ("desktop") {
+    top: 43.5%;
+
+    width: 152px;
+    height: 152px;
+  }
 }
 
 .player__toggle-play::after {
@@ -36,6 +44,10 @@
   mask-repeat: no-repeat;
   mask-position: 60% 50%;
   mask-size: 91px;
+
+  @include respond-to ("desktop") {
+    mask-size: 63px 83px;
+  }
 }
 
 .player__toggle-play::before {
@@ -49,6 +61,11 @@
   transform: translate(-50%, -50%);
   border-radius: 50%;
   border: 8px solid $color-white;
+
+  @include respond-to ("desktop") {
+    width: 152px;
+    height: 152px;
+  }
 }
 
 .player__toggle-play:hover::after {
@@ -71,10 +88,16 @@
   padding: 25px 30px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; // потом посмотреть а надо ли здесь так делать
   gap: 50px;
   align-items: center;
   background-color: $color-black;
+
+  @include respond-to ("desktop") {
+    padding: 15px 40px;
+    justify-content: flex-start; // и если выше не надо убрать и здесь
+    gap: 30px;
+  }
 }
 
 .player__btn-play {
@@ -88,33 +111,52 @@
   background-color: #b3b3b3;
   mask-image: url("../../icons/stack.svg#btn-play-video-panel-player");
   mask-position: center;
+  mask-size: auto;
   mask-repeat: no-repeat;
 
   cursor: pointer;
+
+  @include respond-to ("desktop") {
+    height: 30px;
+  }
 }
 
 .player__progress {
   flex-grow: 1;
+  width: 100%;
   max-width: 929px;
   display: flex;
   align-items: center;
+
+  @include respond-to ("desktop") {
+    max-width: 564px;
+  }
 }
 
 .player__progress-field {
+  --progress-cutoff-video: 53%;
+
   margin: 0;
   width: 100%;
   height: 8px;
   appearance: none;
-  /* stylelint-disable-next-line property-no-vendor-prefix */
-  -webkit-appearance: none;
-  background: linear-gradient(to right, #710707 0%, #710707 53.5%, #c4c4c4 53.5%, #c4c4c4 100%);
+  background:
+    linear-gradient(
+      to right,
+      #710707 0%,
+      #710707 var(--progress-cutoff-video),
+      #c4c4c4 var(--progress-cutoff-video),
+      #c4c4c4 100%
+    );
   outline: none;
+
+  @include respond-to ("desktop") {
+    height: 5px;
+  }
 }
 
 /* ползунок (кружок) */
 .player__progress-field::-webkit-slider-thumb {
-  /* stylelint-disable-next-line property-no-vendor-prefix */
-  -webkit-appearance: none;
   appearance: none;
 
   width: 15px;
@@ -123,26 +165,20 @@
   background-color: $color-white;
   cursor: pointer;
   border: none;
-  margin-left: 7px;
 
-  // transition: transform 0.1s ease-in-out;
-}
-
-.player__progress-field::-webkit-slider-thumb:hover,
-.player__range-volume-field::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
-  background-color: $color-gray-light;
-}
-
-.player__progress-field::-webkit-slider-thumb:active,
-.player__range-volume-field::-webkit-slider-thumb:active {
-  transform: scale(1.2);
-  background-color: $color-gray-light;
+  @include respond-to ("desktop") {
+    width: 13px;
+    height: 13px;
+  }
 }
 
 .player__progress-field::-moz-range-progress {
-  background-color: #710707;
-  height: 8px;
+  margin: 0;
+  outline: none;
+
+  @include respond-to ("desktop") {
+    height: 5px;
+  }
 }
 
 .player__btn-volume {
@@ -159,6 +195,11 @@
   mask-repeat: no-repeat;
 
   cursor: pointer;
+
+  @include respond-to ("desktop") {
+    width: 26px;
+    height: 20px;
+  }
 }
 
 .player__range-volume {
@@ -169,20 +210,29 @@
 }
 
 .player__range-volume-field {
+  --progress-cutoff-volume: 43%;
+
   margin: 0;
   width: 100%;
   height: 8px;
   appearance: none;
-  /* stylelint-disable-next-line property-no-vendor-prefix */
-  -webkit-appearance: none;
-  background: linear-gradient(to right, #710707 0%, #710707 43.2%, #c4c4c4 43.2%, #c4c4c4 100%);
+  background:
+    linear-gradient(
+      to right,
+      #710707 0%,
+      #710707 var(--progress-cutoff-volume),
+      #c4c4c4 var(--progress-cutoff-volume),
+      #c4c4c4 100%
+    );
   outline: none;
+
+  @include respond-to ("desktop") {
+    height: 5px;
+  }
 }
 
 /* ползунок (кружок) */
 .player__range-volume-field::-webkit-slider-thumb {
-  /* stylelint-disable-next-line property-no-vendor-prefix */
-  -webkit-appearance: none;
   appearance: none;
 
   width: 15px;
@@ -191,16 +241,28 @@
   background-color: $color-white;
   cursor: pointer;
   border: none;
-}
 
-// .player__range-volume-field::-webkit-slider-thumb:hover {
-//   transform: scale(1.2);
-//   background-color: $color-gold;
-// }
+  @include respond-to ("desktop") {
+    width: 13px;
+    height: 13px;
+  }
+}
 
 .player__range-volume-field::-moz-range-progress {
   background-color: #710707;
   height: 8px;
+}
+
+.player__progress-field::-webkit-slider-thumb:hover,
+.player__range-volume-field::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background-color: $color-gray-light;
+}
+
+.player__progress-field::-webkit-slider-thumb:active,
+.player__range-volume-field::-webkit-slider-thumb:active {
+  transform: scale(1.2);
+  background-color: $color-gray-light;
 }
 
 .player__btn-full-screen {
@@ -217,6 +279,11 @@
   mask-repeat: no-repeat;
 
   cursor: pointer;
+
+  @include respond-to ("desktop") {
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .player__btn-play:hover,
@@ -238,3 +305,10 @@
 .player__btn-full-screen:active {
   mask-image: url("../../icons/stack.svg#fullscreen-exit");
 }
+
+
+// Welcome to the Louvre - главное видео
+// Exposition - Le Corps et l'Ame. De Donatello a Michel-Ange. Sculpures italiennes de la Renaissance - первое видео
+// Au Louvre! La Venus de Milo - второе видео
+// Promenade dans les collections mesopotamiennes avec Ariane Thomas - третье видео
+// Petits contens de Printemps - La ruse du Renard - четвертое видео

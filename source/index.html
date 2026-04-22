@@ -305,13 +305,14 @@
               <span class="visually-hidden">Button play</span>
             </button>
             <div class="player__progress">
-              <input class="player__progress-field" id="video" name="video" type="range" min="0" max="100" value="53" step="1">
+              <input class="player__progress-field" id="video" name="video" type="range" min="0" max="100" step="1">
               <label class="player__progress-label visually-hidden" for="video">Video</label>
             </div>
             <button class="player__btn-volume" type="button">
               <span class="visually-hidden">Button volume</span>
             </button>
-            <div class="player__range-volume"><input class="player__range-volume-field" type="range" name="volume" id="volume" min="0" max="100" value="43">
+            <div class="player__range-volume">
+              <input class="player__range-volume-field" type="range" name="volume" id="volume" min="0" max="100" value="43">
               <label class="player__range-volume-label visually-hidden" for="volume">Volume</label>
             </div>
             <button class="player__btn-full-screen" type="button">
@@ -324,7 +325,7 @@
             <li class="video-slider__item">
               <video class="video-slider__video" width="452" height="254" src="images/video/video3.mp4" preload="metadata" poster="images/video/poster3.jpg" playsinline="playsinline"></video>
               <div class="video-slider__container-item-title">
-                <p class="video-slider__item-title">Exposition - Le Corps et l’Ame. De Dona...</p>
+                <p class="video-slider__item-title">Exposition - Le Corps et l'Ame. De Donatello a Michel-Ange. Sculpures italiennes de la Renaissance</p>
               </div>
               <button class="video-slider__item-btn" type="button">
                 <span class="visually-hidden">Button play item slider</span>
@@ -342,7 +343,16 @@
             <li class="video-slider__item">
               <video class="video-slider__video" width="452" height="254" src="images/video/video2.mp4" preload="metadata" poster="images/video/poster2.jpg" playsinline="playsinline"></video>
               <div class="video-slider__container-item-title">
-                <p class="video-slider__item-title">Promenade dans les collections mesop...</p>
+                <p class="video-slider__item-title">Promenade dans les collections mesopotamiennes avec Ariane Thomas</p>
+              </div>
+              <button class="video-slider__item-btn" type="button">
+                <span class="visually-hidden">Button play item slider</span>
+              </button>
+            </li>
+            <li class="video-slider__item">
+              <video class="video-slider__video" width="452" height="254" src="images/video/video2.mp4" preload="metadata" poster="images/video/poster2.jpg" playsinline="playsinline"></video>
+              <div class="video-slider__container-item-title">
+                <p class="video-slider__item-title">Petits contens de Printemps</p>
               </div>
               <button class="video-slider__item-btn" type="button">
                 <span class="visually-hidden">Button play item slider</span>
@@ -612,7 +622,7 @@
         <h2 class="title contacts__title">Contacts</h2>
         <div class="contacts__wrapper">
           <div class="contacts__text-content">
-            <h3 class="contacts__secondary-title">Palais Royal Musee du Louvre</h3>
+            <h3 class="contacts__secondary-title">Palais Royal Musee&nbsp;du&nbsp;Louvre</h3>
             <ul class="contacts__list">
               <li class="contacts__item">
                 <span class="contacts__label">address:</span>
@@ -653,7 +663,7 @@
         <h2 class="visually-hidden">Information about the developer</h2>
         <a class="info-page__footer-logo" href="#">
           <span class="visually-hidden">Logo museum</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="195" height="50" fill="none" viewBox="0 0 199 33">
+          <svg class="info-page__footer-logo-svg" xmlns="http://www.w3.org/2000/svg" width="195" height="50" fill="none" viewBox="0 0 199 33">
             <g clip-path="url(#clip0_1_1995)">
               <path fill="currentColor" d="M49 26H0L24.5 0zM13.3 13.13l3.34 3.54 3.34-3.54-3.34-3.55zm3.34 11.88 3.34-3.54-3.34-3.55-3.33 3.55zm15.77 0 3.34-3.54-3.34-3.55-3.4 3.55zM28.47 5.4l-.08.09-3.15 3.35c-.1.1 0 .16 0 .24l3.07 3.27.14.13 3.34-3.53zM8.79 25l.13-.14 3.07-3.26a.2.2 0 0 0 .08-.15.2.2 0 0 0-.08-.15q-1.39-1.45-2.75-2.92l-.45-.47-3.34 3.55zm8.45-16.06 3.33 3.54.1-.1 3.15-3.32c.1-.12 0-.18 0-.26l-3.08-3.25-.13-.14zm0 8.38 3.33 3.54.17-.17q1.5-1.56 3.02-3.21l.07-.08.02-.09q0-.05-.02-.08l-.07-.08q-1.42-1.5-2.82-3l-.37-.37zm15.76 0 3.34 3.54 3.33-3.54-3.33-3.54zm-4.53-3.55v.07l-3.17 3.36c-.1.1-.06.16 0 .25l2.94 3.14q.12.15.28.29l3.34-3.54zm-15.74 7.07.07-.09 3.16-3.36c.1-.1 0-.15 0-.24l-3.11-3.26-.15-.13-3.32 3.53zm19.63-4.19 3.33-3.54-3.33-3.53-3.34 3.54zm-7.89-8.38 3.34-3.54-3.28-3.46h-.07l-3.2 3.43-.04.09q0 .04.04.08zm0 8.38 3.34-3.54-3.31-3.54-3.34 3.55zm0 8.38 3.34-3.54-3.34-3.55-3.3 3.52zm15.77 0 3.33-3.54-3.32-3.52h-.06l-3.22 3.38c-.1.12 0 .17 0 .24l2.62 2.84zm-38.35.2h6L4.9 22.09zm39.28 0h5.94l-2.97-3.15zm-17.62 0-2.98-3.15-2.98 3.15zm9.76 0h5.94l-2.97-3.15zm-1.91 0-2.97-3.15-2.97 3.15zm-15.77 0-2.97-3.15-2.97 3.15z" />
             </g>

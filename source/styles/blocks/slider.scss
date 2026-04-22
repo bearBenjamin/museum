@@ -1,8 +1,12 @@
 .slider {
   position: relative;
-  width: 1000px;
-  height: auto;
+  //width: 1000px;
+  // height: auto;
   padding-bottom: 60px;
+
+  @include respond-to ("desktop") {
+    //width: 700px;
+  }
 }
 
 .slider__window {
@@ -48,6 +52,11 @@
   width: 600px;
   display: flex;
   background-color: $color-black;
+
+  @include respond-to ("desktop") {
+    width: 700px;
+    padding: 35px 75px 36px 224px;
+  }
 }
 
 .slider__container-number {
@@ -64,6 +73,13 @@
   text-transform: uppercase;
 
   cursor: default;
+
+  @include respond-to ("desktop") {
+    margin-right: 45px;
+
+    font-size: 20px;
+    line-height: 200%;
+  }
 }
 
 // .slider__current-count {}
@@ -83,6 +99,11 @@
   gap: 9px;
 
   background-color: inherit;
+
+  @include respond-to ("desktop") {
+    margin-right: 28px;
+    gap: 17px;
+  }
 }
 
 .slider__pagination-item {
@@ -92,6 +113,11 @@
   justify-content: flex-start;
   align-items: center;
   cursor: pointer;
+
+  @include respond-to ("desktop") {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .slider__pagination-btn {
@@ -105,6 +131,13 @@
   background-color: $color-white;
   transition: background-color 0.3s ease-in-out;
   cursor: pointer;
+
+  @include respond-to ("desktop") {
+    margin: 2px 0 0 1px;
+
+    width: 12px;
+    height: 12px;
+  }
 }
 
 .slider__pagination-btn--current {

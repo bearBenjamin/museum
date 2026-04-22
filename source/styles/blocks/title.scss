@@ -6,4 +6,10 @@
   line-height: 113%;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @include respond-to ("desktop") {
+    font-size: 50px;
+    line-height: 150%;
+    letter-spacing: 0.1em;
+  }
 }
