@@ -8,6 +8,12 @@
   display: grid;
   grid-template-columns: auto auto 1fr;
   column-gap: 20px;
+
+  @include respond-to ("tablet") {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr auto;
+    column-gap: 80px;
+  }
 }
 
 .info-page__wrapper::before {
@@ -31,6 +37,11 @@
   @include respond-to ("desktop") {
     width: 194px;
     height: 33px;
+  }
+
+  @include respond-to ("tablet") {
+    width: 199px;
+    height: 41px;
   }
 }
 
@@ -59,6 +70,11 @@
     margin: 6px 0 25px 25px;
     column-gap: 105px;
   }
+
+  @include respond-to ("tablet") {
+    column-gap: 80px;
+    margin: 16px 0 21px 19px;
+  }
 }
 
 .info-page__footer-item {
@@ -66,6 +82,12 @@
   font-weight: 200;
   font-size: 22px;
   letter-spacing: 0.09em;
+
+  @include respond-to ("tablet") {
+    font-weight: 100;
+    font-size: 18px;
+    letter-spacing: 0.11em;
+  }
 }
 
 .info-page__footer-item:nth-child(2) {
@@ -101,6 +123,12 @@
 
   @include respond-to ("desktop") {
     margin-bottom: 51px;
+  }
+
+  @include respond-to ("tablet") {
+    grid-area: 2 / 2 / 3 / 3;
+    margin-right: 90px;
+    margin-bottom: 42px;
   }
 }
 

@@ -16,6 +16,10 @@
 
 .slider-explore__picture {
   display: block;
+
+  @include respond-to ("tablet") {
+    min-height: 705px;
+  }
 }
 
 .slider-explore__slider-toggle {
@@ -38,6 +42,20 @@
       $color-white 100%
     )
     no-repeat center / 4px 100%;
+
+  @include respond-to ("tablet") {
+    background:
+      linear-gradient(
+        to bottom,
+        $color-white 0%,
+        $color-white calc(51.5% - 20px),
+        transparent calc(51% - 20px),
+        transparent calc(51% + 20px),
+        $color-white calc(51% + 20px),
+        $color-white 100%
+      )
+      no-repeat center / 4px 100%;
+  }
 }
 
 .slider-explore__slider-toggle::before {
@@ -55,7 +73,11 @@
   border: 4px solid $color-white;
   border-radius: 50%;
 
-  box-sizing: border-box;
+  // box-sizing: border-box;
+
+  @include respond-to ("tablet") {
+    top: 51.5%;
+  }
 }
 
 .slider-explore__slider-toggle:hover {

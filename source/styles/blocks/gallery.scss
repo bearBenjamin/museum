@@ -13,6 +13,12 @@
 
     height: 1460px;
   }
+
+  @include respond-to ("tablet") {
+    padding-top: 40px;
+
+    height: 1220px;
+  }
 }
 
 .gallery::after {
@@ -31,6 +37,10 @@
   @include respond-to ("desktop") {
     height: 239px;
   }
+
+  @include respond-to ("tablet") {
+    height: 235px;
+  }
 }
 
 .gallery__title {
@@ -38,6 +48,10 @@
 
   @include respond-to ("desktop") {
     margin-bottom: 60px;
+  }
+
+  @include respond-to ("tablet") {
+    margin-bottom: 40px;
   }
 }
 
@@ -51,6 +65,11 @@
   width: 100%;
 
   height: auto;
+
+  @include respond-to ("tablet") {
+    column-count: 2;
+    column-gap: 24px;
+  }
 }
 
 .gallery__item {

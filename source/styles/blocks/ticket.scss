@@ -8,6 +8,11 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
+
+  @include respond-to ("tablet") {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .ticket__title {
@@ -17,6 +22,10 @@
 
   @include respond-to ("desktop") {
     margin-bottom: 83px;
+  }
+
+  @include respond-to ("tablet") {
+    margin-bottom: 63px;
   }
 }
 
@@ -44,6 +53,10 @@
 
   @include respond-to ("desktop") {
     margin-right: 80px;
+  }
+
+  @include respond-to ("tablet") {
+    margin-right: 60px;
   }
 }
 
@@ -87,6 +100,10 @@
   @include respond-to ("desktop") {
     margin-bottom: 28px;
     text-align: left;
+  }
+
+  @include respond-to ("tablet") {
+    margin-bottom: 39px;
   }
 }
 
@@ -153,6 +170,10 @@
   @include respond-to ("desktop") {
     margin-bottom: 25px;
   }
+
+  @include respond-to ("tablet") {
+    margin-bottom: 39px;
+  }
 }
 
 .ticket__filter-group-item-amount {
@@ -163,6 +184,10 @@
 
   @include respond-to ("desktop") {
     margin-bottom: 28px;
+  }
+
+  @include respond-to ("tablet") {
+    margin-bottom: 24px;
   }
 }
 
@@ -253,6 +278,10 @@
 
   @include respond-to ("desktop") {
     margin-bottom: 68px;
+  }
+
+  @include respond-to ("tablet") {
+    margin-bottom: 40px;
   }
 }
 

@@ -23,6 +23,10 @@
 .form-ticket__wrapper {
   display: flex;
   gap: 40px;
+
+  @include respond-to ("tablet") {
+    flex-direction: column;
+  }
 }
 
 .form-ticket__wrapper-one {

@@ -17,6 +17,10 @@
   @include respond-to ("desktop") {
     width: 330px;
   }
+
+  @include respond-to ("tablet") {
+    width: 280px;
+  }
 }
 
 .item-card__title {
@@ -35,6 +39,11 @@
   @include respond-to ("desktop") {
     font-size: 28px;
     letter-spacing: 0.11em;
+  }
+
+  @include respond-to ("tablet") {
+    font-size: 22px;
+    letter-spacing: 0.14em;
   }
 }
 
@@ -70,6 +79,10 @@
     font-weight: 100;
     font-size: 20px;
   }
+
+  @include respond-to ("tablet") {
+    font-size: 18px;
+  }
 }
 
 .item-card__label {
@@ -80,6 +93,10 @@
   @include respond-to ("desktop") {
     font-weight: 200;
     font-size: 16px;
+  }
+
+  @include respond-to ("tablet") {
+    font-weight: 100;
   }
 }
 

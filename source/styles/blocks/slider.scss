@@ -1,12 +1,6 @@
 .slider {
   position: relative;
-  //width: 1000px;
-  // height: auto;
   padding-bottom: 60px;
-
-  @include respond-to ("desktop") {
-    //width: 700px;
-  }
 }
 
 .slider__window {
@@ -21,6 +15,10 @@
   inset: 0;
   z-index: 2;
   background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%);
+
+  @include respond-to ("tablet") {
+    display: none;
+  }
 }
 
 .slider__list {
@@ -56,6 +54,12 @@
   @include respond-to ("desktop") {
     width: 700px;
     padding: 35px 75px 36px 224px;
+  }
+
+  @include respond-to ("tablet") {
+    bottom: -39px;
+    width: 728px;
+    padding: 26px 163px 26px 164px;
   }
 }
 
@@ -103,6 +107,10 @@
   @include respond-to ("desktop") {
     margin-right: 28px;
     gap: 17px;
+  }
+
+  @include respond-to ("tablet") {
+    margin-right: 38px;
   }
 }
 
@@ -154,6 +162,10 @@
   // gap: 20px;
 
   background-color: inherit;
+
+  @include respond-to ("tablet") {
+    gap: 10px;
+  }
 }
 
 .slider__arrow-btn {
@@ -164,6 +176,10 @@
   background-color: transparent;
 
   cursor: pointer;
+
+  @include respond-to ("tablet") {
+    padding: 20px 10px 20px 0;
+  }
 }
 
 .slider__arrow-btn::before {

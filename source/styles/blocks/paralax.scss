@@ -6,4 +6,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $color-white;
+
+  @include respond-to ("tablet") {
+    height: 300px;
+  }
 }

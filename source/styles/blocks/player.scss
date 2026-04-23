@@ -31,6 +31,13 @@
     width: 152px;
     height: 152px;
   }
+
+  @include respond-to ("tablet") {
+    top: 42.5%;
+
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .player__toggle-play::after {
@@ -47,6 +54,10 @@
 
   @include respond-to ("desktop") {
     mask-size: 63px 83px;
+  }
+
+  @include respond-to ("tablet") {
+    mask-size: 33px 44px;
   }
 }
 
@@ -65,6 +76,12 @@
   @include respond-to ("desktop") {
     width: 152px;
     height: 152px;
+  }
+
+  @include respond-to ("tablet") {
+    width: 80px;
+    height: 80px;
+    border-width: 4px;
   }
 }
 
@@ -98,6 +115,12 @@
     justify-content: flex-start; // и если выше не надо убрать и здесь
     gap: 30px;
   }
+
+  @include respond-to ("tablet") {
+    position: relative;
+    padding: 15px 32px 11px 30px;
+    gap: 35px;
+  }
 }
 
 .player__btn-play {
@@ -119,6 +142,10 @@
   @include respond-to ("desktop") {
     height: 30px;
   }
+
+  @include respond-to ("tablet") {
+    height: 29px;
+  }
 }
 
 .player__progress {
@@ -130,6 +157,13 @@
 
   @include respond-to ("desktop") {
     max-width: 564px;
+  }
+
+  @include respond-to ("tablet") {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    max-width: 728px;
   }
 }
 
@@ -207,6 +241,10 @@
   max-width: 155px;
   display: flex;
   align-items: center;
+
+  @include respond-to ("tablet") {
+    max-width: 486px;
+  }
 }
 
 .player__range-volume-field {
@@ -283,6 +321,11 @@
   @include respond-to ("desktop") {
     width: 26px;
     height: 26px;
+  }
+
+  @include respond-to ("tablet") {
+    width: 27px;
+    height: 27px;
   }
 }
 

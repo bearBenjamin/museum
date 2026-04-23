@@ -13,6 +13,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include respond-to ("tablet") {
+    padding-top: 39px;
+    padding-bottom: 39px;
+  }
 }
 
 .info-developer__copyright {

@@ -20,4 +20,8 @@
   position: relative;
   margin: auto;
   width: 1440px;
+
+  @include respond-to ("desktop") {
+    width: 1024px;
+  }
 }

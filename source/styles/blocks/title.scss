@@ -12,4 +12,9 @@
     line-height: 150%;
     letter-spacing: 0.1em;
   }
+
+  @include respond-to ("tablet") {
+    font-size: 40px;
+    letter-spacing: 0.13em;
+  }
 }

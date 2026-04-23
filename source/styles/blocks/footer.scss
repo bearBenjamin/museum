@@ -6,6 +6,10 @@
   @include respond-to ("desktop") {
     padding-top: 60px;
   }
+
+  @include respond-to ("tablet") {
+    padding-top: 42px;
+  }
 }
 
 // .footer__info-page {}

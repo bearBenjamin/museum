@@ -8,6 +8,11 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
+
+  @include respond-to ("tablet") {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .explore__wrapper {
@@ -35,6 +40,10 @@
 
   @include respond-to ("desktop") {
     margin-bottom: 83px;
+  }
+
+  @include respond-to ("tablet") {
+    margin-bottom: 63px;
   }
 }
 
@@ -73,13 +82,21 @@
   color: #caaa7d;
 }
 
-// .explore__text-one {}
+.explore__text-one {
+  @include respond-to ("tablet") {
+    display: none;
+  }
+}
 
 .explore__text-two {
   @include respond-to ("desktop") {
     margin-bottom: 62px;
 
     line-height: 175%;
+  }
+
+  @include respond-to ("tablet") {
+    display: none;
   }
 }
 
@@ -98,5 +115,10 @@
     width: 100%;
     max-width: 720px;
     min-height: 700px;
+  }
+
+  @include respond-to ("tablet") {
+    max-width: 728px;
+    min-height: 705px;
   }
 }
