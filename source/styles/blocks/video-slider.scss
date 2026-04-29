@@ -25,6 +25,10 @@
     gap: 20px;
     margin-bottom: 20px;
   }
+
+  @include respond-to ("mobile") {
+    margin-bottom: 40px;
+  }
 }
 
 .video-slider__item {
@@ -44,6 +48,11 @@
   @include respond-to ("tablet") {
     width: 354px;
     height: 199px;
+  }
+
+  @include respond-to ("mobile") {
+    width: 180px;
+    height: 101px;
   }
 }
 
@@ -92,6 +101,10 @@
   background-position: center;
   background-size: 40px 40px;
   background-repeat: no-repeat;
+
+  @include respond-to ("mobile") {
+    top: -2px;
+  }
 }
 
 .video-slider__container-item-title::after {
@@ -108,6 +121,10 @@
   mask-position: center;
   mask-size: 4px 16px;
   mask-repeat: no-repeat;
+
+  @include respond-to ("mobile") {
+    display: none;
+  }
 }
 
 .video-slider__item-btn {
@@ -171,6 +188,11 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+
+  @include respond-to ("mobile") {
+    width: 174px;
+    height: 8px;
+  }
 }
 
 .video-slider__pagination-item-arrow {
@@ -190,6 +212,10 @@
   mask-size: 10px, 12px;
   mask-position: center;
   mask-repeat: no-repeat;
+
+  @include respond-to ("mobile") {
+    mask-size: 7px 8px;
+  }
 }
 
 .video-slider__pagination-item-arrow--right {
@@ -202,6 +228,10 @@
   mask-repeat: no-repeat;
 
   rotate: 180deg;
+
+  @include respond-to ("mobile") {
+    mask-size: 7px 8px;
+  }
 }
 
 .video-slider__pagination-item-btn {
@@ -217,6 +247,11 @@
   @include respond-to ("tablet") {
     width: 10px;
     height: 10px;
+  }
+
+  @include respond-to ("mobile") {
+    width: 8px;
+    height: 8px;
   }
 }
 

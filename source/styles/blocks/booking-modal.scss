@@ -9,6 +9,10 @@
   background-color: rgba(242, 242, 242, 0.8);
   transition: transform 0.5s ease-in-out;
   transform: translateX(-100%);
+
+  @include respond-to ("mobile") {
+    transform: translateX(-150%);
+  }
 }
 
 .booking-modal--open {

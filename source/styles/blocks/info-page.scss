@@ -1,6 +1,10 @@
 .info-page {
   color: $color-white;
   background-color: $color-black;
+
+  @include respond-to ("mobile") {
+    padding-bottom: 42px;
+  }
 }
 
 .info-page__wrapper {
@@ -14,6 +18,10 @@
     grid-template-rows: 1fr auto;
     column-gap: 80px;
   }
+
+  @include respond-to ("mobile") {
+    display: block;
+  }
 }
 
 .info-page__wrapper::before {
@@ -24,6 +32,10 @@
   bottom: 0;
   left: 0;
   background-color: #666666;
+
+  @include respond-to ("mobile") {
+    bottom: -40px;
+  }
 }
 
 .info-page__footer-logo {
@@ -42,6 +54,11 @@
   @include respond-to ("tablet") {
     width: 199px;
     height: 41px;
+  }
+
+  @include respond-to ("mobile") {
+    width: 131px;
+    height: 20px;
   }
 }
 
@@ -75,6 +92,13 @@
     column-gap: 80px;
     margin: 16px 0 21px 19px;
   }
+
+  @include respond-to ("mobile") {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 30px 85px;
+    margin: 34px 0 40px;
+  }
 }
 
 .info-page__footer-item {
@@ -88,6 +112,13 @@
     font-size: 18px;
     letter-spacing: 0.11em;
   }
+
+  @include respond-to ("mobile") {
+    margin-bottom: 0;
+    font-weight: 200;
+    font-size: 16px;
+    letter-spacing: 0.13em;
+  }
 }
 
 .info-page__footer-item:nth-child(2) {
@@ -96,6 +127,18 @@
 
 .info-page__footer-item:nth-child(3) {
   grid-area: 3 / 1 / 4 / 2;
+
+  @include respond-to ("mobile") {
+    grid-area: 1 / 2 / 2 / 3;
+    margin: 0 auto;
+  }
+}
+
+.info-page__footer-item:nth-child(4) {
+  @include respond-to ("mobile") {
+    grid-area: 2 / 2 / 3 / 3;
+    margin: 0 0 0 6px;
+  }
 }
 
 .info-page__footer-info-link {
@@ -129,6 +172,11 @@
     grid-area: 2 / 2 / 3 / 3;
     margin-right: 90px;
     margin-bottom: 42px;
+  }
+
+  @include respond-to ("mobile") {
+    margin: 0 60px;
+    gap: 3px;
   }
 }
 

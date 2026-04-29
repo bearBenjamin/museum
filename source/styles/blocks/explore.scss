@@ -58,7 +58,7 @@
   background-color: $color-red-dark;
 
   @include respond-to ("desktop") {
-    bottom: -20px;
+    bottom: -23px;
   }
 }
 
@@ -120,5 +120,10 @@
   @include respond-to ("tablet") {
     max-width: 728px;
     min-height: 705px;
+  }
+
+  @include respond-to ("mobile") {
+    max-width: 380px;
+    min-height: 368px;
   }
 }

@@ -13,7 +13,17 @@
     padding-top: 40px;
     padding-bottom: 80px;
   }
+
+  @include respond-to ("mobile") {
+    padding-bottom: 42px;
+  }
 }
+
+// .visiting__vrapper {
+//   @include respond-to ("mobile") {
+//     margin-bottom: 40px;
+//   }
+// }
 
 .visiting__title {
   position: relative;
@@ -42,6 +52,10 @@
   @include respond-to ("desktop") {
     bottom: -20px;
   }
+
+  @include respond-to ("tablet") {
+    bottom: -23px;
+  }
 }
 
 .visiting__list-cards {
@@ -64,6 +78,12 @@
   @include respond-to ("tablet") {
     padding: 0 56px;
     gap: 40px 56px;
+  }
+
+  @include respond-to ("mobile") {
+    padding: 0 50px;
+    grid-template-columns: auto;
+    row-gap: 42px;
   }
 }
 

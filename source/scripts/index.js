@@ -85,9 +85,12 @@ const setInitialValueVideo = () => {
   } else if (width > 768 && width <= 1024) {
     progressInputVideo.value = 41;
     progressInputVolume.value = 39;
-  } else {
+  } else if (width > 420 && width <= 768) {
     progressInputVideo.value = 31;
     progressInputVolume.value = 40;
+  } else {
+    progressInputVideo.value = 40;
+    progressInputVolume.value = 39.5;
   }
 
   // console.log('progressInputVideo.value: ', progressInputVideo.value);
@@ -125,10 +128,16 @@ const reshuffleGallery = () => {
 
     galleryList.innerHTML = '';
     newOrder.forEach((item) => galleryList.appendChild(item));
-  } else {
+  } else if (width > 420 && width <= 768) {
     const newOrder = [items[2], items[10], items[14], items[0], items[3], items[5], items[6], items[4], items[13], items[1], items[7], items[8], items[9], items[11], items[12]];
     // 1, 2, 4, 10, 13, 14
     // 0, 3, 5, 6 --- 7, 8, 9, 11, 12
+    galleryList.innerHTML = '';
+    newOrder.forEach((item) => galleryList.appendChild(item));
+  } else {
+    const newOrder = [items[10], items[8], items[9], items[3], items[4], items[5], items[6], items[1], items[11], items[13], items[2], items[7], items[12], items[14], items[0]];
+    // 10, 8, 9, 1, 11, 13, 2
+    // (9), 3 , 4, 5, 6, (2), 7, 12, 14, 0
     galleryList.innerHTML = '';
     newOrder.forEach((item) => galleryList.appendChild(item));
   }

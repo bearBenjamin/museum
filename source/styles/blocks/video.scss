@@ -13,6 +13,10 @@
     padding-top: 40px;
     padding-bottom: 80px;
   }
+
+  @include respond-to ("mobile") {
+    padding-bottom: 40px;
+  }
 }
 
 .video__wrapper {
@@ -39,6 +43,10 @@
   @include respond-to ("tablet") {
     margin-bottom: 20px;
   }
+
+  @include respond-to ("mobile") {
+    margin-bottom: 15px;
+  }
 }
 
 .video__text {
@@ -63,7 +71,11 @@
   }
 
   @include respond-to ("tablet") {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
+  }
+
+  @include respond-to ("mobile") {
+    margin-bottom: 40px;
   }
 }
 

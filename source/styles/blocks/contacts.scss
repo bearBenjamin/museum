@@ -11,7 +11,11 @@
 
   @include respond-to ("tablet") {
     padding-top: 40px;
-    padding-bottom: 66px;
+    padding-bottom: 65px;
+  }
+
+  @include respond-to ("mobile") {
+    padding-bottom: 40px;
   }
 }
 
@@ -27,6 +31,10 @@
   @include respond-to ("tablet") {
     margin-bottom: 60px;
   }
+
+  @include respond-to ("mobile") {
+    margin-bottom: 62px;
+  }
 }
 
 .contacts__title::before {
@@ -39,7 +47,7 @@
   background-color: $color-red-dark;
 
   @include respond-to ("tablet") {
-    bottom: -20px;
+    bottom: -23px;
   }
 }
 
@@ -74,6 +82,10 @@
     margin-bottom: 40px;
     font-size: 20px;
   }
+
+  @include respond-to ("mobile") {
+    font-size: 16px;
+  }
 }
 
 .contacts__list {
@@ -95,6 +107,10 @@
   @include respond-to ("tablet") {
     margin-bottom: 15px;
     font-size: 18px;
+  }
+
+  @include respond-to ("mobile") {
+    font-size: 16px;
   }
 }
 

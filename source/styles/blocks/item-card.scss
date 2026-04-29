@@ -4,6 +4,10 @@
   color: $color-black;
 
   transition: opacity 0.3s ease;
+
+  // @include respond-to ("mobile") {
+  //   margin-bottom: 42px;
+  // }
 }
 
 .item-card__link {
@@ -45,6 +49,11 @@
     font-size: 22px;
     letter-spacing: 0.14em;
   }
+
+  @include respond-to ("mobile") {
+    font-size: 18px;
+    letter-spacing: 0.28em;
+  }
 }
 
 .item-card__title::before {
@@ -61,6 +70,10 @@
 
   @include respond-to ("desktop") {
     width: 150px;
+  }
+
+  @include respond-to ("mobile") {
+    bottom: -14px;
   }
 }
 
@@ -82,6 +95,10 @@
 
   @include respond-to ("tablet") {
     font-size: 18px;
+  }
+
+  @include respond-to ("mobile") {
+    font-size: 16px;
   }
 }
 

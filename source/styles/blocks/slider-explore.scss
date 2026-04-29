@@ -12,13 +12,24 @@
 .slider-explore__slider-inner--before {
   width: 440px;
   z-index: 1;
+
+  @include respond-to ("mobile") {
+    width: 230px;
+  }
 }
 
 .slider-explore__picture {
+  width: 720px;
+  height: 700px;
   display: block;
 
   @include respond-to ("tablet") {
-    min-height: 705px;
+    height: 705px;
+  }
+
+  @include respond-to ("mobile") {
+    width: 380px;
+    height: 368px;
   }
 }
 
@@ -49,12 +60,28 @@
         to bottom,
         $color-white 0%,
         $color-white calc(51.5% - 20px),
-        transparent calc(51% - 20px),
-        transparent calc(51% + 20px),
-        $color-white calc(51% + 20px),
+        transparent calc(51.5% - 20px),
+        transparent calc(51.5% + 20px),
+        $color-white calc(51.5% + 20px),
         $color-white 100%
       )
       no-repeat center / 4px 100%;
+  }
+
+  @include respond-to ("mobile") {
+    left: 230px;
+    width: 20px;
+    background:
+      linear-gradient(
+        to bottom,
+        $color-white 0%,
+        $color-white calc(51.9% - 10px),
+        transparent calc(51.1% - 10px),
+        transparent calc(51.1% + 10px),
+        $color-white calc(51.1% + 10px),
+        $color-white 100%
+      )
+      no-repeat center / 2px 100%;
   }
 }
 
@@ -78,6 +105,12 @@
   @include respond-to ("tablet") {
     top: 51.5%;
   }
+
+  @include respond-to ("mobile") {
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+  }
 }
 
 .slider-explore__slider-toggle:hover {
@@ -92,6 +125,34 @@
       $color-gold 100%
     )
     no-repeat center / 4px 100%;
+
+  @include respond-to ("tablet") {
+    background:
+      linear-gradient(
+        to bottom,
+        $color-gold 0%,
+        $color-gold calc(51.5% - 20px),
+        transparent calc(51.5% - 20px),
+        transparent calc(51.5% + 20px),
+        $color-gold calc(51.5% + 20px),
+        $color-gold 100%
+      )
+      no-repeat center / 4px 100%;
+  }
+
+  @include respond-to ("mobile") {
+    background:
+      linear-gradient(
+        to bottom,
+        $color-gold 0%,
+        $color-gold calc(51.9% - 10px),
+        transparent calc(51.1% - 10px),
+        transparent calc(51.1% + 10px),
+        $color-gold calc(51.1% + 10px),
+        $color-gold 100%
+      )
+      no-repeat center / 2px 100%;
+  }
 }
 
 .slider-explore__slider-toggle:active {
@@ -106,6 +167,34 @@
       $color-gold-dark 100%
     )
     no-repeat center / 4px 100%;
+
+  @include respond-to ("tablet") {
+    background:
+      linear-gradient(
+        to bottom,
+        $color-gold-dark 0%,
+        $color-gold-dark calc(51.5% - 20px),
+        transparent calc(51.5% - 20px),
+        transparent calc(51.5% + 20px),
+        $color-gold-dark calc(51.5% + 20px),
+        $color-gold-dark 100%
+      )
+      no-repeat center / 4px 100%;
+  }
+
+  @include respond-to ("mobile") {
+    background:
+      linear-gradient(
+        to bottom,
+        $color-gold-dark 0%,
+        $color-gold-dark calc(51.9% - 10px),
+        transparent calc(51.1% - 10px),
+        transparent calc(51.1% + 10px),
+        $color-gold-dark calc(51.1% + 10px),
+        $color-gold-dark 100%
+      )
+      no-repeat center / 2px 100%;
+  }
 }
 
 .slider-explore__slider-toggle:hover::before {
