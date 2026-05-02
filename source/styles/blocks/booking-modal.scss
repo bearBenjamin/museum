@@ -9,9 +9,12 @@
   background-color: rgba(242, 242, 242, 0.8);
   transition: transform 0.5s ease-in-out;
   transform: translateX(-100%);
+  overflow-y: auto; // Позволяет скроллить саму модалку, если она выше экрана
+  -webkit-overflow-scrolling: touch; // Для плавного скролла на iOS
+
 
   @include respond-to ("mobile") {
-    transform: translateX(-150%);
+    transform: translateX(-100%);
   }
 }
 
@@ -27,5 +30,13 @@
 
   @include respond-to ("desktop") {
     width: 1024px;
+  }
+
+  @include respond-to ("tablet") {
+    width: 768px;
+  }
+
+  @include respond-to ("mobile") {
+    width: 420px;
   }
 }

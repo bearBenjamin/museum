@@ -103,6 +103,11 @@
     flex-direction: column;
     gap: 35px;
   }
+
+  @include respond-to ("mobile") {
+    top: 90px;
+    min-height: 544px;
+  }
 }
 
 .main-navigation__wrapper--close {
@@ -111,7 +116,7 @@
   }
 
   @include respond-to ("mobile") {
-    transform: translate(-175%);
+    transform: translate(-100%);
   }
 }
 
@@ -138,14 +143,23 @@
     align-items: flex-start;
     gap: 24px 0;
 
-    padding: 25px 120px 280px 55px;
+    padding: 34px 120px 280px 55px;
     background-color: $color-black;
   }
 
   @include respond-to ("tablet") {
-    width: 658px;
+    // width: 658px;
     margin: 0 auto;
+    margin-left: 55px;
     padding: 0;
+  }
+
+  @include respond-to ("mobile") {
+    // width: 122px;
+    margin-left: 55px;
+    padding-top: 34px;
+    padding-right: 223px;
+    padding-bottom: 0;
   }
 }
 
@@ -157,7 +171,7 @@
 
   @include respond-to("desktop") {
     position: relative;
-    width: 122px;
+    // width: 122px;
     font-weight: 300;
     font-size: 20px;
     letter-spacing: 0.1em;
@@ -170,7 +184,7 @@
 
 .main-navigation__item-link {
   display: block;
-  max-width: 125px;
+  width: 125px;
   padding-top: 62px;
   padding-bottom: 62px;
   color: $color-white;
@@ -232,6 +246,31 @@
     flex-wrap: wrap;
     gap: 15px 20px;
   }
+
+  @include respond-to ("mobile") {
+    width: 310px;
+    margin: 0 auto;
+    justify-content: center;
+    column-gap: 12px;
+  }
+}
+
+.main-navigation__gallery-item:first-child {
+  @include respond-to ("mobile") {
+    order: 2;
+  }
+}
+
+.main-navigation__gallery-item:nth-child(2) {
+  @include respond-to ("mobile") {
+    order: 1;
+  }
+}
+
+.main-navigation__gallery-item:last-child {
+  @include respond-to ("mobile") {
+    order: 3;
+  }
 }
 
 .main-navigation__gallery-list::after {
@@ -243,6 +282,10 @@
   left: 0;
   right: 55px;
   background-color: rgba(255, 255, 255, 0.5);
+
+  @include respond-to ("mobile") {
+    bottom: -16px;
+  }
 }
 
 .main-navigation__burger-social-list {
@@ -257,11 +300,22 @@
     display: flex;
     gap: 23px;
   }
+
+  @include respond-to ("mobile") {
+    padding: 5px 0;
+    max-width: 260px;
+    gap: 5px;
+  }
 }
 
 .main-navigation__burger-social-item {
   border: 1px solid #666666;
   border-radius: 50%;
+
+  @include respond-to ("mobile") {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .main-navigation__burger-social-link {

@@ -1,17 +1,34 @@
 .form-part-one {
-  margin-top: 41px;
+  padding-top: 43px;
   color: $color-black;
   background-color: $color-white;
+
+  @include respond-to ("desktop") {
+    padding-top: 38px;
+  }
 }
 
 .form-part-one__title {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   padding-right: 14px;
   font-weight: 400;
   font-size: 50px;
   letter-spacing: normal;
   color: $color-gold;
+
+  @include respond-to ("desktop") {
+    margin-bottom: 2px;
+  }
+
+  @include respond-to ("tablet") {
+    margin-bottom: 3px;
+  }
+
+  @include respond-to ("mobile") {
+    margin-bottom: 7px;
+    font-size: 32px;
+  }
 }
 
 .form-part-one__title::before {
@@ -26,16 +43,29 @@
   background-size: 85px 41px;
   background-position: center;
   background-repeat: no-repeat;
+
+  @include respond-to ("desktop") {
+    top: -44%;
+  }
+
+  @include respond-to ("mobile") {
+    top: -82%;
+  }
 }
 
 .form-part-one__subtitle {
   position: relative;
   margin: 0;
-  margin-bottom: 73px;
+  margin-bottom: 72px;
   padding-right: 284px;
   font-weight: 400;
   font-size: 18px;
   color: $color-red-dark;
+
+  @include respond-to ("tablet") {
+    margin-bottom: 51px;
+    padding-right: 30px;
+  }
 }
 
 .form-part-one__subtitle::after {
@@ -44,7 +74,7 @@
   width: 100%;
   height: 3px;
   position: absolute;
-  bottom: -10px;
+  bottom: -12px;
   left: 0;
   background-color: $color-red-dark;
 }
@@ -59,17 +89,23 @@
 
 .form-part-one__filter-group--date {
   margin-bottom: 20px;
+  gap: 28px;
+
+  @include respond-to ("mobile") {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .form-part-one__container-date {
   position: relative;
-  width: 190px;
   display: flex;
   align-items: center;
 }
 
 .form-part-one__date {
-  width: 100%;
+  width: 190px;
+  height: 45px;
   padding: 13px 15px 12px 45px;
   font-family: inherit;
   font-weight: 400;
@@ -77,27 +113,57 @@
   border: 1px solid $color-black;
   border-radius: 0;
   appearance: none;
+  cursor: pointer;
+
+  @include respond-to ("tablet") {
+    width: 251px;
+  }
+
+  @include respond-to ("mobile") {
+    width: 360px;
+  }
 }
 
 .form-part-one__date--day {
-  background-image:
-    url("../../icons/stack.svg#ticket-select-arrow"),
-    url("../../icons/stack.svg#ticket-date");
-  background-size: 17px 17px, 15px 15px;
-  background-position:
-    right 15px center,
-    left 15px center;
+  background-image: url("../../icons/stack.svg#ticket-date");
+  background-size: 15px 15px;
+  background-position: left 15px center;
   background-repeat: no-repeat;
 }
 
+.form-part-one__container-date::after {
+  content: "";
+  width: 17px;
+  height: 17px;
+  top: 50%;
+  right: 16px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  transform: translateY(-50%) rotate(0deg);
+  position: absolute;
+  background-color: $color-black;
+  mask-image: url("../../icons/stack.svg#ticket-select-arrow");
+  mask-size: cover;
+  mask-repeat: no-repeat;
+}
+
+.form-part-one__container-date:hover::after {
+  background-color: $color-gold;
+}
+
+.form-part-one__container-date:hover .form-part-one__date {
+  border-color: $color-gold;
+  color: $color-gold;
+}
+
+.form-part-one__container-date:active::after {
+  background-color: $color-gold-dark;
+  transform: translateY(-50%) rotate(180deg);
+}
+
 .form-part-one__date--time {
-  background-image:
-    url("../../icons/stack.svg#ticket-select-arrow"),
-    url("../../icons/stack.svg#ticket-time");
-  background-size: 17px 17px, 15px 15px;
-  background-position:
-    right 15px center,
-    left 15px center;
+  background-image: url("../../icons/stack.svg#ticket-time");
+  background-size: 15px 15px;
+  background-position: left 15px center;
   background-repeat: no-repeat;
 }
 
@@ -110,11 +176,16 @@
   margin: 0;
   padding: 13px 307px 12px 43px;
   width: 100%;
+  height: 45px;
   border: 1px solid $color-black;
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   color: $color-black;
+
+  @include respond-to ("mobile") {
+    padding: 13px 267px 12px 43px;
+  }
 }
 
 .form-part-one__info-user--name {
@@ -147,37 +218,90 @@
   color: $color-black;
 }
 
+.form-part-one__info-user:hover {
+  border-color: $color-gold;
+}
+
+.form-part-one__info-user:hover::placeholder {
+  color: $color-gold;
+}
+
 .form-part-one__container-ticket-type {
   position: relative;
-  width: 400px;
+  width: 100%;
   display: flex;
   align-items: center;
 }
 
+.form-part-one__container-ticket-type::after {
+  content: "";
+  width: 17px;
+  height: 17px;
+  top: 50%;
+  right: 16px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  transform: translateY(-50%) rotate(0deg);
+  position: absolute;
+  background-color: $color-black;
+  mask-image: url("../../icons/stack.svg#ticket-select-arrow");
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  pointer-events: none;
+}
+
+
 .form-part-one__ticket-type {
   width: 100%;
+  height: 45px;
   padding: 13px 260px 12px 45px;
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
-  background-image:
-    url("../../icons/stack.svg#ticket-select-arrow"),
-    url("../../icons/stack.svg#ticket-type");
-  background-size: 17px 17px, 15px 15px;
-  background-position:
-    right 15px center,
-    left 15px center;
+  background-image: url("../../icons/stack.svg#ticket-type");
+  background-size: 15px 15px;
+  background-position: left 15px center;
   background-repeat: no-repeat;
   border: 1px solid $color-black;
   border-radius: 0;
   appearance: none;
+
+  @include respond-to ("mobile") {
+    padding-right: 218px;
+  }
+}
+
+.form-part-one__container-ticket-type:hover::after {
+  background-color: $color-gold;
+}
+
+.form-part-one__container-ticket-type:hover .form-part-one__ticket-type {
+  border-color: $color-gold;
+  color: $color-gold;
+}
+
+.form-part-one__container-ticket-type:active::after {
+  background-color: $color-gold-dark;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.form-part-one__container-ticket-type option {
+  color: $color-black;
 }
 
 .form-part-one__filter-group--count-ticket {
+  width: 100%;
   padding: 10px 15px 15px;
   flex-direction: column;
   gap: 0;
   border: 1px solid $color-black;
+
+  @include respond-to ("desktop") {
+    padding: 10px 15px 20px;
+  }
+
+  @include respond-to ("tablet") {
+    padding: 10px 15px 13px;
+  }
 }
 
 .form-part-one__entry-title {
@@ -197,7 +321,7 @@
   width: 100%;
   height: 2px;
   position: absolute;
-  bottom: -5px;
+  bottom: -6px;
   left: 0;
   background-color: $color-red-dark;
 }
@@ -222,7 +346,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid $color-black;
+  // border: 1px solid $color-black;
 }
 
 .form-part-one__count {
@@ -233,14 +357,29 @@
   width: 35px;
   height: 25px;
   background-color: $color-black;
+  cursor: pointer;
+}
+
+.form-part-one__count:hover {
+  background-color: $color-gold;
+}
+
+.form-part-one__count:active {
+  background-color: $color-gold-dark;
+}
+
+.form-part-one__count:focus-visible {
+  background-color: $color-gold;
 }
 
 .form-part-one__input-basic-entry,
 .form-part-one__input-senior-entry {
   margin: 0;
-  padding: 2px 13px 3px 12px;
-  border: none;
+  padding: 4px 10px 3px 11px;
+  border: 1px solid $color-black;
   width: 35px;
+  height: 25px;
+  font-size: 18px;
 }
 
 .form-part-one__count--decrease {

@@ -15,7 +15,7 @@
   }
 
   @include respond-to ("mobile") {
-    padding-bottom: 42px;
+    padding-bottom: 39px;
   }
 }
 
@@ -83,7 +83,7 @@
   @include respond-to ("mobile") {
     padding: 0 50px;
     grid-template-columns: auto;
-    row-gap: 42px;
+    row-gap: 41px;
   }
 }
 

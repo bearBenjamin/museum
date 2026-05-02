@@ -81,6 +81,32 @@
   margin-bottom: 24px;
 }
 
+.gallery__item--js {
+  opacity: 0;
+  transform: translateY(80px);
+  transition-property: opacity, transform;
+  // transform: scale(0.8);
+  transition-duration: 0.8s, 1.2s;
+  transition-timing-function: ease-out, cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+
+  @include respond-to ("tablet") {
+    transform: translateY(60px);
+    // transform: scale(0.7);
+  }
+
+  @include respond-to ("mobile") {
+    transform: translateY(40px);
+    // transform: scale(0.6);
+  }
+}
+
+.gallery__item--animated {
+  opacity: 1;
+  transform: translateY(0);
+  // transform: translate(1.1);
+}
+
 .gallery__item:nth-child(1),
 .gallery__item:nth-child(11) {
   padding-top: 50px;

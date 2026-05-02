@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Museum</title>
+  <!-- linthtml-disable htmlacademy/no-blocking-script -->
+  <script>document.documentElement.classList.add('page--js');</script>
+  <!-- linthtml-enable htmlacademy/no-blocking-script -->
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer=""></script>
 </head>
@@ -789,7 +792,7 @@
     <div class="booking-modal__container modal-container">
       <section class="modal-container__content">
         <form class="modal-container__form form-ticket" action="#" method="post" id="form-buy-ticket">
-          <button class="form-ticket__button-close" type="reset">
+          <button class="form-ticket__button-close" type="button">
             <span class="visually-hidden">Close button</span>
           </button>
           <div class="form-ticket__wrapper">
@@ -901,7 +904,7 @@
                     <div class="form-part-two__field-row">
                       <div class="form-part-two__field-row-one">
                         <label class="visually-hidden" for="date-card">Date</label>
-                        <input class="form-part-two__input-date-card" type="text" id="date-card" name="date-card" placeholder="3">
+                        <input class="form-part-two__input-date-card" type="text" id="date-card" name="date-card" placeholder="03">
                         <div class="form-part-two__toggle-button">
                           <button class="form-part-two__button-up" type="button">
                             <span class="visually-hidden">Button up</span>
@@ -936,7 +939,7 @@
                   <div class="form-part-two__black-square"></div>
                   <label class="form-part-two__label-cv" for="cvc">CVC/CVV</label>
                   <input class="form-part-two__input-cv" type="text" id="cvc" name="cvc">
-                  <p class="form-part-two__card-cvc-text">The last 3 or 4 digits on back of the card</p>
+                  <p class="form-part-two__card-cvc-text">The last 3&nbsp;or&nbsp;4 digits on back of&nbsp;the card</p>
                 </div>
                 <button class="form-part-two__submit" type="submit">
                   <span class="visually-hidden">Button submit</span>
@@ -949,7 +952,6 @@
       </section>
     </div>
   </div>
-
 </body>
 
 </html>

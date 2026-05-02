@@ -13,26 +13,56 @@
   right: 30px;
   width: 25px;
   height: 25px;
-  background-image: url("../../icons/stack.svg#ticket-close");
-  background-size: 25px 25px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: $color-white;
+  mask-image: url("../../icons/stack.svg#ticket-close");
+  mask-size: 25px 25px;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: $color-black;
+  cursor: pointer;
+}
+
+.form-ticket__button-close:hover {
+  background-color: $color-gold;
+}
+
+.form-ticket__button-close:active {
+  background-color: $color-gold-dark;
+}
+
+.form-ticket__button-close:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 25px $color-gold;
 }
 
 .form-ticket__wrapper {
+  width: 970px;
   display: flex;
   gap: 40px;
 
   @include respond-to ("tablet") {
     flex-direction: column;
+    gap: 51px;
+    width: 530px;
+    margin: 0 auto;
   }
 }
 
 .form-ticket__wrapper-one {
   width: 400px;
+
+  @include respond-to ("tablet") {
+    width: 530px;
+  }
+
+  @include respond-to ("mobile") {
+    width: 360px;
+  }
 }
 
 .form-ticket__wrapper-two {
   width: 530px;
+
+  @include respond-to ("mobile") {
+    width: 360px;
+  }
 }

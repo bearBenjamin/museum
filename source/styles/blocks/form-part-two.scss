@@ -1,18 +1,25 @@
 .form-part-two {
-  padding: 25px 30px 26px;
+  padding: 24px 30px 26px;
   display: flex;
   flex-direction: column;
   color: $color-black;
   background-color: $color-white;
   border: 1px solid $color-black;
+
+  @include respond-to ("tablet") {
+    padding: 25px 15px;
+  }
+
+  @include respond-to ("mobile") {
+    gap: 9px;
+  }
 }
 
 .form-part-two__inner-one {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  gap: 22px;
-  margin-bottom: 10px;
+  gap: 19px;
 }
 
 .form-part-two__innert-info-ticket {
@@ -65,6 +72,13 @@
   background-image: url("../../icons/stack.svg#ticket-chek-type");
 }
 
+.form-part-two__ticket-picture {
+  @include respond-to ("mobile") {
+    width: 120px;
+    height: 96px;
+  }
+}
+
 .form-part-two__price-list {
   margin: 0;
   padding: 0;
@@ -110,6 +124,10 @@
   top: -10px;
   left: 0;
   background-color: $color-red-dark;
+
+  @include respond-to ("tablet") {
+    top: -13px;
+  }
 }
 
 .form-part-two__price-total {
@@ -126,14 +144,21 @@
 .form-part-two__card-container {
   position: relative;
   width: 100%;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to ("mobile") {
+    gap: 25px;
+  }
 }
 
 .form-part-two__inner-two {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 6px;
+  left: -2px;
   z-index: 2;
-  padding: 15px 20px;
+  padding: 16px 20px 15px;
   width: 360px;
   background-color: #bcbcbc;
   display: grid;
@@ -141,6 +166,17 @@
   grid-template-rows: auto auto auto auto auto;
   column-gap: 15px;
   border-radius: 3px;
+
+  @include respond-to ("tablet") {
+    top: 9px;
+    left: -1px;
+  }
+
+  @include respond-to ("mobile") {
+    position: static;
+    width: 330px;
+    padding: 15px 20px;
+  }
 }
 
 .form-part-two__label-card {
@@ -169,6 +205,7 @@
 
 .form-part-two__date-card-group-title {
   margin-bottom: 5px;
+  padding: 0;
   font-weight: 400;
   font-size: 12px;
   color: #161615;
@@ -221,6 +258,7 @@
   margin: 0;
   padding: 0;
   border: none;
+  cursor: pointer;
 }
 
 .form-part-two__button-up,
@@ -258,7 +296,7 @@
 
 .form-part-two__label-name-card {
   grid-area: 4 / 1 / 5 / 2;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   font-weight: 400;
   font-size: 12px;
   color: #161615;
@@ -283,14 +321,24 @@
 
 .form-part-two__inner-three {
   position: absolute;
-  top: 30px;
-  left: 110px;
+  top: 36px;
+  left: 108px;
   z-index: 1;
   width: 360px;
   background-color: #939393;
   display: flex;
   flex-direction: column;
   border-radius: 3px;
+
+  @include respond-to ("tablet") {
+    top: 38px;
+    left: 139px;
+  }
+
+  @include respond-to ("mobile") {
+    position: static;
+    width: 330px;
+  }
 }
 
 .form-part-two__black-square {
@@ -303,7 +351,7 @@
 
 .form-part-two__label-cv {
   margin-right: 29px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   width: fit-content;
   align-self: end;
   font-weight: 400;
@@ -314,7 +362,7 @@
 
 .form-part-two__input-cv {
   margin-right: 20px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   width: 75px;
   height: 35px;
   align-self: end;
@@ -322,7 +370,9 @@
 }
 
 .form-part-two__card-cvc-text {
+  margin: 0;
   margin-right: 30px;
+  margin-bottom: 15px;
   width: 55px;
   align-self: end;
   font-weight: 400;
@@ -332,14 +382,30 @@
 
 .form-part-two__submit {
   display: block;
+  width: 220px;
   margin: 0;
+  margin-top: auto;
   padding: 11px 85px 10px;
-  position: absolute;
-  top: 273px;
-  right: -2px;
+  align-self: end;
+  // position: absolute;
+  // top: 273px;
+  // right: -2px;
   border: none;
   font-weight: 400;
   font-size: 22px;
   color: $color-white;
   background-color: $color-red-dark;
+  cursor: pointer;
+
+  @include respond-to ("mobile") {
+    margin-top: 14px;
+  }
+}
+
+.form-part-two__submit:hover {
+  background-color: $color-gold;
+}
+
+.form-part-two__submit:active {
+  background-color: $color-gold-dark;
 }
