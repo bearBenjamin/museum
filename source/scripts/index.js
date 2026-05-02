@@ -55,10 +55,12 @@ const btnToggleModal = document.querySelector('.form-ticket__button-close');
 
 btnToggleTicket.addEventListener('click', () => {
   bookingModal.classList.add('booking-modal--open');
+  pageBody.classList.add('page__body--noscroll');
 });
 
 btnToggleModal.addEventListener('click', () => {
   bookingModal.classList.remove('booking-modal--open');
+  pageBody.classList.remove('page__body--noscroll');
 });
 
 
@@ -144,3 +146,56 @@ const reshuffleGallery = () => {
 };
 
 reshuffleGallery();
+
+
+//анимация галереи
+const isGalleryReady = () => {
+  if (items.length === 0) {
+    return false;
+  }
+
+  if (!document.documentElement.classList.contains('page--js')) {
+    return false;
+  }
+
+  items.forEach((item) => {
+    item.classList.add('gallery__item--js');
+  });
+
+  return true;
+};
+
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const animateGalleryPicture = (item) => {
+  const randomDelay = (Math.random() * 0.4).toFixed(1);
+  item.style.transitionDelay = `${randomDelay}s`;
+  item.classList.add('gallery__item--animated');
+};
+
+const handleIntersecting = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const item = entry.target;
+      animateGalleryPicture(item);
+      observer.unobserve(item);
+    }
+  });
+};
+
+const initGalleryAnimation = () => {
+  const ready = isGalleryReady();
+
+  if (!ready) {
+    return;
+  }
+
+  const observer = new IntersectionObserver(handleIntersecting, observerOptions);
+
+  items.forEach((item) => observer.observe(item));
+};
+
+initGalleryAnimation();
