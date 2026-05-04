@@ -70,6 +70,15 @@
 
   height: auto;
 
+  @include respond-to ("desktop") {
+    column-gap: clamp(28px, calc(28px + (36 - 28) * (100vw - 880px) / (1024 - 880)), 36px);
+  }
+
+  @media (max-width: 880px) {
+    column-count: 2;
+    column-gap: clamp(24px, calc(24px + (28 - 24) * (100vw - 768px) / (880 - 768)), 28px);
+  }
+
   @include respond-to ("tablet") {
     column-count: 2;
     column-gap: 24px;

@@ -12,11 +12,15 @@
   grid-template-columns: auto 1fr;
   grid-template-rows: auto auto 1fr;
 
-  @include respond-to ("tablet") {
-    // grid-template-columns: 1fr;
-    // justify-items: center;
+  @media (max-width: 880px) {
     display: block;
   }
+
+  // @include respond-to ("tablet") {
+  //   // grid-template-columns: 1fr;
+  //   // justify-items: center;
+  //   display: block;
+  // }
 
   @include respond-to ("mobile") {
     padding-top: 6px;
@@ -41,16 +45,26 @@
     letter-spacing: 0.1em;
   }
 
+  @media (max-width: 880px) {
+    margin: 0 auto;
+    padding-top: clamp(0px, calc(0px + (50 - 0) * (100vw - 768px) / (880 - 768)), 50px);
+    padding-bottom: clamp(0px, calc(25px - (25 - 0) * (100vw - 768px) / (880 - 768)), 25px);
+    font-size: clamp(39px, calc(39px + (50 - 39) * (100vw - 768px) / (880 - 768)), 50px);
+    text-align: center;
+    line-height: 166%;
+    letter-spacing: 0.12em;
+  }
+
   @include respond-to ("tablet") {
     // grid-area: 1 / 1 / 2 / 2;
-    margin: 0 auto;
+    // margin: 0 auto;
     margin-top: -5px;
     padding-top: 0;
     padding-bottom: 25px;
     font-size: 39px;
     line-height: 146%;
     letter-spacing: 0.13em;
-    text-align: center;
+    // text-align: center;
   }
 
   @include respond-to ("mobile") {
@@ -80,14 +94,21 @@
     letter-spacing: 0.08em;
   }
 
+  @media (max-width: 880px) {
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 0.09em;
+    font-size: 22px;
+  }
+
   @include respond-to ("tablet") {
     // grid-area: 2 / 1 / 3 / 2;
-    margin: 0 auto;
+    // margin: 0 auto;
     padding-top: 0;
     padding-bottom: 49px;
 
     font-size: 20px;
-    text-align: center;
+    // text-align: center;
     letter-spacing: 0.1em;
   }
 
@@ -124,9 +145,13 @@
     letter-spacing: 0.1em;
   }
 
-  @include respond-to ("tablet") {
+  @media (max-width: 880px) {
     display: none;
   }
+
+  // @include respond-to ("tablet") {
+  //   display: none;
+  // }
 }
 
 .welcome__title,
@@ -156,6 +181,10 @@
 
   @include respond-to ("desktop") {
     max-width: 700px;
+  }
+
+  @media (max-width: 880px) {
+    max-width: 714px;
   }
 
   @include respond-to ("tablet") {

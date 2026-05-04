@@ -61,11 +61,14 @@
   margin-right: 60px;
 
   @include respond-to ("desktop") {
-    margin-right: 80px;
+    margin-right: clamp(60px, calc(60px + (80 - 60) * (100vw - 768px) / (1024 - 768)), 80px);
   }
 
   @include respond-to ("tablet") {
-    margin-right: 60px;
+    // margin-right: 60px;
+    margin-right: clamp(0px, calc(0px + (60 - 0) * (100vw - 420px) / (768 - 420)), 60px);
+    // Постепенно вводим нижний отступ вместо правого
+    margin-bottom: clamp(0px, calc(40px - (40 - 0) * (100vw - 320px) / (420 - 320)), 40px);
   }
 
   @include respond-to ("mobile") {
@@ -80,10 +83,9 @@
   height: auto;
   display: block;
 
-  // @media (max-width: 1440px) {
-  //   max-width: 700px;
-  //   max-height: 440px;
-  // }
+  @include respond-to ("desktop") {
+    max-width: 700px;
+  }
 }
 
 .ticket__filter-group {
@@ -91,10 +93,6 @@
   margin: 0;
   padding: 0;
   border: none;
-
-  // @include respond-to ("desktop") {
-
-  // }
 }
 
 .ticket__filter-group-type {
@@ -103,10 +101,6 @@
   @media (max-width: 1440px) {
     display: none;
   }
-
-  // @include respond-to ("desktop") {
-  //   display: none;
-  // }
 }
 
 .ticket__filter-group-title {

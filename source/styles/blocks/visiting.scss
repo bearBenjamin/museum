@@ -66,8 +66,8 @@
     grid-template-columns: repeat(2, minmax(280px, 1fr));
     justify-items: center;
 
-    padding-left: clamp(0px, 108px - 108 * (100vw - 1024px) / (1688 - 1024), 108px);
-    padding-right: clamp(0px, 108px - 108 * (100vw - 1024px) / (1688 - 1024), 108px);
+    padding-left: clamp(0px, calc(108px - (108 - 0) * (100vw - 1024px) / (1688 - 1024)), 108px);
+    padding-right: clamp(0px, calc(108px - (108 - 0) * (100vw - 1024px) / (1688 - 1024)), 108px);
 
     gap:
       clamp(60px, calc(60px + (75 - 60) * (100vw - 1024px) / (1688 - 1024)), 75px)
@@ -75,10 +75,13 @@
   }
 
   @include respond-to ("desktop") {
-    padding: 0 108px;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-    gap: 60px 108px;
+    padding-left: clamp(56px, calc(56px + (108 - 56) * (100vw - 768px) / (1024 - 768)), 108px);
+    padding-right: clamp(56px, calc(56px + (108 - 56) * (100vw - 768px) / (1024 - 768)), 108px);
+
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap:
+      clamp(40px, calc(40px + (60 - 40) * (100vw - 768px) / (1024 - 768)), 60px)
+      clamp(56px, calc(56px + (108 - 56) * (100vw - 768px) / (1024 - 768)), 108px);
   }
 
   @include respond-to ("tablet") {

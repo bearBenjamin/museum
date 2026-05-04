@@ -6,6 +6,23 @@
   @include respond-to ("desktop") {
     max-width: 984px;
   }
+
+  @media (max-width: 1023px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: clamp(728px, calc(728px + (984 - 728) * (100vw - 768px) / (1023 - 768)), 984px);
+  }
+
+  @include respond-to ("tablet") {
+    max-width: 728px;
+  }
+
+  // @include respond-to ("mobile") {
+  //   max-width: 100%;
+  //   padding: 0 20px;
+  // }
 }
 
 .video-slider__list {
@@ -21,6 +38,12 @@
     gap: 41px;
   }
 
+  @media (max-width: 1023px) {
+    justify-content: center;
+    gap: clamp(20px, calc(20px + (42 - 20) * (100vw - 768px) / (1023 - 768)), 42px);
+    margin-bottom: clamp(20px, calc(20px + (40 - 20) * (100vw - 768px) / (1023 - 768)), 40px);
+  }
+
   @include respond-to ("tablet") {
     gap: 20px;
     margin-bottom: 20px;
@@ -33,6 +56,24 @@
 
 .video-slider__item {
   position: relative;
+  transition: opacity 0.3s ease, pointer-events 0.3s ease;
+
+  @media (max-width: 1023px) {
+    opacity: 0.4;
+    pointer-events: none; // По умолчанию кликать нельзя
+  }
+
+  @include respond-to ("tablet") {
+    opacity: none;
+    pointer-events: auto;
+  }
+}
+
+.video-slider__item--is-active {
+  @media (max-width: 1023px) {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
 .video-slider__video {
@@ -43,6 +84,11 @@
   @include respond-to ("desktop") {
     width: 300px;
     height: 170px;
+  }
+
+  @media (max-width: 1023px) {
+    width: clamp(300px, calc(354px - (354 - 300) * (100vw - 768px) / (1023 - 768)), 354px);
+    height: clamp(170px, calc(199px - (199 - 170) * (100vw - 768px) / (1023 - 768)), 199px);
   }
 
   @include respond-to ("tablet") {

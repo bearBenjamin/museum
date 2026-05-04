@@ -2,6 +2,14 @@
   position: relative;
   padding-bottom: 60px;
 
+  @media (max-width: 880px) {
+    margin: 0 auto;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   @include respond-to ("tablet") {
     padding-bottom: 0;
     display: flex;
@@ -26,9 +34,13 @@
   z-index: 2;
   background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%);
 
-  @include respond-to ("tablet") {
+  @media (max-width: 880px) {
     display: none;
   }
+
+  // @include respond-to ("tablet") {
+  //   display: none;
+  // }
 }
 
 .slider__list {
@@ -72,11 +84,20 @@
     padding: 35px 75px 36px 224px;
   }
 
+  @media (max-width: 880px) {
+    position: static;
+    padding:
+      clamp(26px, calc(26px + (35 - 26) * (100vw - 768px) / (880 - 768)), 35px)
+      clamp(75px, calc(150px - (150 - 75) * (100vw - 768px) / (880 - 768)), 150px)
+      clamp(26px, calc(26px + (36 - 26) * (100vw - 768px) / (880 - 768)), 36px)
+      clamp(150px, calc(150px + (224 - 150) * (100vw - 768px) / (880 - 768)), 224px);
+  }
+
   @include respond-to ("tablet") {
     position: static;
     // bottom: -39px;
     // width: 728px;
-    padding: 26px 163px 26px 164px;
+    padding: 26px 150px;
   }
 
   @include respond-to ("mobile") {
