@@ -1,16 +1,16 @@
 // .slider-explore {}
 
 .slider-explore__slider-inner {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
   overflow: hidden;
 }
 
 .slider-explore__slider-inner--before {
-  width: 440px;
+  position: absolute;
+  width: 61.11%;
   z-index: 1;
 
   @include respond-to ("mobile") {
@@ -37,7 +37,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 440px;
+  left: 61.11%;
   width: 40px;
   transform: translateX(-50%);
   z-index: 1;

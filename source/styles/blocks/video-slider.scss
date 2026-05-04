@@ -36,9 +36,9 @@
 }
 
 .video-slider__video {
-  width: 452px;
-  height: 254px;
   display: block;
+  width: clamp(300px, calc(300px + (452 - 300) * (100vw - 1024px) / (1920 - 1024)), 452px);
+  height: clamp(170px, calc(170px + (254 - 170) * (100vw - 1024px) / (1920 - 1024)), 254px);
 
   @include respond-to ("desktop") {
     width: 300px;

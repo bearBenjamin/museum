@@ -25,6 +25,11 @@
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
 
+  @media (max-width: 1440px) {
+    width: clamp(152px, calc(152px + (220 - 152) * (100vw - 1024px) / (1440 - 1024)), 220px);
+    height: clamp(152px, calc(152px + (220 - 152) * (100vw - 1024px) / (1440 - 1024)), 220px);
+  }
+
   @include respond-to ("desktop") {
     top: 43.5%;
 
@@ -59,6 +64,10 @@
   mask-position: 60% 50%;
   mask-size: 91px;
 
+  @media (max-width: 1440px) {
+    mask-size: clamp(63px, calc(63px + (91 - 63) * (100vw - 1024px) / (1440 - 1024)), 91px);
+  }
+
   @include respond-to ("desktop") {
     mask-size: 63px 83px;
   }
@@ -83,6 +92,11 @@
   transform: translate(-50%, -50%);
   border-radius: 50%;
   border: 8px solid $color-white;
+
+  @media (max-width: 1440px) {
+    width: clamp(152px, calc(152px + (220 - 152) * (100vw - 1024px) / (1440 - 1024)), 220px);
+    height: clamp(152px, calc(152px + (220 - 152) * (100vw - 1024px) / (1440 - 1024)), 220px);
+  }
 
   @include respond-to ("desktop") {
     width: 152px;
@@ -126,6 +140,12 @@
   gap: 50px;
   align-items: center;
   background-color: $color-black;
+
+  @media (max-width: 1220px) {
+    padding:
+      clamp(15px, calc(15px + (25 - 15) * (100vw - 1024px) / (1220 - 1024)), 25px)
+      clamp(30px, calc(40px - (40 - 30) * (100vw - 1024px) / (1220 - 1024)), 40px);
+  }
 
   @include respond-to ("desktop") {
     padding: 15px 40px;

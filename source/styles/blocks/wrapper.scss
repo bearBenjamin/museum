@@ -3,7 +3,7 @@
   max-width: 1920px;
 
   margin: 0 auto;
-  padding: 0 240px;
+  padding: 0 clamp(20px, calc(20px + (240 - 20) * ((100vw - 1024px) / (1920 - 1024))), 240px);
 
   @include respond-to("desktop") {
     max-width: 1024px;
@@ -13,13 +13,9 @@
 
   @include respond-to("tablet") {
     max-width: 768px;
-
-    //padding: 0 20px;
   }
 
   @include respond-to("mobile") {
     max-width: 420px;
-
-    //padding: 0 20px;
   }
 }

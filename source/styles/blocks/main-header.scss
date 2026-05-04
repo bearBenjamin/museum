@@ -1,14 +1,8 @@
 .main-header {
+  width: 100%;
   position: relative;
-  // padding-top: 59px;
-  // padding-bottom: 58px;
   color: $color-white;
   background-color: $color-black;
-
-  // @include respond-to ("desktop") {
-  //   padding-top: 49px;
-  //   padding-bottom: 48px;
-  // }
 }
 
 .main-header__wrapper {
@@ -23,7 +17,8 @@
 .main-header__navigation {
   display: flex;
   align-items: center;
-  gap: 60px;
+  // gap: 60px;
+  gap: clamp(10px, 2.8vw, 60px);
 }
 
 .main-header__button {

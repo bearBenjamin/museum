@@ -56,8 +56,14 @@
   bottom: 1px;
   right: 0;
   z-index: 3;
-  padding: 36px 75px 36px 74px;
-  width: 600px;
+  width: clamp(600px, calc(700px - (700 - 600) * (100vw - 1024px) / (1920 - 1024)), 700px);
+
+  padding:
+    36px
+    75px
+    36px
+    clamp(74px, calc(224px - (224 - 74) * (100vw - 1024px) / (1920 - 1024)), 224px);
+
   display: flex;
   background-color: $color-black;
 

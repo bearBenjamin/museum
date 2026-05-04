@@ -7,26 +7,28 @@
   margin-right: auto;
   padding-top: 59px;
   padding-bottom: 58px;
+  width: 100%;
+  max-width: 199px;
   display: flex;
   gap: 25px;
-  // width: 199px;
 
   color: $color-white;
 
   @include respond-to ("desktop") {
     padding-top: 49px;
     padding-bottom: 48px;
-    // width: 200px;
+    max-width: 200px;
   }
 
   @include respond-to ("tablet") {
     padding-top: 35px;
     padding-bottom: 34px;
-    // width: 199px;
+    max-width: 199px;
   }
 
   @include respond-to ("mobile") {
     padding-bottom: 35px;
+    max-width: 141px;
   }
 }
 
@@ -35,10 +37,6 @@
   width: 49px;
   height: 26px;
   align-self: flex-start;
-
-  // @include respond-to ("desktop") {
-  //   width: 189px;
-  // }
 
   @include respond-to ("tablet") {
     margin-top: -7px;
@@ -136,7 +134,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px 55px;
+  // gap: 10px 55px;
+  gap: 10px clamp(5px, 2.8vw, 55px); // 55 / 1920 * 100 = 2.8vw
 
   @include respond-to("desktop") {
     flex-direction: column;
@@ -184,7 +183,7 @@
 
 .main-navigation__item-link {
   display: block;
-  width: 125px;
+  width: fit-content;
   padding-top: 62px;
   padding-bottom: 62px;
   color: $color-white;

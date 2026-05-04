@@ -53,7 +53,8 @@
 
 .contacts__wrapper {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
+  gap: 25px;
 
   @include respond-to ("tablet") {
     flex-direction: column;
@@ -123,6 +124,10 @@
 .contacts__email {
   display: inline-block;
   color: $color-black;
+}
+
+.contacts__map-container {
+  margin-left: auto;
 }
 
 .contacts__map {

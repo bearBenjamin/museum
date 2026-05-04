@@ -4,10 +4,6 @@
   color: $color-black;
 
   transition: opacity 0.3s ease;
-
-  // @include respond-to ("mobile") {
-  //   margin-bottom: 42px;
-  // }
 }
 
 .item-card__link {
@@ -16,14 +12,20 @@
 
 .item-card__picture {
   display: block;
-  width: 440px;
+  width: 100%;
+  height: auto;
+  max-width: 440px;
+
+  @media (max-width: 1688px) {
+    max-width: 440px;
+  }
 
   @include respond-to ("desktop") {
-    width: 330px;
+    max-width: 330px;
   }
 
   @include respond-to ("tablet") {
-    width: 280px;
+    max-width: 280px;
   }
 }
 
@@ -40,7 +42,7 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
 
-  @include respond-to ("desktop") {
+  @media (max-width: 1190px) {
     font-size: 28px;
     letter-spacing: 0.11em;
   }
@@ -67,6 +69,10 @@
   background-color: $color-red-dark;
 
   transition: width 0.4s ease-in-out;
+
+  @media (max-width: 1688px) {
+    width: clamp(150px, calc(150px + (300 - 150) * (100vw - 1024px) / (1688 - 1024)), 300px);
+  }
 
   @include respond-to ("desktop") {
     width: 150px;

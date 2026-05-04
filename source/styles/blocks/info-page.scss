@@ -83,6 +83,11 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 155px;
 
+  @media (max-width: 1440px) {
+    margin-left: clamp(25px, calc(25px + (125 - 25) * (100vw - 1024px) / (1440 - 1024)), 125px);
+    column-gap: clamp(105px, calc(105px + (155 - 105) * (100vw - 1024px) / (1440 - 1024)), 155px);
+  }
+
   @include respond-to ("desktop") {
     margin: 6px 0 25px 25px;
     column-gap: 105px;

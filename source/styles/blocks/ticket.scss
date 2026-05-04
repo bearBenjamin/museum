@@ -76,8 +76,14 @@
 
 .ticket__picture {
   width: 100%;
+  max-width: 720px;
   height: auto;
   display: block;
+
+  // @media (max-width: 1440px) {
+  //   max-width: 700px;
+  //   max-height: 440px;
+  // }
 }
 
 .ticket__filter-group {
@@ -94,9 +100,13 @@
 .ticket__filter-group-type {
   margin-right: 240px;
 
-  @include respond-to ("desktop") {
+  @media (max-width: 1440px) {
     display: none;
   }
+
+  // @include respond-to ("desktop") {
+  //   display: none;
+  // }
 }
 
 .ticket__filter-group-title {
@@ -182,6 +192,14 @@
   display: inline-block;
   width: 230px;
   overflow-wrap: break-word;
+}
+
+.ticket__filter-group-amount {
+  margin-left: auto;
+
+  @include respond-to ("desktop") {
+    margin-left: 0;
+  }
 }
 
 .ticket__filter-group-list-amount {

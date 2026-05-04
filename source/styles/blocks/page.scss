@@ -9,8 +9,8 @@
   min-height: 100vh;
   min-width: 320px;
   margin: 0;
+  grid-template-columns: minmax(320px, 100%);
   grid-template-rows: min-content 1fr min-content;
-
 
   font-family: $basic-family;
   font-weight: 400;
