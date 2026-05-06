@@ -42,6 +42,10 @@
   margin-left: 75px;
   text-transform: capitalize;
 
+  @media (max-width: 668px) {
+    display: none;
+  }
+
   @include respond-to ("mobile") {
     display: none;
   }

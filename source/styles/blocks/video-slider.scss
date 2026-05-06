@@ -39,7 +39,7 @@
   }
 
   @media (max-width: 1023px) {
-    justify-content: center;
+    align-self: flex-start;
     gap: clamp(20px, calc(20px + (42 - 20) * (100vw - 768px) / (1023 - 768)), 42px);
     margin-bottom: clamp(20px, calc(20px + (40 - 20) * (100vw - 768px) / (1023 - 768)), 40px);
   }
@@ -76,6 +76,22 @@
   }
 }
 
+.video-slider__item:first-child {
+  @media (max-width: 1023px) {
+    margin-left: calc(-171px + (-374 - (-171)) * (1023px - 100vw) / (1023 - 768)); // 374 ширина слайда с учетом отступа - итоговая, 171 половина размера ширины текущего слайда с учетом отступа - т.е. величина при которой второй и третий слайды будут по центру
+  }
+
+  @include respond-to ("tablet") {
+    // margin-left: -374px;
+    margin-left: calc(-1 * (clamp(200px, calc(200px + (374 - 200) * (100vw - 420px) / (768 - 420)), 374px)));
+  }
+
+  @include respond-to ("mobile") {
+    margin-left: -200px;
+  }
+}
+
+
 .video-slider__video {
   display: block;
   width: clamp(300px, calc(300px + (452 - 300) * (100vw - 1024px) / (1920 - 1024)), 452px);
@@ -92,8 +108,8 @@
   }
 
   @include respond-to ("tablet") {
-    width: 354px;
-    height: 199px;
+    width: clamp(180px, calc(180px + (354 - 180) * (100vw - 420px) / (768 - 420)), 354px);
+    height: clamp(101px, calc(101px + (199 - 101) * (100vw - 420px) / (768 - 420)), 199px);
   }
 
   @include respond-to ("mobile") {

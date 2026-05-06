@@ -13,6 +13,11 @@
   width: 61.11%;
   z-index: 1;
 
+  @include respond-to ("tablet") {
+    width: clamp(230px, calc(230px + (440 - 230) * (100vw - 420px) / (768 - 420)), 440px);
+    overflow: hidden;
+  }
+
   @include respond-to ("mobile") {
     width: 230px;
   }
@@ -24,7 +29,8 @@
   display: block;
 
   @include respond-to ("tablet") {
-    height: 705px;
+    width: clamp(380px, calc(380px + (720 - 380) * (100vw - 420px) / (768 - 420)), 720px);
+    height: clamp(368px, calc(368px + (705 - 368) * (100vw - 420px) / (768 - 420)), 705px);
   }
 
   @include respond-to ("mobile") {
@@ -55,6 +61,11 @@
     no-repeat center / 4px 100%;
 
   @include respond-to ("tablet") {
+    left: clamp(230px, calc(230px + (440 - 230) * (100vw - 420px) / (768 - 420)), 440px);
+
+    width: clamp(20px, calc(20px + (40 - 20) * (100vw - 420px) / (768 - 420)), 40px);
+    height: clamp(368px, calc(368px + (705 - 368) * (100vw - 420px) / (768 - 420)), 705px);
+
     background:
       linear-gradient(
         to bottom,

@@ -97,7 +97,14 @@
     position: static;
     // bottom: -39px;
     // width: 728px;
-    padding: 26px 150px;
+    // padding: 26px 150px;
+    padding:
+      clamp(16px, calc(16px + (26 - 16) * (100vw - 420px) / (768 - 420)), 26px)
+      clamp(75px, calc(75px + (150 - 75) * (100vw - 420px) / (768 - 420)), 150px);
+  }
+
+  @media (max-width: 700px) {
+    width: clamp(380px, calc(380px + (700 - 380) * (100vw - 420px) / (700 - 420)), 700px);
   }
 
   @include respond-to ("mobile") {
@@ -122,9 +129,12 @@
   cursor: default;
 
   @include respond-to ("desktop") {
-    margin-right: 45px;
+    // margin-right: 45px;
 
-    font-size: 20px;
+    // font-size: 20px;
+
+    margin-right: clamp(25px, calc(25px + (45 - 25) * (100vw - 420px) / (768 - 420)), 45px);
+    font-size: clamp(16px, calc(16px + (20 - 16) * (100vw - 420px) / (768 - 420)), 20px);
     line-height: 200%;
   }
 
@@ -160,7 +170,9 @@
   }
 
   @include respond-to ("tablet") {
-    margin-right: 38px;
+    // margin-right: 38px;
+    margin-right: clamp(20px, calc(20px + (38 - 20) * (100vw - 420px) / (768 - 420)), 38px);
+    gap: clamp(10px, calc(10px + (17 - 10) * (100vw - 420px) / (768 - 420)), 17px);
   }
 
   @include respond-to ("mobile") {
@@ -180,6 +192,11 @@
   @include respond-to ("desktop") {
     width: 20px;
     height: 20px;
+  }
+
+  @include respond-to ("tablet") {
+    width: clamp(7px, calc(7px + (20 - 7) * (100vw - 420px) / (768 - 420)), 20px);
+    height: clamp(7px, calc(7px + (20 - 7) * (100vw - 420px) / (768 - 420)), 20px);
   }
 
   @include respond-to ("mobile") {
@@ -207,6 +224,11 @@
     height: 12px;
   }
 
+  @include respond-to ("tablet") {
+    width: clamp(7px, calc(7px + (12 - 7) * (100vw - 420px) / (768 - 420)), 12px);
+    height: clamp(7px, calc(7px + (12 - 7) * (100vw - 420px) / (768 - 420)), 12px);
+  }
+
   @include respond-to ("mobile") {
     margin: 1px 0 0;
     width: 7px;
@@ -230,7 +252,8 @@
   background-color: inherit;
 
   @include respond-to ("tablet") {
-    gap: 10px;
+    // gap: 10px;
+    gap: clamp(5px, calc(5px + (10 - 5) * (100vw - 420px) / (768 - 420)), 10px);
   }
 
   @include respond-to ("mobile") {

@@ -25,3 +25,5 @@ $secondary-family: "Forum", sans-serif;
 // $range-player: 416;
 // $range-player-control: 196;
 // $padding-fluid: clamp(0px, 108px - 108 * (100vw - 1024px) / (1688 - 1024), 108px);
+// $current-slide-w: clamp(200px, calc(200px + (374 - 200) * (100vw - 420px) / (768 - 420)), 374px);
+// $current-gap: clamp(10px, calc(10px + (20 - 10) * (100vw - 420px) / (768 - 420)), 20px);

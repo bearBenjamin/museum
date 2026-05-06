@@ -85,13 +85,17 @@
   }
 
   @include respond-to ("tablet") {
-    padding: 0 56px;
-    gap: 40px 56px;
+    padding: 0 clamp(50px, calc(50px + (56 - 50) * (100vw - 720px) / (768 - 720)), 56px);
+    gap: 40px clamp(10px, calc(10px + (56 - 10) * (100vw - 750px) / (768 - 750)), 56px);
+  }
+
+  @media (max-width: 710px) {
+    grid-template-columns: 1fr;
+    justify-content: center;
   }
 
   @include respond-to ("mobile") {
     padding: 0 50px;
-    grid-template-columns: auto;
     row-gap: 41px;
   }
 }
