@@ -6,6 +6,10 @@
   @include respond-to ("desktop") {
     padding-top: 38px;
   }
+
+  @media (max-width: 1020px) {
+    margin: 0 auto;
+  }
 }
 
 .form-part-one__title {
@@ -25,7 +29,7 @@
     margin-bottom: 3px;
   }
 
-  @include respond-to ("mobile") {
+  @media (max-width: 590px) {
     margin-bottom: 7px;
     font-size: 32px;
   }
@@ -48,7 +52,7 @@
     top: -44%;
   }
 
-  @include respond-to ("mobile") {
+  @media (max-width: 590px) {
     top: -82%;
   }
 }
@@ -89,9 +93,9 @@
 
 .form-part-one__filter-group--date {
   margin-bottom: 20px;
-  gap: 28px;
+  gap: 20px;
 
-  @include respond-to ("mobile") {
+  @media (max-width: 590px) {
     flex-direction: column;
     gap: 20px;
   }
@@ -115,20 +119,49 @@
   appearance: none;
   cursor: pointer;
 
-  @include respond-to ("tablet") {
-    width: 251px;
+  @media (max-width: 1020px) {
+    width: 305px;
   }
 
-  @include respond-to ("mobile") {
+  @include respond-to ("tablet") {
+    width: 255px;
+  }
+
+  @media (max-width: 590px) {
     width: 360px;
   }
 }
 
-.form-part-one__date--day {
-  background-image: url("../../icons/stack.svg#ticket-date");
-  background-size: 15px 15px;
-  background-position: left 15px center;
-  background-repeat: no-repeat;
+// .form-part-one__date--day {
+//   background-image: url("../../icons/stack.svg#ticket-date");
+//   background-size: 15px 15px;
+//   background-position: left 15px center;
+//   background-repeat: no-repeat;
+// }
+
+.form-part-one__container-date::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  background-color: $color-black;
+}
+
+.form-part-one__container-date--day::before {
+  mask-image: url("../../icons/stack.svg#ticket-date");
+  mask-size: 15px 15px;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
+.form-part-one__container-date--time::before {
+  mask-image: url("../../icons/stack.svg#ticket-time");
+  mask-size: 15px 15px;
+  mask-position: center;
+  mask-repeat: no-repeat;
 }
 
 .form-part-one__container-date::after {
@@ -146,7 +179,9 @@
   mask-repeat: no-repeat;
 }
 
-.form-part-one__container-date:hover::after {
+.form-part-one__container-date:hover::after,
+.form-part-one__container-date--day:hover::before,
+.form-part-one__container-date--time:hover::before {
   background-color: $color-gold;
 }
 
@@ -160,13 +195,6 @@
   transform: translateY(-50%) rotate(180deg);
 }
 
-.form-part-one__date--time {
-  background-image: url("../../icons/stack.svg#ticket-time");
-  background-size: 15px 15px;
-  background-position: left 15px center;
-  background-repeat: no-repeat;
-}
-
 .form-part-one__filter-group--info-user {
   flex-direction: column;
   margin-bottom: 20px;
@@ -174,7 +202,7 @@
 
 .form-part-one__info-user {
   margin: 0;
-  padding: 13px 307px 12px 43px;
+  padding: 13px 256px 12px 43px;
   width: 100%;
   height: 45px;
   border: 1px solid $color-black;
@@ -182,33 +210,63 @@
   font-weight: 400;
   font-size: 18px;
   color: $color-black;
-
-  @include respond-to ("mobile") {
-    padding: 13px 267px 12px 43px;
-  }
 }
 
-.form-part-one__info-user--name {
-  background-image: url("../../icons/stack.svg#ticket-name");
-  background-size: 13px 15px;
-  background-position: left 15px center;
-  background-repeat: no-repeat;
+.form-part-one__container-name {
+  position: relative;
 }
 
-.form-part-one__info-user--e-mail {
-  background-image: url("../../icons/stack.svg#ticket-email");
-  background-size: 15px 11px;
-  background-position: left 15px center;
-  background-repeat: no-repeat;
+.form-part-one__container-name::before {
+  content: "";
+  width: 13px;
+  height: 15px;
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  transform: translateY(-50%);
+  background-color: $color-black;
+  mask-image: url("../../icons/stack.svg#ticket-name");
+  mask-size: 13px 15px;
+  mask-position: center;
+  mask-repeat: no-repeat;
 }
 
-.form-part-one__info-user--phone {
-  padding-left: 44px;
-  padding-right: 256px;
-  background-image: url("../../icons/stack.svg#ticket-phone");
-  background-size: 14px 23px;
-  background-position: left 15px center;
-  background-repeat: no-repeat;
+.form-part-one__container-email {
+  position: relative;
+}
+
+.form-part-one__container-email::before {
+  content: "";
+  width: 15px;
+  height: 11px;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  background-color: $color-black;
+  mask-image: url("../../icons/stack.svg#ticket-email");
+  mask-size: 15px 11px;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
+.form-part-one__container-phone {
+  position: relative;
+}
+
+.form-part-one__container-phone::before {
+  content: "";
+  width: 14px;
+  height: 23px;
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  background-color: $color-black;
+  mask-image: url("../../icons/stack.svg#ticket-phone");
+  mask-size: 14px 23px;
+  mask-position: center;
+  mask-repeat: no-repeat;
 }
 
 .form-part-one__info-user::placeholder {
@@ -226,11 +284,32 @@
   color: $color-gold;
 }
 
+.form-part-one__container-name:hover::before,
+.form-part-one__container-email:hover::before,
+.form-part-one__container-phone:hover::before {
+  background-color: $color-gold;
+}
+
 .form-part-one__container-ticket-type {
   position: relative;
   width: 100%;
   display: flex;
   align-items: center;
+}
+
+.form-part-one__container-ticket-type::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  background-color: $color-black;
+  mask-image: url("../../icons/stack.svg#ticket-type");
+  mask-size: 15px 15px;
+  mask-position: center;
+  mask-repeat: no-repeat;
 }
 
 .form-part-one__container-ticket-type::after {
@@ -257,19 +336,17 @@
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
-  background-image: url("../../icons/stack.svg#ticket-type");
-  background-size: 15px 15px;
-  background-position: left 15px center;
-  background-repeat: no-repeat;
+
   border: 1px solid $color-black;
   border-radius: 0;
   appearance: none;
 
-  @include respond-to ("mobile") {
+  @media (max-width: 590px) {
     padding-right: 218px;
   }
 }
 
+.form-part-one__container-ticket-type:hover::before,
 .form-part-one__container-ticket-type:hover::after {
   background-color: $color-gold;
 }

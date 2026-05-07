@@ -39,19 +39,37 @@
   display: flex;
   gap: 40px;
 
+  @media (max-width: 1020px) {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 730px;
+  }
+
   @include respond-to ("tablet") {
     flex-direction: column;
     gap: 51px;
     width: 530px;
     margin: 0 auto;
   }
+
+  @media (max-width: 590px) {
+    width: 360px;
+  }
 }
 
 .form-ticket__wrapper-one {
   width: 400px;
 
+  @media (max-width: 1020px) {
+    width: 630px;
+  }
+
   @include respond-to ("tablet") {
     width: 530px;
+  }
+
+  @media (max-width: 590px) {
+    width: 360px;
   }
 
   @include respond-to ("mobile") {
@@ -61,6 +79,18 @@
 
 .form-ticket__wrapper-two {
   width: 530px;
+
+  @media (max-width: 1020px) {
+    width: 630px;
+  }
+
+  @include respond-to ("tablet") {
+    width: 530px;
+  }
+
+  @media (max-width: 590px) {
+    width: 360px;
+  }
 
   @include respond-to ("mobile") {
     width: 360px;

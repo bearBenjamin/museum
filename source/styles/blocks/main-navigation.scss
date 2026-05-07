@@ -93,6 +93,14 @@
     transition: transform 0.5s ease-in-out;
   }
 
+  @media (max-width: 880px) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
   @include respond-to ("tablet") {
     top: 110px;
     width: 100%;
@@ -146,11 +154,15 @@
     background-color: $color-black;
   }
 
-  @include respond-to ("tablet") {
-    // width: 658px;
-    margin: 0 auto;
-    margin-left: 55px;
+  @media (max-width: 880px) {
     padding: 0;
+    margin: 0 auto;
+    margin-left: clamp(55px, calc(55px + (111 - 55) * (100vw - 768px) / (880 - 768)), 111px);
+  }
+
+  @include respond-to ("tablet") {
+    margin-top: 35px;
+    margin-left: 55px;
   }
 
   @include respond-to ("mobile") {
@@ -234,7 +246,7 @@
 .main-navigation__gallery-list {
   display: none;
 
-  @include respond-to ("tablet") {
+  @media (max-width: 880px) {
     position: relative;
     width: 100%;
     max-width: 658px;
@@ -246,7 +258,23 @@
     gap: 15px 20px;
   }
 
+  @media (max-width: 720px) {
+    padding-left: 25px;
+    padding-right: 25px;
+    justify-content: center;
+  }
+
+  // @media (max-width: 680px) {
+  //   padding-left: 0;
+  //   width: 310px;
+  //   margin: 0 auto;
+  //   justify-content: center;
+  //   column-gap: 12px;
+  // }
+
   @include respond-to ("mobile") {
+    padding-left: 0;
+    padding-right: 0;
     width: 310px;
     margin: 0 auto;
     justify-content: center;
@@ -272,6 +300,27 @@
   }
 }
 
+.main-navigation__gallery-img--first {
+  @media (max-width: 768px) {
+    max-width: clamp(310px, calc(310px + (658 - 310) * (100vw - 420px) / (768 - 420)), 658px);
+  }
+}
+
+.main-navigation__gallery-img--second,
+.main-navigation__gallery-img--third {
+  width: 100%;
+  max-width: 319px;
+  height: auto;
+  display: block;
+
+  // Резина в диапазоне от Планшета до Мобилки
+  @media (max-width: 768px) {
+    // На 768px они будут ~319px, а к 420px плавно ужмутся до мобильных размеров (например, 149px)
+    // Расчет: (310px мобильной ширины - 12px gap) / 2 = 149px
+    max-width: clamp(149px, calc(149px + (319 - 149) * (100vw - 420px) / (768 - 420)), 319px);
+  }
+}
+
 .main-navigation__gallery-list::after {
   content: "";
   width: 100%;
@@ -289,6 +338,16 @@
 
 .main-navigation__burger-social-list {
   display: none;
+
+  @media (max-width: 880px) {
+    margin: 0 auto;
+    padding: 30px 0;
+    width: 100%;
+    max-width: 340px;
+    list-style: none;
+    display: flex;
+    gap: 23px;
+  }
 
   @include respond-to ("tablet") {
     margin: 0 auto;

@@ -4,14 +4,23 @@
 }
 
 .modal-container__content {
-  padding: 91px 235px;
+  // padding: 91px 235px;
+  padding:
+    clamp(75px, calc(75px + (91 - 75) * (100vw - 1024px) / (1920 - 1024)), 91px)
+    clamp(25px, calc(25px + (235 - 25) * (100vw - 1024px) / (1920 - 1024)), 235px)
+    clamp(30px, calc(30px + (91 - 30) * (100vw - 1024px) / (1920 - 1024)), 91px);
 
   @include respond-to ("desktop") {
-    padding: 75px 25px 30px;
+    // padding: 75px 25px 30px;
+    padding:
+      clamp(75px, calc(80px - (80 - 75) * (100vw - 768px) / (1024 - 768)), 80px)
+      clamp(25px, calc(30px - (30 - 25) * (100vw - 768px) / (1024 - 768)), 30px)
+      clamp(30px, calc(40px - (40 - 30) * (100vw - 768px) / (1024 - 768)), 40px);
   }
 
   @include respond-to ("tablet") {
-    padding: 80px 30px 40px;
+    // padding: 80px 30px 40px;
+    padding: 80px 30px clamp(40px, calc(50px - (50 - 40) * (100vw - 420px) / (768 - 420)), 50px);
   }
 
   @include respond-to ("mobile") {

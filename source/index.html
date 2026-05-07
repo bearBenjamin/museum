@@ -52,7 +52,7 @@
                 <source width="95" height="95" media="(max-width: 420px)" type="image/webp" srcset="images/burger-menu/burger-menu-crop-1-420@1x.webp 1x, images/burger-menu/burger-menu-crop-1-420@2x.webp 2x">
                 <source width="658" height="194" type="image/webp" srcset="images/burger-menu/burger-menu-crop-1-768@1x.webp 1x, images/burger-menu/burger-menu-crop-1-768@2x.webp 2x">
                 <source width="95" height="95" media="(max-width: 420px)" type="image/jpeg" srcset="images/burger-menu/burger-menu-crop-1-420@1x.jpg 1x, images/burger-menu/burger-menu-crop-1-420@2x.jpg 2x">
-                <img class="main-navigation__gallery-img" src="images/burger-menu/burger-menu-crop-1-768@1x.jpg" srcset="images/burger-menu/burger-menu-crop-1-768@2x.jpg" width="658" height="194" alt="picture gallery burger menu" loading="lazy">
+                <img class="main-navigation__gallery-img main-navigation__gallery-img--first" src="images/burger-menu/burger-menu-crop-1-768@1x.jpg" srcset="images/burger-menu/burger-menu-crop-1-768@2x.jpg" width="658" height="194" alt="picture gallery burger menu" loading="lazy">
               </picture>
             </li>
             <li class="main-navigation__gallery-item">
@@ -60,7 +60,7 @@
                 <source width="95" height="95" media="(max-width: 420px)" type="image/webp" srcset="images/burger-menu/burger-menu-crop-2-420@1x.webp 1x, images/burger-menu/burger-menu-crop-2-420@2x.webp 2x">
                 <source width="319" height="161" type="image/webp" srcset="images/burger-menu/burger-menu-crop-2-768@1x.webp 1x, images/burger-menu/burger-menu-crop-2-768@2x.webp 2x">
                 <source width="95" height="95" media="(max-width: 420px)" type="image/jpeg" srcset="images/burger-menu/burger-menu-crop-2-420@1x.jpg 1x, images/burger-menu/burger-menu-crop-2-420@2x.jpg 2x">
-                <img class="main-navigation__gallery-img" src="images/burger-menu/burger-menu-crop-2-768@1x.jpg" srcset="images/burger-menu/burger-menu-crop-2-768@2x.jpg" width="319" height="161" alt="picture gallery burger menu" loading="lazy">
+                <img class="main-navigation__gallery-img main-navigation__gallery-img--second" src="images/burger-menu/burger-menu-crop-2-768@1x.jpg" srcset="images/burger-menu/burger-menu-crop-2-768@2x.jpg" width="319" height="161" alt="picture gallery burger menu" loading="lazy">
               </picture>
             </li>
             <li class="main-navigation__gallery-item">
@@ -68,7 +68,7 @@
                 <source width="95" height="95" media="(max-width: 420px)" type="image/webp" srcset="images/burger-menu/burger-menu-crop-3-420@1x.webp 1x, images/burger-menu/burger-menu-crop-3-420@2x.webp 2x">
                 <source width="319" height="161" type="image/webp" srcset="images/burger-menu/burger-menu-crop-3-768@1x.webp 1x, images/burger-menu/burger-menu-crop-3-768@2x.webp 2x">
                 <source width="95" height="95" media="(max-width: 420px)" type="image/jpeg" srcset="images/burger-menu/burger-menu-crop-2-420@1x.jpg 1x, images/burger-menu/burger-menu-crop-2-420@2x.jpg 2x">
-                <img class="main-navigation__gallery-img" src="images/burger-menu/burger-menu-crop-3-768@1x.jpg" srcset="images/burger-menu/burger-menu-crop-3-768@2x.jpg" width="319" height="161" alt="picture gallery burger menu" loading="lazy">
+                <img class="main-navigation__gallery-img main-navigation__gallery-img--third" src="images/burger-menu/burger-menu-crop-3-768@1x.jpg" srcset="images/burger-menu/burger-menu-crop-3-768@2x.jpg" width="319" height="161" alt="picture gallery burger menu" loading="lazy">
               </picture>
             </li>
           </ul>
@@ -667,8 +667,7 @@
               </li>
             </ul>
             <div class="ticket__sum-wrapper">
-              <span class="ticket__sum-text">Total&nbsp;</span>
-              <span class="ticket__sum-number">€220</span>
+              <span class="ticket__sum-text">Total&nbsp;<span class="ticket__sum-number">€220</span></span>
             </div>
             <button class="ticket__toggle" type="button">
               <span class="visually-hidden">Показать форму покупки билетов</span>
@@ -810,13 +809,13 @@
               <p class="form-part-one__subtitle">Tour to Louvre</p>
               <fieldset class="form-part-one__filter-group form-part-one__filter-group--date">
                 <legend class="visually-hidden">Date</legend>
-                <div class="form-part-one__container-date">
+                <div class="form-part-one__container-date form-part-one__container-date--day">
                   <label class="visually-hidden" for="date">Choose a date</label>
-                  <select class="form-part-one__date form-part-one__date--day" id="date" form="form-buy-ticket" name="date" data-selected="date-picker">
+                  <select class="form-part-one__date" id="date" form="form-buy-ticket" name="date" data-selected="date-picker">
                     <option value="" disabled selected>Date</option>
                   </select>
                 </div>
-                <div class="form-part-one__container-date">
+                <div class="form-part-one__container-date form-part-one__container-date--time">
                   <label class="visually-hidden" for="time">Choose a time</label>
                   <select class="form-part-one__date form-part-one__date--time" id="time" form="form-buy-ticket" name="time" data-selected="time-picker">
                     <option value="" disabled selected>Time</option>
@@ -825,12 +824,18 @@
               </fieldset>
               <fieldset class="form-part-one__filter-group form-part-one__filter-group--info-user">
                 <legend class="visually-hidden">Personal data</legend>
-                <label class="visually-hidden" for="name">Name</label>
-                <input class="form-part-one__info-user form-part-one__info-user--name" type="text" id="name" name="name" placeholder="Name" data-input="user-name">
-                <label class="visually-hidden" for="e-mail">E-mail</label>
-                <input class="form-part-one__info-user form-part-one__info-user--e-mail" type="email" id="e-mail" name="mail" placeholder="E-mail">
-                <label class="visually-hidden" for="phone">Phone</label>
-                <input class="form-part-one__info-user form-part-one__info-user--phone" type="tel" id="phone" name="phone" placeholder="Phone">
+                <div class="form-part-one__container-name">
+                  <label class="visually-hidden" for="name">Name</label>
+                  <input class="form-part-one__info-user form-part-one__info-user--name" type="text" id="name" name="name" placeholder="Name" data-input="user-name">
+                </div>
+                <div class="form-part-one__container-email">
+                  <label class="visually-hidden" for="e-mail">E-mail</label>
+                  <input class="form-part-one__info-user form-part-one__info-user--e-mail" type="email" id="e-mail" name="mail" placeholder="E-mail">
+                </div>
+                <div class="form-part-one__container-phone">
+                  <label class="visually-hidden" for="phone">Phone</label>
+                  <input class="form-part-one__info-user form-part-one__info-user--phone" type="tel" id="phone" name="phone" placeholder="Phone">
+                </div>
                 <div class="form-part-one__container-ticket-type">
                   <label class="visually-hidden" for="ticket-type">Ticket Type</label>
                   <select class="form-part-one__ticket-type" id="ticket-type" form="form-buy-ticket" name="ticket-type">

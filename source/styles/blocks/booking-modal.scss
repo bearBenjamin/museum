@@ -26,14 +26,17 @@
 .booking-modal__container {
   position: relative;
   margin: auto;
-  width: 1440px;
+  // width: 1440px;
+  width: clamp(1024px, calc(1024px + (1440 - 1024) * (100vw - 1024px) / (1440 - 1024)), 1440px);
 
   @include respond-to ("desktop") {
-    width: 1024px;
+    // width: 1024px;
+    width: clamp(768px, calc(768px + (1024 - 768) * (100vw - 768px) / (1024 - 768)), 1024px);
   }
 
   @include respond-to ("tablet") {
-    width: 768px;
+    // width: 768px;
+    width: clamp(420px, calc(420px + (768 - 420) * (100vw - 420px) / (768 - 420)), 768px);
   }
 
   @include respond-to ("mobile") {
