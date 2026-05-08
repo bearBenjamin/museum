@@ -2,8 +2,10 @@ import { initMenu } from './burger-menu';
 import { initModal } from './modal-window';
 import { setInitialValueVideo } from './video';
 import { reshuffleGallery, initGalleryAnimation } from './gallery';
+import { initSlider } from './slider-welcome';
 
 initMenu();
+initSlider();
 initModal();
 setInitialValueVideo();
 reshuffleGallery();
