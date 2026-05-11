@@ -30,6 +30,7 @@
   padding: 0;
   list-style: none;
 
+  position: relative;
   display: flex;
   gap: 42px;
   margin-bottom: 40px;
@@ -56,21 +57,24 @@
 
 .video-slider__item {
   position: relative;
-  transition: opacity 0.3s ease, pointer-events 0.3s ease;
+  transition: opacity 0.5s ease, pointer-events 0.5s ease;
 
-  @media (max-width: 1023px) {
+  opacity: 1;
+  pointer-events: auto;
+
+  @media (max-width: 1023.98px) {
     opacity: 0.4;
     pointer-events: none; // По умолчанию кликать нельзя
   }
 
   @include respond-to ("tablet") {
-    opacity: none;
+    opacity: 1;
     pointer-events: auto;
   }
 }
 
 .video-slider__item--is-active {
-  @media (max-width: 1023px) {
+  @media (max-width: 1023.98px) {
     opacity: 1;
     pointer-events: auto;
   }
