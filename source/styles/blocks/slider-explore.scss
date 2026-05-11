@@ -1,4 +1,12 @@
-// .slider-explore {}
+.slider-explore {
+  /* Запрещает браузеру обрабатывать жесты по оси X (влево-вправо)
+     и жесты масштабирования, отдавая управление JS */
+  touch-action: pan-y;
+  /* Запрещает выделение контента */
+  user-select: none;
+  /* Специально для Safari и старых браузеров
+  -webkit-user-select: none; */
+}
 
 .slider-explore__slider-inner {
   position: relative;
@@ -27,6 +35,7 @@
   width: 720px;
   height: 700px;
   display: block;
+  pointer-events: none;
 
   @include respond-to ("tablet") {
     width: clamp(380px, calc(380px + (720 - 380) * (100vw - 420px) / (768 - 420)), 720px);
@@ -59,6 +68,8 @@
       $color-white 100%
     )
     no-repeat center / 4px 100%;
+
+  cursor: pointer;
 
   @include respond-to ("tablet") {
     left: clamp(230px, calc(230px + (440 - 230) * (100vw - 420px) / (768 - 420)), 440px);
