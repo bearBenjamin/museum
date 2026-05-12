@@ -30,4 +30,3 @@ const pauseMainVideo = () => {
 };
 
 export { resetPlayer, changeVideo, pauseMainVideo };
-
