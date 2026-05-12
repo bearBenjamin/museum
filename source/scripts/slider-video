@@ -1,3 +1,5 @@
+import { resetPlayer, changeVideo, pauseMainVideo } from './video-player';
+
 const DIRECTION_NEXT = 1;
 const DIRECTION_PREV = -1;
 const BREAKPOINT = 1024;
@@ -5,6 +7,8 @@ const TABLET = 768;
 const SLIDES_TO_SHOW = 3;
 
 const initVideoSlider = () => {
+  const mainVideo = document.querySelector('#my-player');
+
   const sliderList = document.querySelector('.video-slider__list');
   const slides = sliderList.querySelectorAll('.video-slider__item');
 
@@ -38,6 +42,99 @@ const initVideoSlider = () => {
   lastClones.reverse().forEach((clone) => sliderList.prepend(clone.cloneNode(true)));
 
   const allSlides = Array.from(sliderList.children);
+
+  const getSlideVideoData = (slide) => {
+    const data = slide.querySelector('video');
+    if (!data) {
+      return null;
+    }
+
+    return {
+      src: data.getAttribute('src'),
+      poster: data.getAttribute('poster')
+    };
+  };
+
+  const syncVideo = () => {
+    if (!mainVideo) {
+      return;
+    }
+
+    const currentSlide = allSlides[currentIndex];
+    const dataVideo = getSlideVideoData(currentSlide);
+
+    if (!dataVideo || !dataVideo.src) {
+      resetPlayer();
+      return;
+    }
+
+    if (mainVideo.getAttribute('src') !== dataVideo.src) {
+      changeVideo(dataVideo.src, dataVideo.poster);
+    }
+  };
+
+  const stopAllCarouselVideos = (currentVideo = null) => {
+    const allVideos = sliderList.querySelectorAll('video');
+    allVideos.forEach((video) => {
+      if (video !== currentVideo) {
+        video.pause();
+        video.load();
+      }
+    });
+  };
+
+  const playCarouselVideo = (video, container) => {
+    stopAllCarouselVideos(video); // Останавливаем остальные
+    pauseMainVideo(); // Останавливаем большой плеер
+
+    if (video.readyState === 0) {
+      video.load(); // Принудительная загрузка, если браузер ленивый
+    }
+
+    const playPromise = video.play();
+
+    // play() возвращает Promise. Обрабатываем его для надежности.
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          // Успешный старт
+          container.classList.add('video-slider__item--playing');
+        })
+        .catch((error) => {
+          // Ошибка (например, автозапуск заблокирован браузером)
+          // eslint-disable-next-line no-console
+          console.warn('Воспроизведение прервано:', error);
+          container.classList.remove('video-slider__item--playing');
+        });
+    }
+  };
+
+  const pauseCarouselVideo = (video, container) => {
+    video.pause();
+    container.classList.remove('video-slider__item--playing');
+  };
+
+  const initCarouselVideoControl = () => {
+    sliderList.addEventListener('click', (evt) => {
+      const playBtn = evt.target.closest('.video-slider__item-btn'); // Твой класс кнопки
+      if (!playBtn) {
+        return;
+      }
+
+      const container = playBtn.closest('.video-slider__item');
+      const video = container.querySelector('video');
+
+      if (!video) {
+        return;
+      }
+
+      if (video.paused) {
+        playCarouselVideo(video, container);
+      } else {
+        pauseCarouselVideo(video, container);
+      }
+    });
+  };
 
   const getOffset = (index) => {
     const containerWidth = sliderList.parentElement.clientWidth;
@@ -98,6 +195,9 @@ const initVideoSlider = () => {
     const offset = getOffset(currentIndex);
 
     sliderList.style.transform = `translateX(-${offset}px)`;
+
+    stopAllCarouselVideos();
+    syncVideo();
 
     updateActiveClasses();
     updatePagination();
@@ -167,6 +267,7 @@ const initVideoSlider = () => {
 
   window.addEventListener('resize', onResize);
 
+  initCarouselVideoControl();
   onResize();
   updatePagination();
 
