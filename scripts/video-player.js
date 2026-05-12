@@ -1,0 +1,1 @@
+var e=document.querySelector("#my-player"),o=document.querySelector("#video"),s=()=>{e&&(e.pause(),e.currentTime=0,o&&(o.value=0))},c=(r,t)=>{!e||e.src.includes(r)||(e.src=r,e.poster=t,e.load(),s())},n=()=>{e.pause()};export{c as changeVideo,n as pauseMainVideo,s as resetPlayer};
