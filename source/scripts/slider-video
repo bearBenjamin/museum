@@ -81,6 +81,11 @@ const initVideoSlider = (castomPlayerAPI) => {
       if (video !== currentVideo) {
         video.pause();
         video.load();
+
+        const container = video.closest('.video-slider__item');
+        if (container) {
+          container.classList.remove('video-slider__item--playing');
+        }
       }
     });
   };
