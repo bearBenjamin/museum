@@ -226,6 +226,14 @@
   transition: background-color 0.3s ease;
 }
 
+.video-slider__item--playing .video-slider__item-btn {
+  opacity: 0.3;
+}
+
+.video-slider__item--playing .video-slider__item-btn::before {
+  mask-image: url("../../icons/stack.svg#pause");
+}
+
 .video-slider__item-btn:hover {
   background-color: rgba(33, 33, 33, 0.6);
 }

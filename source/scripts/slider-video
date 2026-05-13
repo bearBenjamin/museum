@@ -1,12 +1,14 @@
-import { resetPlayer, changeVideo, pauseMainVideo } from './video-player';
-
 const DIRECTION_NEXT = 1;
 const DIRECTION_PREV = -1;
 const BREAKPOINT = 1024;
 const TABLET = 768;
 const SLIDES_TO_SHOW = 3;
 
-const initVideoSlider = () => {
+const initVideoSlider = (castomPlayerAPI) => {
+  if (!castomPlayerAPI) {
+    return;
+  }
+
   const mainVideo = document.querySelector('#my-player');
 
   const sliderList = document.querySelector('.video-slider__list');
@@ -64,12 +66,12 @@ const initVideoSlider = () => {
     const dataVideo = getSlideVideoData(currentSlide);
 
     if (!dataVideo || !dataVideo.src) {
-      resetPlayer();
+      castomPlayerAPI.reset();
       return;
     }
 
     if (mainVideo.getAttribute('src') !== dataVideo.src) {
-      changeVideo(dataVideo.src, dataVideo.poster);
+      castomPlayerAPI.change(dataVideo.src, dataVideo.poster);
     }
   };
 
@@ -84,16 +86,16 @@ const initVideoSlider = () => {
   };
 
   const playCarouselVideo = (video, container) => {
-    stopAllCarouselVideos(video); // Останавливаем остальные
-    pauseMainVideo(); // Останавливаем большой плеер
+    stopAllCarouselVideos(video); // Останавливаю видео слайдера
+    castomPlayerAPI.pause(); // Останавливаю большой плеер
 
     if (video.readyState === 0) {
-      video.load(); // Принудительная загрузка, если браузер ленивый
+      video.load(); // Принудительная загрузка
     }
 
     const playPromise = video.play();
 
-    // play() возвращает Promise. Обрабатываем его для надежности.
+    // play() возвращает Promise. Обрабатываю. Проверка на случай браузера, который на работает с новым возвратом play() - раньше не возвращал промис
     if (playPromise !== undefined) {
       playPromise
         .then(() => {
@@ -116,7 +118,7 @@ const initVideoSlider = () => {
 
   const initCarouselVideoControl = () => {
     sliderList.addEventListener('click', (evt) => {
-      const playBtn = evt.target.closest('.video-slider__item-btn'); // Твой класс кнопки
+      const playBtn = evt.target.closest('.video-slider__item-btn');
       if (!playBtn) {
         return;
       }
@@ -266,6 +268,12 @@ const initVideoSlider = () => {
   sliderList.addEventListener('transitionend', onMoving);
 
   window.addEventListener('resize', onResize);
+
+  // слушаю кастомное событие плеера
+  window.addEventListener('mainVideoPlay', () => {
+    stopAllCarouselVideos();
+  });
+
 
   initCarouselVideoControl();
   onResize();

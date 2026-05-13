@@ -2,6 +2,14 @@
   position: relative;
 }
 
+.player:fullscreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* Центрируем видео по вертикали */
+  justify-content: center; /* Центрируем видео по горизонтали */
+  background-color: $color-black;  /* Черный фон по бокам, если видео не на весь экран */
+}
+
 .player__video {
   width: 100%;
   aspect-ratio: 1440 / 650;
@@ -47,6 +55,42 @@
   @include respond-to ("mobile") {
     top: 38.5%;
 
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.player:fullscreen .player__toggle-play {
+  @media (min-width: 1921px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: clamp(120px, 20vh, 250px); // Растет от высоты экрана
+    height: clamp(120px, 20vh, 250px);
+
+    &::before {
+      width: 100%;
+      height: 100%;
+      border-width: clamp(4px, 1vh, 10px);
+    }
+  }
+
+  @media (max-width: 1439px) and (min-width: 769px) {
+    top: 48%;
+    width: 152px;
+    height: 152px;
+  }
+
+  @include respond-to ("tablet") {
+    top: 48%;
+    width: 80px;
+    height: 80px;
+  }
+
+  @include respond-to ("mobile") {
+    top: 48.5%;
     width: 50px;
     height: 50px;
   }
@@ -132,6 +176,32 @@
   border-color: $color-gold-dark;
 }
 
+.player__toggle-play.player__toggle-play--pause::after {
+  mask-image: url("../../icons/stack.svg#pause");
+  mask-position: 50%;
+  background-color: transparent;
+}
+
+.player__toggle-play.player__toggle-play--pause:hover::after {
+  background-color: $color-gold;
+}
+
+.player__toggle-play.player__toggle-play--pause:active::after {
+  background-color: $color-gold-dark;
+}
+
+.player__toggle-play.player__toggle-play--pause::before {
+  border-color: transparent;
+}
+
+.player__toggle-play.player__toggle-play--pause:hover::before {
+  border-color: $color-gold;
+}
+
+.player__toggle-play.player__toggle-play--pause:active::before {
+  border-color: $color-gold-dark;
+}
+
 .player__controls {
   padding: 25px 30px;
   width: 100%;
@@ -162,6 +232,20 @@
   @include respond-to ("mobile") {
     padding: 21px 20px 16px;
     gap: 30px;
+  }
+}
+
+.player:fullscreen .player__controls {
+  background: rgba(0, 0, 0, 0.7);
+
+  @media (min-width: 1921px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3vh 5vw;
+    gap: 4vw;
+    z-index: 3;
   }
 }
 
@@ -196,7 +280,6 @@
 }
 
 .player__progress {
-  flex-grow: 1;
   width: 100%;
   max-width: 929px;
   display: flex;
@@ -218,6 +301,10 @@
     left: 0;
     max-width: 380px;
   }
+}
+
+.player:fullscreen .player__progress {
+  max-width: 100%;
 }
 
 .player__progress-field {
@@ -245,6 +332,10 @@
     height: 4px;
   }
 }
+
+// .player:fullscreen .player__progress-field {
+//   object-fit: contain;
+// }
 
 /* ползунок (кружок) */
 .player__progress-field::-webkit-slider-thumb {
@@ -315,6 +406,12 @@
 
   @include respond-to ("mobile") {
     max-width: 200px;
+  }
+}
+
+.player:fullscreen .player__range-volume {
+  @media (min-width: 1921px) {
+    width: clamp(155px, 20vw, 350px);
   }
 }
 
@@ -414,6 +511,30 @@
   }
 }
 
+.player:fullscreen .player__btn-play {
+  @media (min-width: 1921px) {
+    width: clamp(23px, 2.5vw, 45px);
+    height: clamp(31px, 3.5vw, 60px);
+    // Гарантируем, что иконка внутри растянется под новый размер
+    mask-size: contain;
+    margin: 0 1vw;
+  }
+}
+
+.player:fullscreen .player__btn-volume {
+  @media (min-width: 1921px) {
+    width: clamp(38px, 3vw, 70px);
+    height: clamp(31px, 2.5vw, 60px);
+  }
+}
+
+.player:fullscreen .player__btn-full-screen {
+  @media (min-width: 1921px) {
+    width: clamp(35px, 2.5vw, 65px);
+    height: clamp(35px, 2.5vw, 65px);
+  }
+}
+
 .player__btn-play:hover,
 .player__btn-volume:hover,
 .player__btn-full-screen:hover {
@@ -422,15 +543,15 @@
 
 // пока так, потом навешу модификатор и буду менять через JS
 
-.player__btn-play:active {
+.player__btn-play--pause {
   mask-image: url("../../icons/stack.svg#pause");
 }
 
-.player__btn-volume:active {
+.player__btn-volume--muted {
   mask-image: url("../../icons/stack.svg#mute");
 }
 
-.player__btn-full-screen:active {
+.player__btn-full-screen--active {
   mask-image: url("../../icons/stack.svg#fullscreen-exit");
 }
 
