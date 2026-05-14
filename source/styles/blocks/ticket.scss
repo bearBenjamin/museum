@@ -114,7 +114,7 @@
 }
 
 .ticket__filter-group-type {
-  margin-right: 240px;
+  margin-right: 100px;
 
   @media (max-width: 1440px) {
     display: none;
@@ -214,6 +214,13 @@
 
 .ticket__filter-group-amount {
   margin-left: auto;
+
+  width: 175px;
+  min-width: 175px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
 
   @include respond-to ("desktop") {
     margin-left: 0;
@@ -341,12 +348,14 @@
 
 .ticket__sum-wrapper {
   margin-bottom: 52px;
+  min-width: 150px;
   font-weight: 700;
   font-size: 28px;
   letter-spacing: 0.03em;
 
   @include respond-to ("desktop") {
     margin-bottom: 68px;
+    min-width: 175px;
   }
 
   @include respond-to ("tablet") {
@@ -364,7 +373,11 @@
   }
 }
 
-// .ticket__sum-text {}
+.ticket__sum-text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 
 // .ticket__sun-number {}
 
@@ -375,7 +388,8 @@
 
   position: absolute;
   top: 334px;
-  left: -25px;
+  // left: -25px;
+  left: 0;
   padding-right: 37px;
   padding-left: 37px;
   width: 175px;
