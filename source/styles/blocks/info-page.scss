@@ -227,10 +227,6 @@
     margin: 0 auto;
   }
 
-  // @media (max-width: 568px) {
-  //   margin: 0 30px;
-  // }
-
   @include respond-to ("mobile") {
     margin: 0 60px;
     gap: 3px;

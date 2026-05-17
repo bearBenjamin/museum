@@ -236,17 +236,12 @@ const showInputError = (inputName, isValid) => {
   let errorNode = inputElement.parentNode.querySelector('.form-ticket__error-message');
 
   if (!isValid) {
-    // Включаем красную подсветку границы (можете заменить на ваш класс, например, `is-invalid`)
     inputElement.style.borderColor = '#ff0000';
 
     // Если сообщения еще нет на экране — создаем его
     if (!errorNode) {
       errorNode = document.createElement('p');
       errorNode.className = 'form-ticket__error-message';
-      // Стили для текста предупреждения (можно перенести в SCSS)
-      // errorNode.style.color = '#ff0000';
-      // errorNode.style.fontSize = '12px';
-      // errorNode.style.margin = '4px 0 0 0';
       inputElement.parentNode.appendChild(errorNode);
     }
 

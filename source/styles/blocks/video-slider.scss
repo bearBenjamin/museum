@@ -18,11 +18,6 @@
   @include respond-to ("tablet") {
     max-width: 728px;
   }
-
-  // @include respond-to ("mobile") {
-  //   max-width: 100%;
-  //   padding: 0 20px;
-  // }
 }
 
 .video-slider__list {

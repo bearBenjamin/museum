@@ -17,7 +17,6 @@
 .main-header__navigation {
   display: flex;
   align-items: center;
-  // gap: 60px;
   gap: clamp(10px, 2.8vw, 60px);
 }
 

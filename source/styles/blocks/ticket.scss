@@ -70,7 +70,6 @@
   }
 
   @include respond-to ("tablet") {
-    // margin-right: 60px;
     margin-right: clamp(0px, calc(0px + (60 - 0) * (100vw - 420px) / (768 - 420)), 60px);
     // Постепенно вводим нижний отступ вместо правого
     margin-bottom: clamp(0px, calc(40px - (40 - 0) * (100vw - 320px) / (420 - 320)), 40px);
@@ -84,11 +83,6 @@
     margin: 0;
     margin-bottom: 40px;
   }
-
-  // @include respond-to ("mobile") {
-  //   margin: 0;
-  //   margin-bottom: 40px;
-  // }
 }
 
 .ticket__picture {
@@ -379,8 +373,6 @@
   justify-content: flex-start;
 }
 
-// .ticket__sun-number {}
-
 .ticket__toggle {
   margin: 0;
   padding: 0;
@@ -388,7 +380,6 @@
 
   position: absolute;
   top: 334px;
-  // left: -25px;
   left: 0;
   padding-right: 37px;
   padding-left: 37px;

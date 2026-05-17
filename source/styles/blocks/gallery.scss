@@ -101,7 +101,6 @@
 
   @include respond-to ("tablet") {
     transform: translateY(60px);
-    // transform: scale(0.7);
   }
 
   @include respond-to ("mobile") {
@@ -113,7 +112,6 @@
 .gallery__item--animated {
   opacity: 1;
   transform: translateY(0);
-  // transform: translate(1.1);
 }
 
 .gallery__item:nth-child(1),

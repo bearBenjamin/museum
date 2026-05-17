@@ -61,5 +61,4 @@ const initMenu = () => {
   initNavigation();
 };
 
-
 export { initMenu };

@@ -28,10 +28,6 @@
   @media (max-width: 1440px) {
     display: block;
   }
-
-  // @include respond-to ("desktop") {
-  //   display: block;
-  // }
 }
 
 .video__title {
@@ -43,10 +39,6 @@
   @media (max-width: 1440px) {
     margin-bottom: 40px;
   }
-
-  // @include respond-to ("desktop") {
-  //   margin-bottom: 40px;
-  // }
 
   @include respond-to ("tablet") {
     margin-bottom: 20px;
@@ -69,10 +61,6 @@
   @media (max-width: 1440px) {
     display: none;
   }
-
-  // @include respond-to ("desktop") {
-  //   display: none;
-  // }
 }
 
 .video__player {
@@ -81,10 +69,6 @@
   @media (max-width: 1440px) {
     margin-bottom: 40px;
   }
-
-  // @include respond-to ("desktop") {
-  //   margin-bottom: 40px;
-  // }
 
   @include respond-to ("tablet") {
     margin-bottom: 21px;

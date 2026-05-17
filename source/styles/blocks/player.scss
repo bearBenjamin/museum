@@ -333,10 +333,6 @@
   }
 }
 
-// .player:fullscreen .player__progress-field {
-//   object-fit: contain;
-// }
-
 /* ползунок (кружок) */
 .player__progress-field::-webkit-slider-thumb {
   appearance: none;
@@ -541,8 +537,6 @@
   background-color: #989898;
 }
 
-// пока так, потом навешу модификатор и буду менять через JS
-
 .player__btn-play--pause {
   mask-image: url("../../icons/stack.svg#pause");
 }
@@ -554,10 +548,3 @@
 .player__btn-full-screen--active {
   mask-image: url("../../icons/stack.svg#fullscreen-exit");
 }
-
-
-// Welcome to the Louvre - главное видео
-// Exposition - Le Corps et l'Ame. De Donatello a Michel-Ange. Sculpures italiennes de la Renaissance - первое видео
-// Au Louvre! La Venus de Milo - второе видео
-// Promenade dans les collections mesopotamiennes avec Ariane Thomas - третье видео
-// Petits contens de Printemps - La ruse du Renard - четвертое видео

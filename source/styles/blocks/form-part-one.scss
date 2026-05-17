@@ -138,13 +138,6 @@
   background-color: $color-white;
 }
 
-// .form-part-one__date--day {
-//   background-image: url("../../icons/stack.svg#ticket-date");
-//   background-size: 15px 15px;
-//   background-position: left 15px center;
-//   background-repeat: no-repeat;
-// }
-
 .form-part-one__container-date::before {
   content: "";
   width: 15px;
@@ -441,7 +434,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // border: 1px solid $color-black;
 }
 
 .form-part-one__count {

@@ -1,6 +1,6 @@
 .page {
   height: 100%;
-  box-sizing: border-box; // проверка подхода через наследование от родителя - глобально задал inherit
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
