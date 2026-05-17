@@ -8,8 +8,8 @@ const TYPE_TITLES = {
 
 const ERROR_MESSAGES = {
   name: 'Name must be 3-15 characters long and contain only letters and spaces.',
-  mail: 'Email must look like username@example.com (username: 3-15 chars, domain: min 4 letters, top-domain: min 2 letters).',
-  phone: 'Phone must contain only digits (max 10), optionally separated by spaces or hyphens.'
+  mail: 'Email must look like username@example.com.',
+  phone: 'Phone must contain only digits (max 10).'
 };
 
 const currencyFormatter = new Intl.NumberFormat('en-US', {
@@ -244,13 +244,13 @@ const showInputError = (inputName, isValid) => {
       errorNode = document.createElement('p');
       errorNode.className = 'form-ticket__error-message';
       // Стили для текста предупреждения (можно перенести в SCSS)
-      errorNode.style.color = '#ff0000';
-      errorNode.style.fontSize = '12px';
-      errorNode.style.margin = '4px 0 0 0';
+      // errorNode.style.color = '#ff0000';
+      // errorNode.style.fontSize = '12px';
+      // errorNode.style.margin = '4px 0 0 0';
       inputElement.parentNode.appendChild(errorNode);
     }
 
-    errorNode.textContent = ERROR_MESSAGES[inputName] || 'Invalid value';
+    errorNode.textContent = ERROR_MESSAGES[inputName];
   } else {
     // Если всё валидно — убираем подсветку и удаляем текст ошибки
     inputElement.style.borderColor = '';
@@ -260,4 +260,14 @@ const showInputError = (inputName, isValid) => {
   }
 };
 
-export { updateInterface, renderDateSelectOptions, renderTimeSelectOptions, showInputError };
+const clearAllErrors = () => {
+  const errorMessages = document.querySelectorAll('.form-ticket__error-message');
+  errorMessages.forEach((msg) => msg.remove());
+
+  const inputs = document.querySelectorAll('#form-buy-ticket input, #form-buy-ticket select');
+  inputs.forEach((input) => {
+    input.style.borderColor = '';
+  });
+};
+
+export { updateInterface, renderDateSelectOptions, renderTimeSelectOptions, showInputError, clearAllErrors };
