@@ -6,7 +6,7 @@ import { setInitialValueVideo } from './video';
 import { initCastomPlayer } from './video-player';
 import { initVideoSlider } from './slider-video';
 import { reshuffleGallery, initGalleryAnimation } from './gallery';
-import './form.js';
+import { initTicketForm } from './form-controller';
 
 initMenu();
 initSlider();
@@ -18,3 +18,4 @@ const castomPlayerAPI = initCastomPlayer();
 initVideoSlider(castomPlayerAPI);
 reshuffleGallery();
 initGalleryAnimation();
+initTicketForm();

@@ -840,8 +840,9 @@
                   <label class="visually-hidden" for="ticket-type">Ticket Type</label>
                   <select class="form-part-one__ticket-type" id="ticket-type" form="form-buy-ticket" name="ticket-type">
                     <option value="" disabled selected>Ticket Type</option>
-                    <option value="Basic">Basic</option>
-                    <option value="Senior">Senior</option>
+                    <option value="permanent">Permanent exhibition</option>
+                    <option value="temporary">Temporay exhibition</option>
+                    <option value="combined">Combinde admission</option>
                   </select>
                 </div>
               </fieldset>
@@ -849,8 +850,8 @@
                 <legend class="visually-hidden">Entry ticket</legend>
                 <h2 class="form-part-one__entry-title">Entry ticket</h2>
                 <ul class="form-part-one__entry-list">
-                  <li class="form-part-one__entry-item">
-                    <label class="form-part-one__control-entry" for="basic-form">Basic 18+ (20 €)</label>
+                  <li class="form-part-one__entry-item" data-type="basicCount">
+                    <label class="form-part-one__control-entry" for="basic-form">Basic 18+ (<span class="form-part-one__entry-price-value" data-entry-type="basic">20 €</span>)</label>
                     <div class="form-part-one__entry-wrapper">
                       <button class="form-part-one__count form-part-one__count--decrease" type="button">
                         <span class="visually-hidden">Кнопка уменьшения количества билетов</span>
@@ -861,13 +862,13 @@
                       </button>
                     </div>
                   </li>
-                  <li class="form-part-one__entry-item">
-                    <label class="form-part-one__control-entry" for="senior-form">Senior 65+ (10 €)</label>
+                  <li class="form-part-one__entry-item" data-type="seniorCount">
+                    <label class="form-part-one__control-entry" for="senior-form">Senior 65+ (<span class="form-part-one__entry-price-value" data-entry-type="senior">10 €</span>)</label>
                     <div class="form-part-one__entry-wrapper">
                       <button class="form-part-one__count form-part-one__count--decrease" type="button">
                         <span class="visually-hidden">Кнопка уменьшения количества билетов</span>
                       </button>
-                      <input class="form-part-one__input-senior-entry" type="number" form="form-buy-ticket" min="0" max="99" name="senior" id="senior-form" value="2">
+                      <input class="form-part-one__input-senior-entry" type="text" form="form-buy-ticket" name="senior" id="senior-form" value="2">
                       <button class="form-part-one__count form-part-one__count--increase" type="button">
                         <span class="visually-hidden">Кнопка увеличения количества билетов</span>
                       </button>
@@ -892,14 +893,14 @@
                   <img class="form-part-two__ticket-picture" src="images/ticket-form/buy-ticket-form@1x.jpg" width="150" height="120" alt="picture ticket">
                 </div>
                 <ul class="form-part-two__price-list">
-                  <li class="form-part-two__price-item">
+                  <li class="form-part-two__price-item" data-type="basicCount">
                     <span class="form-part-two__price-count">2</span>
-                    <span class="form-part-two__price-name">Basic (20 €)</span>
+                    <span class="form-part-two__price-name">Basic (<span class="form-part-two__price">20 €</span>)</span>
                     <span class="form-part-two__price-sum">40 €</span>
                   </li>
-                  <li class="form-part-two__price-item">
+                  <li class="form-part-two__price-item" data-type="seniorCount">
                     <span class="form-part-two__price-count">2</span>
-                    <span class="form-part-two__price-name">Senior (10 €)</span>
+                    <span class="form-part-two__price-name">Senior (<span class="form-part-two__price">10 €</span>)</span>
                     <span class="form-part-two__price-sum">20 €</span>
                   </li>
                   <li class="form-part-two__price-item">
