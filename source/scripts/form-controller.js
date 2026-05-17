@@ -1,7 +1,7 @@
 import { state } from './form-state.js';
 import { changeTicketType, changeTicketQuantity, updateUserData } from './form-state.js';
 import { updateInterface, renderDateSelectOptions, renderTimeSelectOptions, showInputError, clearAllErrors } from './form-view';
-import { generateDateSlots, generateTimeSlots, maskCardNumber, maskCardMonth, maskCardYear, maskCardCvc, maskCardName, validateUserName, validateUserEmail, validateUserPhone, validateCardNumber, validateCardMonth, validateCardYearField, validateCardNameField, validateCardCvcField } from './form-utils.js';
+import { generateDateSlots, generateTimeSlots, maskCardNumber, maskCardMonth, maskCardYear, maskCardCvc, maskCardName, validateUserName, validateUserEmail, validateUserPhone, validateCardNumber, validateCardMonth, validateCardYearField, validateCardNameField, validateCardCvcField, debounce } from './form-utils.js';
 
 const amountTicketField = document.querySelector('.ticket__filter-group-amount');
 const modalAmounTicketField = document.querySelector('.form-part-one__filter-group--count-ticket');
@@ -13,6 +13,10 @@ const cvcFieldset = document.querySelector('.form-part-two__inner-three');
 
 const ticketForm = document.querySelector('#form-buy-ticket');
 const closeFormButton = document.querySelector('.form-ticket__button-close');
+
+const debouncedUpdateInterface = debounce(() => {
+  updateInterface();
+}, 250);
 
 const handleFieldChange = (evt) => {
   const { name, value } = evt.target;
@@ -32,6 +36,7 @@ const handleFieldChange = (evt) => {
     updateUserData('time', '');
   } else {
     updateUserData(name, value);
+    debouncedUpdateInterface();
   }
 
   updateInterface();

@@ -148,4 +148,12 @@ const validateCardCvcField = (value) => value.length === 3;
  */
 const validateCardNameField = (value) => value.trim().length >= 2;
 
-export { generateDateSlots, isSelectedDateToday, generateTimeSlots, maskCardNumber, maskCardMonth, maskCardYear, maskCardCvc, maskCardName, validateUserName, validateUserEmail, validateUserPhone, validateCardNumber, validateCardMonth, validateCardYearField, validateCardCvcField, validateCardNameField };
+const debounce = (callback, delay = 250) => {
+  let timeoutId;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => callback(...args), delay);
+  };
+};
+
+export { generateDateSlots, isSelectedDateToday, generateTimeSlots, maskCardNumber, maskCardMonth, maskCardYear, maskCardCvc, maskCardName, validateUserName, validateUserEmail, validateUserPhone, validateCardNumber, validateCardMonth, validateCardYearField, validateCardCvcField, validateCardNameField, debounce };
