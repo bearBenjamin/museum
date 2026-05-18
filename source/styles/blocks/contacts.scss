@@ -126,7 +126,42 @@
 }
 
 .contacts__map-container {
+  position: relative;
   margin-left: auto;
+}
+
+.contacts__map-interactive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+}
+
+.contacts__map-interactive--is-loaded {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contacts__map-interactive--grayscale {
+  filter: grayscale(100%);
+}
+
+.contacts__map-icon-body {
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.contacts__map-icon-circle {
+  fill: #ffffff;
+}
+
+.contacts__map-icon:hover .contacts__map-icon-body {
+  fill: #1a1a1a;
 }
 
 .contacts__map {

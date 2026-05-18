@@ -7,6 +7,7 @@ import { initCastomPlayer } from './video-player';
 import { initVideoSlider } from './slider-video';
 import { reshuffleGallery, initGalleryAnimation } from './gallery';
 import { initTicketForm } from './form-controller';
+import './map.js';
 
 initMenu();
 initSlider();

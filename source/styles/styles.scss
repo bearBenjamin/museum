@@ -5,6 +5,9 @@
 @import "./common/global.scss";
 @import "./common/visually-hidden.scss";
 
+/* VENDOR */
+@import "../vendor/leaflet/leaflet.css";
+
 /* BLOCKS */
 @import "./blocks/page.scss";
 @import "./blocks/main-header.scss";
