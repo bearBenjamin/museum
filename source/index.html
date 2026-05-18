@@ -812,13 +812,13 @@
                 <legend class="visually-hidden">Date</legend>
                 <div class="form-part-one__container-date form-part-one__container-date--day">
                   <label class="visually-hidden" for="date">Choose a date</label>
-                  <select class="form-part-one__date" id="date" form="form-buy-ticket" name="date" data-selected="date-picker">
+                  <select class="form-part-one__date" id="date" form="form-buy-ticket" name="date" data-selected="date-picker" required>
                     <option value="" disabled selected>Date</option>
                   </select>
                 </div>
                 <div class="form-part-one__container-date form-part-one__container-date--time">
                   <label class="visually-hidden" for="time">Choose a time</label>
-                  <select class="form-part-one__date form-part-one__date--time" id="time" form="form-buy-ticket" name="time" data-selected="time-picker">
+                  <select class="form-part-one__date form-part-one__date--time" id="time" form="form-buy-ticket" name="time" data-selected="time-picker" required>
                     <option value="" disabled selected>Time</option>
                   </select>
                 </div>
@@ -827,19 +827,19 @@
                 <legend class="visually-hidden">Personal data</legend>
                 <div class="form-part-one__container-name">
                   <label class="visually-hidden" for="name">Name</label>
-                  <input class="form-part-one__info-user form-part-one__info-user--name" type="text" id="name" name="name" placeholder="Name" data-input="user-name">
+                  <input class="form-part-one__info-user form-part-one__info-user--name" type="text" id="name" name="name" placeholder="Name" data-input="user-name" required>
                 </div>
                 <div class="form-part-one__container-email">
                   <label class="visually-hidden" for="e-mail">E-mail</label>
-                  <input class="form-part-one__info-user form-part-one__info-user--e-mail" type="email" id="e-mail" name="mail" placeholder="E-mail">
+                  <input class="form-part-one__info-user form-part-one__info-user--e-mail" type="email" id="e-mail" name="mail" placeholder="E-mail" required>
                 </div>
                 <div class="form-part-one__container-phone">
                   <label class="visually-hidden" for="phone">Phone</label>
-                  <input class="form-part-one__info-user form-part-one__info-user--phone" type="tel" id="phone" name="phone" placeholder="Phone">
+                  <input class="form-part-one__info-user form-part-one__info-user--phone" type="tel" id="phone" name="phone" placeholder="Phone" required>
                 </div>
                 <div class="form-part-one__container-ticket-type">
                   <label class="visually-hidden" for="ticket-type">Ticket Type</label>
-                  <select class="form-part-one__ticket-type" id="ticket-type" form="form-buy-ticket" name="ticket-type">
+                  <select class="form-part-one__ticket-type" id="ticket-type" form="form-buy-ticket" name="ticket-type" required>
                     <option value="" disabled selected>Ticket Type</option>
                     <option value="permanent">Permanent exhibition</option>
                     <option value="temporary">Temporay exhibition</option>
@@ -914,13 +914,13 @@
               <div class="form-part-two__card-container">
                 <div class="form-part-two__inner-two"><!-- здесь будет сетка grid -->
                   <label class="form-part-two__label-card" for="card-number">Card number</label>
-                  <input class="form-part-two__input-card" type="text" id="card-number" name="card-number">
+                  <input class="form-part-two__input-card" type="text" id="card-number" name="card-number" required>
                   <fieldset class="form-part-two__date-card-group">
                     <legend class="form-part-two__date-card-group-title">Expiration date</legend>
                     <div class="form-part-two__field-row">
                       <div class="form-part-two__field-row-one">
                         <label class="visually-hidden" for="date-card">Date</label>
-                        <input class="form-part-two__input-date-card" type="text" id="date-card" name="date-card" placeholder="03">
+                        <input class="form-part-two__input-date-card" type="text" id="date-card" name="date-card" placeholder="03" required>
                         <div class="form-part-two__toggle-button">
                           <button class="form-part-two__button-up" type="button">
                             <span class="visually-hidden">Button up</span>
@@ -932,7 +932,7 @@
                       </div>
                       <div class="form-part-two__field-row-two">
                         <label class="form-part-two__label-year-card visually-hidden" for="year-card">Year</label>
-                        <input class="form-part-two__input-year-card" type="text" id="year-card" name="year-card" placeholder="2024">
+                        <input class="form-part-two__input-year-card" type="text" id="year-card" name="year-card" placeholder="2024" required>
                         <div class="form-part-two__toggle-button">
                           <button class="form-part-two__button-year-up" type="button">
                             <span class="visually-hidden">Button up</span>
@@ -945,7 +945,7 @@
                     </div>
                   </fieldset>
                   <label class="form-part-two__label-name-card" for="card-name">Cardholder name</label>
-                  <input class="form-part-two__input-name-card" type="text" id="card-name" name="card-name">
+                  <input class="form-part-two__input-name-card" type="text" id="card-name" name="card-name" required>
                   <div class="form-part-two__icon-container">
                     <img class="form-part-two__icon-visa" src="images/ticket-form/visa.svg" width="55" height="16" alt="icon visa">
                     <img class="form-part-two__icon-master" src="images/ticket-form/mastercard.svg" width="53" height="32" alt="icon mastercard">
@@ -954,7 +954,7 @@
                 <div class="form-part-two__inner-three">
                   <div class="form-part-two__black-square"></div>
                   <label class="form-part-two__label-cv" for="cvc">CVC/CVV</label>
-                  <input class="form-part-two__input-cv" type="text" id="cvc" name="cvc">
+                  <input class="form-part-two__input-cv" type="text" id="cvc" name="cvc" required>
                   <p class="form-part-two__card-cvc-text">The last 3&nbsp;or&nbsp;4 digits on back of&nbsp;the card</p>
                 </div>
                 <button class="form-part-two__submit" type="submit">

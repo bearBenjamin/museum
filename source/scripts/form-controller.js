@@ -1,7 +1,7 @@
 import { state } from './form-state.js';
 import { changeTicketType, changeTicketQuantity, updateUserData } from './form-state.js';
 import { updateInterface, renderDateSelectOptions, renderTimeSelectOptions, showInputError, clearAllErrors } from './form-view';
-import { generateDateSlots, generateTimeSlots, maskCardNumber, maskCardMonth, maskCardYear, maskCardCvc, maskCardName, validateUserName, validateUserEmail, validateUserPhone, validateCardNumber, validateCardMonth, validateCardYearField, validateCardNameField, validateCardCvcField, debounce } from './form-utils.js';
+import { generateDateSlots, generateTimeSlots, maskCardNumber, maskCardMonth, maskCardYear, maskCardCvc, maskCardName, validateUserName, validateUserEmail, validateUserPhone, validateCardNumber, validateCardMonth, validateCardYearField, validateCardNameField, validateCardCvcField, debounce, validateDateUser, validateTimeUser } from './form-utils.js';
 
 const amountTicketField = document.querySelector('.ticket__filter-group-amount');
 const modalAmounTicketField = document.querySelector('.form-part-one__filter-group--count-ticket');
@@ -112,6 +112,8 @@ const getQuantityTicket = (evt) => {
 
 const validateForm = () => {
   // Проверяем каждое поле на основе данных из нашего state
+  const isDate = validateDateUser(state.date);
+  const isTime = validateTimeUser(state.time);
   const isNameValid = validateUserName(state.name);
   const isEmailValid = validateUserEmail(state.mail); // в вашем стейте это поле называется mail
   const isPhoneValid = validateUserPhone(state.phone);
@@ -123,6 +125,8 @@ const validateForm = () => {
   const isCardCvcValid = validateCardCvcField(state.cardCvv);
 
   // Просим Вью отобразить или стереть ошибки на экране
+  showInputError('date', isDate);
+  showInputError('time', isTime);
   showInputError('name', isNameValid);
   showInputError('mail', isEmailValid);
   showInputError('phone', isPhoneValid);
@@ -136,7 +140,7 @@ const validateForm = () => {
   // Форма считается успешной только если ВСЕ поля верны
   return (
     isNameValid && isEmailValid && isPhoneValid &&
-    isCardNumberValid && isCardMonthValid && isCardYearValid && isCardNameValid && isCardCvcValid
+    isCardNumberValid && isCardMonthValid && isCardYearValid && isCardNameValid && isCardCvcValid && isTime && isDate
   );
 };
 

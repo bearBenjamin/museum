@@ -85,6 +85,9 @@ const maskCardYear = (value) => value.replace(/\D/g, '').slice(0, 4);
 const maskCardCvc = (value) => value.replace(/\D/g, '').slice(0, 3);
 const maskCardName = (value) => value.replace(/[^a-zA-Z\s]/g, '').toUpperCase();
 
+const validateDateUser = (date) => date.length > 0;
+const validateTimeUser = (time) => time.length > 0;
+
 /**
  * Валидация имени: от 3 до 15 символов, только русские/английские буквы и пробелы
  */
@@ -156,4 +159,4 @@ const debounce = (callback, delay = 250) => {
   };
 };
 
-export { generateDateSlots, isSelectedDateToday, generateTimeSlots, maskCardNumber, maskCardMonth, maskCardYear, maskCardCvc, maskCardName, validateUserName, validateUserEmail, validateUserPhone, validateCardNumber, validateCardMonth, validateCardYearField, validateCardCvcField, validateCardNameField, debounce };
+export { generateDateSlots, isSelectedDateToday, generateTimeSlots, maskCardNumber, maskCardMonth, maskCardYear, maskCardCvc, maskCardName, validateDateUser, validateTimeUser, validateUserName, validateUserEmail, validateUserPhone, validateCardNumber, validateCardMonth, validateCardYearField, validateCardCvcField, validateCardNameField, debounce };
