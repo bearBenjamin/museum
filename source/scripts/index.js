@@ -9,6 +9,8 @@ import { reshuffleGallery, initGalleryAnimation } from './gallery';
 import { initTicketForm } from './form-controller';
 import './map.js';
 
+document.documentElement.classList.add('page--js');
+
 initMenu();
 initSlider();
 initModal();
@@ -19,4 +21,5 @@ const castomPlayerAPI = initCastomPlayer();
 initVideoSlider(castomPlayerAPI);
 reshuffleGallery();
 initGalleryAnimation();
+
 initTicketForm();
