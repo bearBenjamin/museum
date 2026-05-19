@@ -177,7 +177,7 @@ const initTicketForm = () => {
   ticketForm.addEventListener('submit', handleFormSubmit);
   closeFormButton?.addEventListener('click', () => {
     clearAllErrors();
-    ticketForm.reset();
+    // ticketForm.reset();
   });
 
   updateInterface();
