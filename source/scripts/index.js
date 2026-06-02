@@ -1,6 +1,6 @@
 import { initMenu } from './burger-menu';
 import { initModal } from './modal-window';
-import { initSlider } from './slider-welcome';
+import { initWelcomeSlider } from './slider-welcome';
 import { initExploreSlider } from './slider-explore';
 import { setInitialValueVideo } from './video';
 import { initCastomPlayer } from './video-player';
@@ -11,8 +11,14 @@ import './map.js';
 
 document.documentElement.classList.add('page--js');
 
+const welcomeSliderElement = document.querySelector('.slider');
+
 initMenu();
-initSlider();
+
+if (welcomeSliderElement) {
+  initWelcomeSlider(welcomeSliderElement);
+}
+
 initModal();
 initExploreSlider();
 setInitialValueVideo();

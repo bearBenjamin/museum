@@ -1,8 +1,8 @@
 const DIRECTION_NEXT = 1;
 const DIRECTION_PREV = -1;
 
-const initSlider = () => {
-  const sliderList = document.querySelector('.slider__list');
+const initWelcomeSlider = (sliderElement) => {
+  const sliderList = sliderElement.querySelector('.slider__list');
 
   if (!sliderList) {
     return;
@@ -10,13 +10,13 @@ const initSlider = () => {
 
   const slides = sliderList.querySelectorAll('.slider__item');
 
-  const prevBtn = document.querySelector('.slider__arrow-left');
-  const nextBtn = document.querySelector('.slider__arrow-right');
+  const prevBtn = sliderElement.querySelector('.slider__arrow-left');
+  const nextBtn = sliderElement.querySelector('.slider__arrow-right');
 
-  const paginationList = document.querySelector('.slider__pagination-list');
+  const paginationList = sliderElement.querySelector('.slider__pagination-list');
   const paginationItems = paginationList.querySelectorAll('.slider__pagination-item');
 
-  const currentSlideCount = document.querySelector('.slider__current-count');
+  const currentSlideCount = sliderElement.querySelector('.slider__current-count');
 
   const totalSlides = slides.length;
   let currentIndex = 1;
@@ -76,22 +76,44 @@ const initSlider = () => {
     updateSlideCount();
   };
 
-  paginationItems.forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-      if (isMoving || currentIndex === index + 1) {
+  const onClickSlider = (evt) => {
+    if (isMoving) {
+      return;
+    }
+
+    if (prevBtn && evt.target.closest('.slider__arrow-left')) {
+      onControlClick(DIRECTION_PREV);
+      return;
+    }
+
+    if (nextBtn && evt.target.closest('.slider__arrow-right')) {
+      onControlClick(DIRECTION_NEXT);
+      return;
+    }
+
+    const paginationBtn = evt.target.closest('.slider__pagination-btn');
+
+    if(paginationBtn) {
+      const item = paginationBtn.closest('.slider__pagination-item');
+      // Быстро находим индекс нажатого элемента в коллекции пагинации
+      const index = Array.from(paginationItems).indexOf(item);
+
+      if (currentIndex === index + 1) {
         return;
       }
+
       currentIndex = index + 1;
       moveSlider();
-    });
-  });
+    }
+  };
 
-  prevBtn.addEventListener('click', () => onControlClick(DIRECTION_PREV));
-  nextBtn.addEventListener('click', () => onControlClick(DIRECTION_NEXT));
+
+  sliderElement.addEventListener('click', onClickSlider);
 
   sliderList.addEventListener('transitionend', onMoving);
 
   updatePagination();
 };
 
-export { initSlider };
+
+export { initWelcomeSlider };
