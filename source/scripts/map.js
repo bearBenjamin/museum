@@ -1,7 +1,4 @@
-import '../vendor/leaflet/leaflet';
-
-const { L } = window;
-
+/* eslint-disable no-undef */
 delete L.Icon.Default.prototype._getIconUrl;
 
 L.Icon.Default.mergeOptions({
